@@ -12,3 +12,4 @@
 目录：
 
 - [命令行入门](./introduction.md)
+- [一些常用 Shell 命令](./common-commands.md)

@@ -8,3 +8,4 @@
 
 - [命令行使用](./command-line/README.md)
     - [命令行入门](./command-line/introduction.md)
+    - [一些常用 Shell 命令](./command-line/common-commands.md)
