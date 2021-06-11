@@ -5,3 +5,4 @@
 友情链接：
 
 - [计算机入门指南](https://github.com/Computer-Literacy-Primer/Computer-Literacy-Primer)：一个同类项目
+- 浅見沙織的笔记（Telegram 频道）：https://t.me/NoteOfAsamiSaori
