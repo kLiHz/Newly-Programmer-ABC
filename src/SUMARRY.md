@@ -7,4 +7,4 @@
     - [购买一台计算机](beginning/buying-a-computer.md)
 
 - [命令行使用](./command-line/README.md)
-    - [入门](./command-line/introduction.md)
+    - [命令行入门](./command-line/introduction.md)

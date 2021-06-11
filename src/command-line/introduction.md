@@ -16,6 +16,8 @@
 
 **终端**（Terminal），是计算机系统用来让用户输入数据并显示计算结果的机器，简而言之就是用户与计算机交互的设备。
 
+有些终端不但可以显示文字，而且可以显示矢量图形和位图。
+
 随着计算机的发展，现在已经**很少有专门的**计算机终端了。
 
 现代的操作系统中一般使用**虚拟终端**（也称作“终端模拟器”） 。输出系统一般是屏幕，输入系统则是键盘。
@@ -241,6 +243,10 @@ cat text.txt | Select-String -Pattern "ello"
 
 将另一个命令的输出，替换到另一个命令的某个位置。
 
+通常使用 `$()` 符号来实现命令替换；这种方法比较通用，并且比较明显；
+
+在 \*nix 系统上，也有用反引号（backticks）“\`”进行命令替换的，但是反引号不容易与一般引号区分，因此建议使用 `$()`。
+
 常见的命令比如：
 
 ```bash
@@ -276,13 +282,17 @@ echo "^[[32m hello ^[[0m"
 
 ![控制终端输出文本的颜色](./assets/terminal-color-control.svg)
 
-如果无法键入 ESC 字符，可以使用“转义字符”表示 ESC 字符。*nix 中可以给“echo”命令加一个参数“`-e`”，使其解析字符串中的转义字符。
+如果无法键入 ESC 字符，在 Windows 上可以尝试升级或更换所使用的**终端**。
+
+而在 \*nix 中，可以给“echo”命令加一个参数“`-e`”，使其解析字符串中的转义字符，然后使用“转义字符”表示 ESC 字符。
 
 ```bash
 ehco -e "\033[31m hello \033[0m"
 ```
 
-有关彩色输出控制序列在此不过多介绍了，感兴趣的同学可以自行查找相关资料（如“escape sequence”）。
+如果实在无法输入字符，可以只观察一下图片中的示例即可。在之后的内容中会指引读者通过编程的方式输出“转义序列”。
+
+有关彩色输出控制序列在此不过多介绍了，感兴趣的同学可以自行查找相关资料。
 
 
 
@@ -346,7 +356,8 @@ int main(int argc, char* argv[]) {
 
 ## 参考资料
 
-- https://printempw.github.io/the-difference-between-cli-terminal-shell-tty/
+- [命令行界面 (CLI)、终端 (Terminal)、Shell、TTY，傻傻分不清楚？ - PRIN BLOG - printempw.github.io](https://printempw.github.io/the-difference-between-cli-terminal-shell-tty/)
+- [脱字符表示法 - 维基百科](https://zh.wikipedia.org/wiki/%E8%84%B1%E5%AD%97%E7%AC%A6%E8%A1%A8%E7%A4%BA%E6%B3%95)
 
 ## 作业
 
