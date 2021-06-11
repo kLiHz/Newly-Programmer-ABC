@@ -1,0 +1,61 @@
+<svg width="850" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="0" y="0" width="850" height="300" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)">
+		<rect x="0" y="0" width="850" height="300" fill="#FFFFFF" />
+		<path d="M247.16 56.5311 314.16 56.5311 314.16 77.5311 247.16 77.5311Z" fill="#FFFF00" fill-rule="evenodd" />
+		<text font-family="Courier New,monospace" font-weight="400" font-size="19" transform="translate(34.9929 49)">
+			PS C:\Users\Henry&gt;
+			<tspan fill="#BF9000" font-size="19" x="212.167" y="0">
+				g++
+			</tspan>
+			cmd-line-test.cpp -o test
+
+			
+			<tspan font-size="19" x="0" y="23">
+				PS C:\Users\Henry&gt;
+			</tspan>
+
+			<tspan fill="#BF9000" font-size="19" x="212.167" y="23">
+				./test
+			</tspan>
+			<tspan font-size="19" x="290.333" y="23">
+				123 abc hello bye!
+			</tspan>
+			<tspan font-size="19" x="0" y="45">
+				Received 5 command-line argument(s).
+			</tspan>
+			
+			<tspan font-size="19" x="0" y="68">
+				0. C:\Users\Henry\test.exe
+			</tspan>
+
+			<tspan font-size="19" x="0" y="90">
+				1. 123
+			</tspan>
+			<tspan font-size="19" x="0" y="112">
+				2. abc
+			</tspan>
+			<tspan font-size="19" x="0" y="135">
+				3. hello
+			</tspan>
+			<tspan font-size="19" x="0" y="157">
+				4. bye!
+			</tspan>
+		</text>
+		<path d="M358.736 164.623 312.492 85.2636 314.22 84.2566 360.464 163.616ZM310.572 87.926 310 79 317.484 83.8983Z" fill="#FF0000" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(324.052 191)">
+			test 是一个可执行程序，
+
+			<tspan font-family="NSimSun,sans-serif" font-size="24" x="0" y="29">
+				但不是一个系统程序，
+			</tspan>
+			<tspan font-family="NSimSun,sans-serif" font-size="24" x="0" y="58">
+				所以我们用“路径”的方式来访问/执行它
+			</tspan>
+		</text>
+	</g>
+</svg>
