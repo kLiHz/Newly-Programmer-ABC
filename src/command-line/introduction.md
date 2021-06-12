@@ -40,6 +40,8 @@ CLI（Command-Line Interface），即“命令行界面”。
 
 ![命令示例](./assets/shell-command-example.svg)
 
+> 如果你不明白这个命令，别着急，我们会在“命令行工具”中讲到它。
+
 ### 命令行参数的一个惯例
 
 再看一条命令：
@@ -365,3 +367,4 @@ int main(int argc, char* argv[]) {
 
 2\. 了解正则表达式；
 
+3\. 阅读参考资料。
