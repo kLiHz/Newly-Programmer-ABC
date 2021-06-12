@@ -5,6 +5,11 @@
 - [准备篇](beginning/README.md)
     - [什么是计算机](beginning/what-are-computers.md)
     - [购买一台计算机](beginning/buying-a-computer.md)
+- [使用自己的计算机](use-your-computer/README.md)
+    - [目录、文件、文件系统](use-your-computer/files-and-directories.md)
+    - [文件格式](use-your-computer/file-format.md)
+    - [整理自己的文件](use-your-computer/organize-your-files.md)
+
 - [使用虚拟机](virtual-machine/README.md)
     - [在 Windows 上的虚拟机中安装 Ubuntu](virtual-machine/try-ubuntu-on-windows.md)
 
