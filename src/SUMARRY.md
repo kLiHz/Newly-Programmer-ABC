@@ -5,6 +5,11 @@
 - [准备篇](beginning/README.md)
     - [什么是计算机](beginning/what-are-computers.md)
     - [购买一台计算机](beginning/buying-a-computer.md)
+
+- [认识自己的计算机](know-your-computer/README.md)
+    - [使用电子产品](know-your-computer/use-electronic-products.md)
+    - [常见的接口、协议](know-your-computer/interface-and-protocol.md)
+
 - [使用自己的计算机](use-your-computer/README.md)
     - [目录、文件、文件系统](use-your-computer/files-and-directories.md)
     - [文件格式](use-your-computer/file-format.md)
