@@ -1,6 +1,6 @@
 # Summary
 
-- [序言](preface.md)
+[序言](preface.md)
 
 - [准备篇](beginning/README.md)
     - [什么是计算机](beginning/what-are-computers.md)
