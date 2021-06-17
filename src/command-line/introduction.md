@@ -330,6 +330,20 @@ int main(int argc, char* argv[]) {
 
 ![在终端中运行自己构建的 CLI 程序](./assets/running-self-built-cli-app.svg)
 
+图片的 `test` 是一个可执行程序，但 `test` 不是一个全局可用的命令，它只在当前目录下可用，因此我们采用如 `./test` 这样通过**路径**的方式来访问/执行它。有些时候，我们也会通过绝对路径的方式访问某个可执行程序，如：
+
+```bash
+C:/Users/Henry/test 123 abc hello
+```
+
+有时候，文件名中可能包含空格，这需要转义。或者，我们可以使用引号将整个路径括起来，像下面这样：
+
+```bash
+"/path/to/an/executable" 123 abc hello
+```
+
+> 至于如何让一个应用在全局可用，我们会在之后讲解“环境变量”。
+
 ## 如何执行需要提权的命令？
 
 ### Windows：运行提权的 Shell

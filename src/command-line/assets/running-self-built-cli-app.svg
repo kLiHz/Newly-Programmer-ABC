@@ -1,11 +1,11 @@
-<svg width="850" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+<svg width="850" height="260" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
 	<defs>
 		<clipPath id="clip0">
-			<rect x="0" y="0" width="850" height="300" />
+			<rect x="0" y="0" width="850" height="260" />
 		</clipPath>
 	</defs>
 	<g clip-path="url(#clip0)">
-		<rect x="0" y="0" width="850" height="300" fill="#FFFFFF" />
+		<rect x="0" y="0" width="850" height="260" fill="#FFFFFF" />
 		<path d="M247.16 56.5311 314.16 56.5311 314.16 77.5311 247.16 77.5311Z" fill="#FFFF00" fill-rule="evenodd" />
 		<text font-family="Courier New,monospace" font-weight="400" font-size="19" transform="translate(34.9929 49)">
 			PS C:\Users\Henry&gt;
@@ -44,17 +44,6 @@
 			</tspan>
 			<tspan font-size="19" x="0" y="157">
 				4. bye!
-			</tspan>
-		</text>
-		<path d="M358.736 164.623 312.492 85.2636 314.22 84.2566 360.464 163.616ZM310.572 87.926 310 79 317.484 83.8983Z" fill="#FF0000" />
-		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(324.052 191)">
-			test 是一个可执行程序，
-
-			<tspan font-family="NSimSun,sans-serif" font-size="24" x="0" y="29">
-				但不是一个系统程序，
-			</tspan>
-			<tspan font-family="NSimSun,sans-serif" font-size="24" x="0" y="58">
-				所以我们用“路径”的方式来访问/执行它
 			</tspan>
 		</text>
 	</g>
