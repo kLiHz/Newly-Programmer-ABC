@@ -1,0 +1,6 @@
+[book]
+title = "程序员入门指南"
+#authors = ["本书编写组"]
+language = "zh-CN"
+multilingual = false
+src = "src"
