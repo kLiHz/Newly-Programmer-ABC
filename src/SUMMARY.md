@@ -21,6 +21,9 @@
 - [使用虚拟机](virtual-machine/README.md)
     - [在 Windows 上的虚拟机中安装 Ubuntu](virtual-machine/try-ubuntu-on-windows.md)
 
+- [开始编程](begin-programming/README.md)
+    - [数据结构与算法入门](begin-programming/ds-algo-intro.md)
+
 - [命令行使用](./command-line/README.md)
     - [命令行入门](./command-line/introduction.md)
     - [一些常用 Shell 命令](./command-line/common-commands.md)
