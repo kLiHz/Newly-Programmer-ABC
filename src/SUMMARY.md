@@ -30,8 +30,10 @@
     - [看懂 C/C++ 代码](begin-programming/read-cpp.md)
 - [编程语言：C++](cpp/README.md)
     - [C/C++ 代码规范](cpp/coding-practices.md)
-    - [C++ Lambda 表达式](cpp/lambda-expression.md)
+    - [编译、链接](cpp/compile-and-link.md)
     - [C/C++ 多文件编程](cpp/multi-files-programming.md)
+    - [CMake 入门](cpp/cmake-intro.md)
+    - [C++ Lambda 表达式](cpp/lambda-expression.md)
     - [用类包装算法](cpp/wrap-algorithm-with-class.md)
 
 
