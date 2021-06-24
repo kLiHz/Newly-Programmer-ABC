@@ -1,0 +1,42 @@
+<svg width="800" height="560" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="0" y="0" width="1280" height="720" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)">
+		<rect x="0" y="0" width="800" height="560" fill="#FFFFFF" />
+		<rect x="424.5" y="30.5001" width="350" height="330" stroke="#3B3838" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="21" transform="translate(551.549 55)">
+			funcs.cpp
+			<tspan font-size="19" x="-118.247" y="46">#include "funcs.h"</tspan>
+			<tspan font-weight="400" font-size="19" x="-118.247" y="90">int add(int n, int m)</tspan>
+			<tspan font-weight="400" font-size="19" x="-118.247" y="113">{</tspan>
+			<tspan font-weight="400" font-size="19" x="-76.9133" y="135">return n + m;</tspan>
+			<tspan font-weight="400" font-size="19" x="-118.247" y="158">}</tspan>
+			<tspan font-weight="400" font-size="19" x="-118.247" y="202">int subtract(int n, int m)</tspan>
+			<tspan font-weight="400" font-size="19" x="-118.247" y="225">{</tspan>
+			<tspan font-weight="400" font-size="19" x="-76.9133" y="247">return n - m;</tspan>
+			<tspan font-weight="400" font-size="19" x="-118.247" y="270">}</tspan>
+		</text>
+		<rect x="36.5001" y="30.5001" width="361" height="240" stroke="#3B3838" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="21" transform="translate(175.524 55)">
+			funcs.h
+			<tspan font-size="19" x="-129.913" y="46">#ifndef FUNCS_H</tspan>
+			<tspan font-size="19" x="-129.913" y="68">#define FUNCS_H</tspan>
+			<tspan font-weight="400" font-size="19" x="-129.913" y="113">int add(int n, int m);</tspan>
+			<tspan font-weight="400" font-size="19" x="-129.913" y="135">int subtract(int n, int m);</tspan>
+			<tspan font-size="19" x="-129.913" y="180">#endif</tspan>
+		</text>
+		<rect x="36.5001" y="292.5" width="361" height="239" stroke="#3B3838" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="21" transform="translate(169.69 316)">
+			main.cpp
+			<tspan font-size="19" x="-124.08" y="46">#include "funcs.h"</tspan>
+			<tspan font-weight="400" font-size="19" x="-124.08" y="90">int main()</tspan>
+			<tspan font-weight="400" font-size="19" x="-124.08" y="113">{</tspan>
+			<tspan font-weight="400" font-size="19" x="-82.7467" y="135">add(6,7);</tspan>
+			<tspan font-weight="400" font-size="19" x="-82.7467" y="158">subtract(8,9);</tspan>
+			<tspan font-weight="400" font-size="19" x="-124.08" y="180">}</tspan>
+		</text>
+	</g>
+</svg>

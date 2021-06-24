@@ -28,4 +28,10 @@
 - [开始编程](begin-programming/README.md)
     - [数据结构与算法入门](begin-programming/ds-algo-intro.md)
     - [看懂 C/C++ 代码](begin-programming/read-cpp.md)
+- [编程语言：C++](cpp/README.md)
+    - [C/C++ 代码规范](cpp/coding-practices.md)
+    - [C++ Lambda 表达式](cpp/lambda-expression.md)
+    - [C/C++ 多文件编程](cpp/multi-files-programming.md)
+    - [用类包装算法](cpp/wrap-algorithm-with-class.md)
+
 

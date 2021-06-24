@@ -1,0 +1,56 @@
+<svg width="1000" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="0" y="0" width="1280" height="720" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)">
+		<rect x="0" y="0" width="1000" height="500" fill="#FFFFFF" />
+		<path d="M919.933 393.178 876.428 322.526 877.563 321.827 921.068 392.479ZM874.289 325.409 873.5 316.5 881.101 321.215Z" />
+		<text font-family="Courier New,KaiTi,sans-serif" font-weight="400" font-size="21" transform="translate(841.198 418)">
+			main.cpp中会有
+			<tspan font-family="Courier New,KaiTi,sans-serif" font-size="21" x="7.16669" y="25">两个func函数</tspan>
+		</text>
+		<rect x="347.5" y="26.5001" width="293" height="210" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="21" transform="translate(440.936 50)">
+			func2.cpp
+			<tspan font-weight="400" font-size="19" x="-84.4133" y="40">#include "func.cpp"</tspan>
+			<tspan font-weight="400" font-size="19" x="-84.4133" y="85">void</tspan>
+			<tspan font-weight="400" font-size="19" x="-32.7466" y="85">func2(int a, int b)</tspan>
+			<tspan font-weight="400" font-size="19" x="-84.4133" y="107">{</tspan>
+			<tspan font-weight="400" font-size="19" x="-43.08" y="130">/*...*/</tspan>
+			<tspan font-weight="400" font-size="19" x="-84.4133" y="152">}</tspan>
+		</text>
+		<rect x="347.5" y="249.5" width="293" height="211" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="21" transform="translate(440.936 274)">
+			func1.cpp
+			<tspan font-weight="400" font-size="19" x="-84.4133" y="40">#include "func.cpp"</tspan>
+			<tspan font-weight="400" font-size="19" x="-84.4133" y="85">void func1(int a, int b)</tspan>
+			<tspan font-weight="400" font-size="19" x="-84.4133" y="107">{</tspan>
+			<tspan font-weight="400" font-size="19" x="-43.08" y="130">/*...*/</tspan>
+			<tspan font-weight="400" font-size="19" x="-84.4133" y="152">}</tspan>
+		</text>
+		<rect x="679.5" y="126.5" width="254" height="240" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="21" transform="translate(759.285 151)">
+			main.cpp
+			<tspan font-weight="400" font-size="19" x="-71.1667" y="40">#include "func1.cpp"</tspan>
+			<tspan font-weight="400" font-size="19" x="-71.1667" y="62">#include "func2.cpp"</tspan>
+			<tspan font-weight="400" font-size="19" x="-71.1667" y="107">int main()</tspan>
+			<tspan font-weight="400" font-size="19" x="-71.1667" y="130">{</tspan>
+			<tspan font-weight="400" font-size="19" x="-29.8334" y="152">/*...*/</tspan>
+			<tspan font-weight="400" font-size="19" x="-71.1667" y="174">}</tspan>
+		</text>
+		<rect x="35.5001" y="160.5" width="267" height="172" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="21" transform="translate(121.682 185)">
+			func.cpp
+			<tspan font-weight="400" font-size="19" x="-77.3333" y="46">void func(int a, int b)</tspan>
+			<tspan font-weight="400" font-size="19" x="-77.3333" y="68">{</tspan>
+			<tspan font-weight="400" font-size="19" x="-36" y="90">/*...*/</tspan>
+			<tspan font-weight="400" font-size="19" x="-77.3333" y="113">}</tspan>
+		</text>
+		<path d="M0.628238-0.223071 36.9156 101.973 35.6591 102.42-0.628238 0.223071ZM39.6107 99.6017 38.5181 108.479 32.0718 102.279Z" transform="matrix(1 0 0 -1 640.5 354.979)" />
+		<path d="M303.116 246.245 345.526 348.565 344.295 349.076 301.884 246.755ZM348.095 346.057 347.463 354.979 340.705 349.12Z" />
+		<path d="M0.620895-0.242762 43.1563 108.547 41.9145 109.033-0.620895 0.242762ZM45.7753 106.092 44.963 114.999 38.3245 109.005Z" transform="matrix(1 0 0 -1 302.5 246.499)" />
+		<path d="M641.132 131.288 677.533 239.966 676.269 240.389 639.868 131.712ZM680.27 237.643 679.018 246.499 672.684 240.184Z" />
+	</g>
+</svg>
