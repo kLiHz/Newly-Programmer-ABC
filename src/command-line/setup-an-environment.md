@@ -112,12 +112,12 @@ JetBrains 系的 IDE 也是跨平台的，社区版免费；同时提供学生�
 
 扩展阅读：
 
-> [MinGW、MinGW-w64 与TDM-GCC 应该如何选择？ - 知乎](https://www.zhihu.com/question/39952667)
+> [MinGW、MinGW-w64 与 TDM-GCC 应该如何选择？ - 知乎](https://www.zhihu.com/question/39952667)
 >
 > [如果仅考虑 Windows 平台，不用 msvc 而去用 gcc 的理由有哪些？ - 知乎](https://www.zhihu.com/question/41733001)
 >
-> [Qt用 MSVC和MinGW哪个编译器编译程序比较好？ - 知乎](https://www.zhihu.com/question/331375227)
+> [Qt 用 MSVC 和 MinGW 哪个编译器编译程序比较好？ - 知乎](https://www.zhihu.com/question/331375227)
 >
-> [怎么安装mingw离线包？ - 知乎](https://www.zhihu.com/question/313334589)
+> [怎么安装 mingw 离线包？ - 知乎](https://www.zhihu.com/question/313334589)
 >
-> [如何评价MSYS2以及未来发展方向如何？](https://www.zhihu.com/question/37025275)
+> [如何评价 MSYS2 以及未来发展方向如何？](https://www.zhihu.com/question/37025275)

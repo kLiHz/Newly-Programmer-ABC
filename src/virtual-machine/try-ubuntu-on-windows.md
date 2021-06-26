@@ -5,7 +5,9 @@
 - 掌握 Windows 下软件的获取与安装
 - 从网络上查找并下载资料
 
-Ubuntu是一个常见的Linux发行版。本文主要讲解在VMware Workstation中安装Ubuntu以及一些基本的使用。
+Ubuntu 是一个常见的 Linux 发行版。本文主要讲解在 VMware Workstation 中安装 Ubuntu 以及一些基本的使用。
+
+链接里面讲到了一些知识，可以了解一下：[《Linux就该这么学》第0章 咱们先来谈谈学习方法和红帽系统 - linuxprobe.com](https://www.linuxprobe.com/chapter-00.html)
 
 ## 为什么要使用 Linux？
 
@@ -17,11 +19,11 @@ Ubuntu是一个常见的Linux发行版。本文主要讲解在VMware Workstation
 
 ## 安装 Ubuntu 操作系统
 
-Ubuntu是比较常见的一个Linux的发行版，而且市场占有率较大。
+Ubuntu 是比较常见的一个 Linux 的发行版，而且市场占有率较大。
 
 ### 获取安装介质
 
-要使用Ubuntu操作系统，我们需要先获取其安装镜像。去官网上获取最新的安装镜像。
+要使用 Ubuntu 操作系统，我们需要先获取其安装镜像。去官网上获取最新的安装镜像。
 
 [Ubuntu 官网 - ubuntu.com](https://ubuntu.com/)
 
@@ -116,3 +118,7 @@ sudo apt-get install cmake
 ### 安装 VMware Tools
 
 安装虚拟机的增强工具会使得虚拟机的使用变得方便，比如文件拖拽、剪贴板共享等。点击 Workstation 的“虚拟机”菜单栏，按照步骤安装即可。
+
+拓展阅读：
+
+参考资料：[喜大普奔！Hyper-V 和 VMWare 终于可以无缝共存、同时运行了！ - 简书 - jianshu.com](https://www.jianshu.com/p/c02f776a65cd)
