@@ -57,6 +57,8 @@ MSYS2 为我们提供了类似 Linux 发行版的操作环境。在 MSYS2 的安
 
 在“MSYS2 MinGW 64-bit”环境中，C/C++ 编译器为“MinGW gcc 64-bit”，其可以生成 Windows 平台下原生的可执行文件（exe）。其包管理器安装的软件也是由 MinGW gcc 构建的软件。我们把这一整套称为“MSYS2 MinGW 64-bit”工具链。
 
+> 我们也可以不使用 MSYS2，只安装 MinGW gcc 作为编译器，并手动安装其他需要的工具和包。
+
 ### 3. Ubuntu
 
 Ubuntu 默认没有安装编译器，我们可以通过包管理器安装所需的软件工具等。
@@ -85,6 +87,37 @@ macOS 默认没有包管理器。安装完成后，我们可以选择安装包�
 
 常用的代码编辑器可以使用 [Visual Studio Code](code.visualstudio.com)，其跨平台可用，且免费开源；虽然只是编辑器，但有海量插件可以实现各种自动化的操作，某种程度上可以当成 IDE 使用。
 
+可以说，不管在哪个平台上，VSCode 都是非常厉害好用的。不过在使用 C++ 的代码智能感知插件时要记得清理缓存，默认的上限是 5 GB，可以修改。
+
 ### 6. 集成开发环境
 
 集成开发环境（IDE）是包含了代码编辑、调试、协作等诸多功能的软件。除了我们刚刚提到的 Xcode 和 Visual Studio 等，也有 JetBrains 系的 IDE，如 CLion、PyCharm 等。不同于前两者，JetBrains 系的 IDE 一般不会附带安装构建需要的工具。这时就需要使用我们之前配置的编译工具链，有时也称为“外部生成工具”。
+
+JetBrains 系的 IDE 也是跨平台的，社区版免费；同时提供学生优惠，即用教育邮箱（或其他方式）认证后可以使用专业版。其产品包括开发 C/C++ 项目用的 CLion ，也有编写 Python 的 PyCharm。
+
+[如何评价 JetBrains 的新 C/C++ IDE CLion？](https://www.zhihu.com/question/25259569)
+
+如今，Visual Studio 提供免费的社区版，而商业版本需要收费。Visual Studio 在使用过程中可能会在项目文件夹下产生很大的缓存，使用时需要注意。
+
+现代 IDE 基本都有**代码补全**、**语法检查**等功能。为什么强调这些功能呢？比如代码补全功能不需要编程者记录确切的函数名，只需要几次击键就可以联想出函数名，可以提高编程效率，同时也能降低错误率。而语法检查则能让编程者及时发现错误，同样能够提高效率。
+
+### 7. 类 Unix 环境的好处
+
+类 Unix 环境下开发，能够方便的找到标头文件（C++），而使用包管理器，也给我们软件的安装带来很多便利，对于常见依赖问题的解决比较方便。
+
+在 Windows 上使用如 MSYS2 这样的环境便是出于这样的考虑。但是模拟的环境毕竟不如原生，而且 Visual Studio 也推出了自己的 vcpkg 包管理器，并且也支持 CMake 管理 C/C++ 项目，寻找依赖也很方便。
+
+
+
+
+扩展阅读：
+
+> [MinGW、MinGW-w64 与TDM-GCC 应该如何选择？ - 知乎](https://www.zhihu.com/question/39952667)
+>
+> [如果仅考虑 Windows 平台，不用 msvc 而去用 gcc 的理由有哪些？ - 知乎](https://www.zhihu.com/question/41733001)
+>
+> [Qt用 MSVC和MinGW哪个编译器编译程序比较好？ - 知乎](https://www.zhihu.com/question/331375227)
+>
+> [怎么安装mingw离线包？ - 知乎](https://www.zhihu.com/question/313334589)
+>
+> [如何评价MSYS2以及未来发展方向如何？](https://www.zhihu.com/question/37025275)

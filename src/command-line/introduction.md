@@ -374,7 +374,7 @@ C:/Users/Henry/test 123 abc hello
 
 ## 参考资料
 
-- [命令行界面 (CLI)、终端 (Terminal)、Shell、TTY，傻傻分不清楚？ - PRIN BLOG - printempw.github.io](https://printempw.github.io/the-difference-between-cli-terminal-shell-tty/)
+- [命令行界面（CLI）、终端（Terminal）、Shell、TTY，傻傻分不清楚？ - PRIN BLOG - printempw.github.io](https://printempw.github.io/the-difference-between-cli-terminal-shell-tty/)
 - [脱字符表示法 - 维基百科](https://zh.wikipedia.org/wiki/%E8%84%B1%E5%AD%97%E7%AC%A6%E8%A1%A8%E7%A4%BA%E6%B3%95)
 
 ## 作业
