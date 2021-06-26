@@ -26,6 +26,7 @@
     - [一些常用 Shell 命令](./command-line/common-commands.md)
 
 - [开始编程](begin-programming/README.md)
+    - [什么是编程](begin-programming/what-is-programming.md)
     - [数据结构与算法入门](begin-programming/ds-algo-intro.md)
     - [看懂 C/C++ 代码](begin-programming/read-cpp.md)
 - [编程语言：C++](cpp/README.md)
