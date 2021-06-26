@@ -24,6 +24,8 @@
 - [命令行使用](./command-line/README.md)
     - [命令行入门](./command-line/introduction.md)
     - [一些常用 Shell 命令](./command-line/common-commands.md)
+    - [一些常用命令行工具](./command-line/common-cli-tools.md)
+    - [建立一个命令行工作环境](./command-line/setup-an-environment.md)
 
 - [开始编程](begin-programming/README.md)
     - [什么是编程](begin-programming/what-is-programming.md)
