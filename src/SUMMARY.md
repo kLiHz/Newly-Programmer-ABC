@@ -31,8 +31,10 @@
     - [什么是编程](begin-programming/what-is-programming.md)
     - [数据结构与算法入门](begin-programming/ds-algo-intro.md)
     - [看懂 C/C++ 代码](begin-programming/read-cpp.md)
+    - [代码规范](begin-programming/coding-practice.md)
+
 - [编程语言：C++](cpp/README.md)
-    - [C/C++ 代码规范](cpp/coding-practices.md)
+    - [C/C++ 代码规范](cpp/cpp-coding-practice.md)
     - [编译、链接](cpp/compile-and-link.md)
     - [C/C++ 多文件编程](cpp/multi-files-programming.md)
     - [CMake 入门](cpp/cmake-intro.md)
