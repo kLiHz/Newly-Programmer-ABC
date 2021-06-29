@@ -11,10 +11,10 @@
     - [常见的接口、协议](know-your-computer/interface-and-protocol.md)
 
 - [使用自己的计算机](use-your-computer/README.md)
-    - [与计算机交互](use-your-computer/interact-with-pc.md)
     - [目录、文件、文件系统](use-your-computer/files-and-directories.md)
     - [文件格式](use-your-computer/file-format.md)
     - [整理自己的文件](use-your-computer/organize-your-files.md)
+    - [与计算机交互](use-your-computer/interact-with-pc.md)
 
 - [网上冲浪]()
     - [掌握一门外语——英语](web-surfing/learn-english.md)
