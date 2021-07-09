@@ -22,17 +22,19 @@
 - [使用虚拟机](virtual-machine/README.md)
     - [在 Windows 上的虚拟机中安装 Ubuntu](virtual-machine/try-ubuntu-on-windows.md)
 
-- [命令行使用](./command-line/README.md)
+- [编程入门](begin-programming/README.md)
+    - [从数据说起]
+    - [什么是编程](begin-programming/what-is-programming.md)
     - [命令行入门](./command-line/introduction.md)
     - [一些常用 Shell 命令](./command-line/common-commands.md)
-    - [一些常用命令行工具](./command-line/common-cli-tools.md)
-    - [建立一个命令行工作环境](./command-line/setup-an-environment.md)
-
-- [开始编程](begin-programming/README.md)
-    - [什么是编程](begin-programming/what-is-programming.md)
     - [数据结构与算法入门](begin-programming/ds-algo-intro.md)
     - [看懂 C/C++ 代码](begin-programming/read-cpp.md)
+    - [编译运行第一个 C/C++ 程序](begin-programming/first-cpp-program.md)
     - [代码规范](begin-programming/coding-practice.md)
+
+- [命令行使用](./command-line/README.md)
+    - [一些常用命令行工具](./command-line/common-cli-tools.md)
+    - [建立一个命令行工作环境](./command-line/setup-an-environment.md)
 
 - [编程语言：C++](cpp/README.md)
     - [C/C++ 代码规范](cpp/cpp-coding-practice.md)
