@@ -19,8 +19,6 @@
 - [网上冲浪]()
     - [掌握一门外语——英语](web-surfing/learn-english.md)
 
-- [使用虚拟机](virtual-machine/README.md)
-    - [在 Windows 上的虚拟机中安装 Ubuntu](virtual-machine/try-ubuntu-on-windows.md)
 
 - [编程入门](begin-programming/README.md)
     - [什么是编程](begin-programming/what-is-programming.md)
@@ -30,6 +28,9 @@
     - [看懂 C/C++ 代码](begin-programming/read-cpp.md)
     - [编译运行第一个 C/C++ 程序](begin-programming/first-cpp-program.md)
     - [代码规范](begin-programming/coding-practice.md)
+
+- [使用虚拟机](virtual-machine/README.md)
+    - [在 Windows 上的虚拟机中安装 Ubuntu](virtual-machine/try-ubuntu-on-windows.md)
 
 - [命令行使用](./command-line/README.md)
     - [一些常用命令行工具](./command-line/common-cli-tools.md)
