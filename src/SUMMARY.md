@@ -23,9 +23,8 @@
     - [在 Windows 上的虚拟机中安装 Ubuntu](virtual-machine/try-ubuntu-on-windows.md)
 
 - [编程入门](begin-programming/README.md)
-    - [从数据说起]
     - [什么是编程](begin-programming/what-is-programming.md)
-    - [命令行入门](./command-line/introduction.md)
+    - [命令行与 Shell 程序](./command-line/cli-and-shell.md)
     - [一些常用 Shell 命令](./command-line/common-commands.md)
     - [数据结构与算法入门](begin-programming/ds-algo-intro.md)
     - [看懂 C/C++ 代码](begin-programming/read-cpp.md)
