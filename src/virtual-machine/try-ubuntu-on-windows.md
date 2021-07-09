@@ -4,6 +4,7 @@
 
 - 掌握 Windows 下软件的获取与安装
 - 从网络上查找并下载资料
+- 使用命令行操作计算机
 
 Ubuntu 是一个常见的 Linux 发行版。本文主要讲解在 VMware Workstation 中安装 Ubuntu 以及一些基本的使用。
 
