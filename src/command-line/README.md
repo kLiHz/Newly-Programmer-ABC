@@ -9,7 +9,12 @@
 - 什么是超链接；
 - 可能还需要一些英语基础。
 
-目录：
+本章内容包括：
 
-- [命令行入门](./introduction.md)
+- [命令行入门：命令行与 Shell 程序](./cli-and-shell.md)
 - [一些常用 Shell 命令](./common-commands.md)
+
+> 上述两篇内容提前放在了章节“开始编程”中。
+
+- [一些常用命令行工具](./common-cli-tools.md)
+- [建立一个命令行工作环境](./setup-an-environment.md)
