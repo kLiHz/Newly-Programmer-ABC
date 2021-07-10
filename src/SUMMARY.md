@@ -15,6 +15,8 @@
     - [文件格式](use-your-computer/file-format.md)
     - [整理自己的文件](use-your-computer/organize-your-files.md)
     - [与计算机交互](use-your-computer/interact-with-pc.md)
+    - [标记语言和富文本](use-your-computer/markup-lang-and-rich-text.md)
+    - [互联网](use-your-computer/internet.md)
 
 - [网上冲浪]()
     - [掌握一门外语——英语](web-surfing/learn-english.md)
