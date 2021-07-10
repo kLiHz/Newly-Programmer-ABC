@@ -20,7 +20,7 @@
 
 目录：[src/SUMMARY.md](src/SUMMARY.md)
 
-在线阅读地址：【施工中】
+在线阅读地址：[GitHub Pages](https://tsagaanbar.github.io/Newly-Programmer-ABC/)
 
 友情链接：
 
