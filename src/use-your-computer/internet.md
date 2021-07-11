@@ -22,4 +22,4 @@
 
 ## DNS 污染
 
-（待补充）
+[详解DNS服务，DNS解析，DNS劫持和污染 - 硬件茶谈 - 哔哩哔哩](https://www.bilibili.com/video/BV1Rp4y1a7xQ)
