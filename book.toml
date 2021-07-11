@@ -4,3 +4,7 @@ title = "程序员入门指南"
 language = "zh-CN"
 multilingual = false
 src = "src"
+
+[output.html]
+git-repository-url = "https://gitee.com/tsagaanbar/Newly-Programmer-ABC"
+mathjax-support = true

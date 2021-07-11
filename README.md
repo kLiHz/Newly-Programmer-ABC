@@ -20,7 +20,13 @@
 
 目录：[src/SUMMARY.md](src/SUMMARY.md)
 
-在线阅读地址：[GitHub Pages](https://tsagaanbar.github.io/Newly-Programmer-ABC/)
+在线阅读地址：[GitHub Pages](https://tsagaanbar.github.io/Newly-Programmer-ABC/) 
+
+构建静态页面：
+
+使用 [mdBook](https://github.com/rust-lang/mdBook) 构建。
+
+> mdBook 本身支持 MathJax 嵌入，这不需要安装额外的预处理器，但目前仍需要使用 `\( \)` 和 `\[ \]` 包裹公式，且公式代码内部的反斜线、下划线等还需要转义，以便正常通过 Markdown 渲染器（renderer）。详见 [官方技术文档](https://rust-lang.github.io/mdBook/format/mathjax.html)。
 
 友情链接：
 
