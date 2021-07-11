@@ -125,14 +125,12 @@ Markdown 没有一个统一的规范，可以说，只规定了最基础的一�
 
 | 代码                    | 预览                  |
 | ----------------------- | --------------------- |
-| `$f(x) = x^2 + 2x + 1$` | $f(x) = x^2 + 2x + 1$ |
+| `$f(x) = x^2 + 2x + 1$` | \\(f(x) = x^2 + 2x + 1\\) |
 
 关于 Markdown 语法的教程，读者可以访问下面的网页：
 
-Markdown 的基本语法及注意事项：[markdownguide.org/basic-syntax](https://www.markdownguide.org/basic-syntax)
-
-Markdown 语法速查表：[markdownguide.org/cheat-sheet](https://www.markdownguide.org/cheat-sheet)
-
+- Markdown 的基本语法及注意事项：[markdownguide.org/basic-syntax](https://www.markdownguide.org/basic-syntax)
+- Markdown 语法速查表：[markdownguide.org/cheat-sheet](https://www.markdownguide.org/cheat-sheet)
 
 
 Markdown 文档的文件后缀名一般为 `.md` 或 `.markdown`。

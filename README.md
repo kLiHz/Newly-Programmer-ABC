@@ -22,11 +22,9 @@
 
 在线阅读地址：[GitHub Pages](https://tsagaanbar.github.io/Newly-Programmer-ABC/) 
 
-构建静态页面：
+构建静态页面：使用 [mdBook](https://github.com/rust-lang/mdBook) 构建。
 
-使用 [mdBook](https://github.com/rust-lang/mdBook) 构建。
-
-> mdBook 本身支持 MathJax 嵌入，这不需要安装额外的预处理器，但目前仍需要使用 `\( \)` 和 `\[ \]` 包裹公式，且公式代码内部的反斜线、下划线等还需要转义，以便正常通过 Markdown 渲染器（renderer）。详见 [官方技术文档](https://rust-lang.github.io/mdBook/format/mathjax.html)。
+> mdBook 本身具有对 MathJax 的支持，但目前需要使用 `\( \)` 和 `\[ \]` 包裹公式（而不是通行的 `$` 和 `$$`），且公式代码中的反斜线、下划线等还需要转义，才能在正常通过 Markdown 渲染器（renderer）后不被丢失。参见 [官方技术文档](https://rust-lang.github.io/mdBook/format/mathjax.html)。
 
 友情链接：
 
@@ -39,6 +37,7 @@
 参考资料：
 
 - 《计算机教育中缺失的一课（The Missing Semester of Your CS Education）》[中文版网站](https://missing-semester-cn.github.io/)、[中文版 GitHub 仓库地址](https://github.com/missing-semester-cn/missing-semester-cn.github.io)
+- [编程入门指南 v1.5 - 知乎专栏](https://zhuanlan.zhihu.com/p/19959253)
 
 除特别注明外，项目中除代码外的部分均在 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 协议之条款下提供。
 

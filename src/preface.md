@@ -9,7 +9,13 @@
 祝你学习愉快！
 
 
- 
+
 > 关于参与该项目：
 >
 > 如果你正在使用浏览器浏览该页面，可以点击右上角的图标，访问该项目的在线仓库。
+>
+> 项目地址：
+>
+> - GitHub：https://github.com/tsagaanbar/Newly-Programmer-ABC
+> - Gitee：https://gitee.com/tsagaanbar/Newly-Programmer-ABC
+
