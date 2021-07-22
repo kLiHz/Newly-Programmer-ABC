@@ -19,6 +19,7 @@
     - [互联网](use-your-computer/internet.md)
     - [如何连接到网络](use-your-computer/connect-to-network.md)
     - [访问互联网上的内容](use-your-computer/browsing-internet.md)
+    - [获取、安装应用程序](use-your-computer/acquire-and-install-apps.md)
 
 - [网上冲浪]()
     - [掌握一门外语——英语](web-surfing/learn-english.md)

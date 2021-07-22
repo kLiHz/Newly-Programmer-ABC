@@ -19,3 +19,4 @@
 - [互联网](./internet.md)
 - [如何连接到网络](./connect-to-network.md)
 - [访问互联网上的内容](./browsing-internet.md)
+- [获取、安装应用程序](./acquire-and-install-apps.md)
