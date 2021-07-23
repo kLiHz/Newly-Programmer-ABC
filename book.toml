@@ -6,5 +6,5 @@ multilingual = false
 src = "src"
 
 [output.html]
-git-repository-url = "https://gitee.com/tsagaanbar/Newly-Programmer-ABC"
+git-repository-url = "https://github.com/tsagaanbar/Newly-Programmer-ABC"
 mathjax-support = true
