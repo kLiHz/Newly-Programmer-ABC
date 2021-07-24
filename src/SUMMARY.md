@@ -40,7 +40,12 @@
 
 - [命令行使用](./command-line/README.md)
     - [一些常用命令行工具](./command-line/common-cli-tools.md)
-    - [建立一个命令行工作环境](./command-line/setup-an-environment.md)
+    - [搭建命令行工作环境](./command-line/setup-an-environment.md)
+
+- [必备知识/知识包](knowledge-pack/README.md)
+    - [许可证]()
+    - [UML：统一建模语言]()
+
 - [代码的分享、管理与协作](code-sharing/README.md)
     - [从代码分享说起](code-sharing/where-it-all-began.md)
     - [代码托管平台与版本控制系统](code-sharing/code-hosting-platform-and-vcs.md)

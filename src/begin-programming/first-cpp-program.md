@@ -30,7 +30,9 @@
 
 针对 Windows 用户，我们先介绍安装 Visual Studio 的方法。Visual Studio 是一个完备的 IDE，也就是，提供编辑代码和编译、构建代码等一系列功能。
 
-笔者个人一开始并不喜欢 Visual Studio，觉得它过于庞大和复杂，配置启动项也比较麻烦，不易学习和掌握。但是随着学习的深入和观念的转变，发现 Visual Studio 还是最适合新手的，因为安装过程十分简单，而选择 CMake 作为项目构建管理工具会使得项目的配置过程轻松很多：
+笔者个人一开始并不喜欢 Visual Studio，觉得它过于庞大和复杂，配置启动项也比较麻烦，不易学习和掌握。但是随着学习的深入和观念的转变，发现 Visual Studio 还是最适合新手的，因为安装过程十分简单，而选择 CMake 作为项目构建管理工具会使得项目的配置过程轻松很多。
+
+> 读者也可以选择只安装 Visual Studio 的命令行工具，这会在“搭建命令行工作环境”中进行详细介绍。
 
 - 打开浏览器，访问 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/)，选择 Visual Studio -> Community 社区版（社区版是免费的），下载完成后直接运行即可。
 
