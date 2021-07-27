@@ -16,7 +16,7 @@
 使用互联网：
 
 - [标记语言和富文本](./markup-lang-and-rich-text.md)
-- [互联网](./internet.md)
-- [如何连接到网络](./connect-to-network.md)
-- [访问互联网上的内容](./browsing-internet.md)
+- [网络和互联网](./network-and-internet.md)
+- [如何浏览互联网](./browsing-internet.md)
+- [互联网能做什么](./what-can-internet-do.md)
 - [获取、安装应用程序](./acquire-and-install-apps.md)

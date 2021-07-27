@@ -14,9 +14,9 @@
     - [整理自己的文件](use-your-computer/organize-your-files.md)
     - [与计算机交互](use-your-computer/interact-with-pc.md)
     - [标记语言和富文本](use-your-computer/markup-lang-and-rich-text.md)
-    - [互联网](use-your-computer/internet.md)
-    - [如何连接到网络](use-your-computer/connect-to-network.md)
-    - [访问互联网上的内容](use-your-computer/browsing-internet.md)
+    - [网络和互联网](use-your-computer/network-and-internet.md)
+    - [如何浏览互联网](use-your-computer/browsing-internet.md)
+    - [互联网能做什么](use-your-computer/what-can-internet-do.md)
     - [获取、安装应用程序](use-your-computer/acquire-and-install-apps.md)
 
 - [网上冲浪]()
