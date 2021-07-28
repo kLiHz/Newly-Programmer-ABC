@@ -17,6 +17,7 @@
     - [网络和互联网](use-your-computer/network-and-internet.md)
     - [如何浏览互联网](use-your-computer/browsing-internet.md)
     - [互联网能做什么](use-your-computer/what-can-internet-do.md)
+    - [建立安全的网络连接](use-your-computer/safe-internet-connection.md)
     - [获取、安装应用程序](use-your-computer/acquire-and-install-apps.md)
 
 - [网上冲浪]()

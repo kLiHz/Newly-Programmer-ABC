@@ -20,3 +20,4 @@
 - [如何浏览互联网](./browsing-internet.md)
 - [互联网能做什么](./what-can-internet-do.md)
 - [获取、安装应用程序](./acquire-and-install-apps.md)
+- [建立安全的网络连接](./safe-internet-connection.md)
