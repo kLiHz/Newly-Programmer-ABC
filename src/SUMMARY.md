@@ -48,6 +48,7 @@
 - [代码的分享、管理与协作](code-sharing/README.md)
     - [从代码分享说起](code-sharing/where-it-all-began.md)
     - [代码托管平台与版本控制系统](code-sharing/code-hosting-platform-and-vcs.md)
+    - [代码托管与版本控制的实际使用](code-sharing/try-code-hosting-and-vcs.md)
 
 - [编程语言：C++](cpp/README.md)
     - [C/C++ 代码规范](cpp/cpp-coding-practice.md)
