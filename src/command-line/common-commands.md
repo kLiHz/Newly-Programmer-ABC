@@ -5,30 +5,50 @@
 - 了解终端、Shell、CLI 等；
 - 理解文件和目录的概念；
 
-## 控制程序运行的命令行参数的一个惯例
+## 命令行选项的惯例
 
-观察下面这两条命令：
+观察下面的命令：
 
-```sh
+```bash
 gcc test1.c -o test1
 apt list --upgradable
 ```
 
-这里的“`list`”“`--upgradable`”都是传递给“`apt`”程序的参数；更进一步讲，带有横线的“`--upgradable`”是用来修饰“`list`”命令的。
+这里的“`list`”“`--upgradable`”都是传递给“`apt`”程序的参数；或者说，“`--upgradable`”是用来修饰“`list`”命令的**命令行选项**。
 
-另外，第一条命令中的“`-o`”和下一条命令的“`--upgradable`”，前者前边有**一根短横线**（连字符），后边只跟了**一个字母**（通常可能为某单词的首字母）；后者前边有**两根短横线**，其后的则是一个**完整的单词**。这是命令行参数的一个惯例。
+形如“`-o`”这样的命令行选项被称为“短选项（short option）”，更长的则为“长选项”，而形如“`--option`”这样以两个连字符为前缀的完整单词则是 GNU 规范中的长选项格式。
 
-再如下面这个命令里，“`-Syu`”中的“`S`”“`y`”“`u`”各有含义，且小写的“`y`”“`u`”为修饰“`S`”命令的参数。
+如今，很多软件遵从 GNU 规范的风格设计命令行参数，但这并不能说明其是一个硬性的要求。
+
 
 ```bash
 pacman -Syu
-```
-
-下面这个命令里的“`cvf`”也是类似的道理，三个字母分别指明了操作的三个属性。
-
-```bash
 jar cvf app1.jar app1
 ```
+
+比如，也有些软件会采用如同“`-Syu`”这样的格式，“`S`”“`y`”“`u`”三个字母各有含义。而像“`cvf`”这种没有任何前缀字符的命令行选项格式，由于历史原因，至今也仍在使用。
+
+此外，“sub-command”的情况也比较常见：
+
+```
+git commit -m "message"
+```
+
+总的来说，不同命令行选项的格式都是历史上探寻最佳设计过程中的产物。请读者阅读 [Command-Line Options (catb.org)](http://catb.org/~esr/writings/taoup/html/ch10s05.html) 以获得更详细的介绍：
+
+Unix 传统鼓励使用命令行参数来控制程序的运行，因为这样可以方便的通过脚本来控制应用程序
+
+根据最初的 Unix 传统，命令行选项是以短横线为前缀的**关键字母**，如“`-a`”“`-b`”。如果该命令行选项有参数，则在其后注明，比如“`-a 10`”。对于没有参数的命令行选项，可以将其合并在一起，比如“`-ab`”或者“`-ba`”。
+
+由于单字母的选项用尽了，GNU 风格开始使用以两个连字符为前缀的**关键词**。命令行选项和其参数之间可以以空格或等号“`=`”间隔，如“`--lines=10`”。这种方法很流行，因为阅读起来更为清晰，并且能和之前的单字母无歧义地组合在一起。
+
+> 参考链接：
+>
+> [bash - Short/long options with option argument - is this some sort of convention? - Stack Overflow](https://stackoverflow.com/questions/10818443/short-long-options-with-option-argument-is-this-some-sort-of-convention)
+>
+> [What is the general syntax of a Unix shell command? - Stack Overflow](https://stackoverflow.com/questions/2160083/what-is-the-general-syntax-of-a-unix-shell-command)
+
+
 
 ## 实用技巧
 
