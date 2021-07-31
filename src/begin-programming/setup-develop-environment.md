@@ -15,7 +15,7 @@
 > 比如，在 Ubuntu 上，我们通常使用 GCC (GNU Compiler Collection) 作为编译器，使用 APT 作为包管理。
 >
 > 在 macOS 上，我们使用 Apple-Clang 编译器，并可以选择 Homebrew 作为包管理器，也可以选择比较少见的 MacPorts 作为包管理器。
-> 
+>
 > 在 Windows 上，我们可以使用 MSVC 作为编译器，使用 vcpkg 管理包（也可以手动管理各种软件包）；也可以安装 MSYS2，使用其提供的 MinGW-w64 GCC 作为编译器，使用其携带的包管理器 pacman 管理软件包；也可以使用 WSL 上的环境（Linux 环境）进行开发。
 
 为了构建适用不同的平台的软件，我们往往需要不同的工具链。在一台计算机上为其他不同平台或新平台构建软件的过程叫做“交叉编译（cross-compiling）”。
@@ -50,7 +50,7 @@ Windows 已经带有 Win32 控制台和 PowerShell 环境，这为我们提供�
 也可以使用 [Scoop](https://scoop.sh/)，这个比较适宜没有管理员权限的情况，并且软件也多一点。缺点是与国际互联网连接性较差时容易安装失败，且从安装失败的状态恢复比较麻烦。
 亦可以使用 MS 官方的 [WinGet](https://github.com/microsoft/winget-cli)，缺点是只能安装而不能卸载。
 
-> macOS 以及诸多 Linux 的发行版的命令行工作环境是类似的（macOS 默认为 bash，也可选择 bash，其使用也与 bash 类似；Linux 大多默认 bash）。两者之间有着类似的工具，命令几乎可以通用。而 Windows 的 PowerShell 命令则别出一格，很多功能、操作的实现所用的命令并不相同。
+> macOS 以及诸多 Linux 的发行版的命令行工作环境是类似的（macOS 默认为 zsh，也可选择 bash，其使用也与 bash 类似；Linux 大多默认 bash）。两者之间有着类似的工具，命令几乎可以通用。而 Windows 的 PowerShell 命令则别出一格，很多功能、操作的实现所用的命令并不相同。
 
 而如果读者希望体验类 Unix 的开发环境、使用类 Unix 的命令行工具，可以使用虚拟机软件安装相关的系统，或者使用 Windows 提供的 WSL 功能（Windows Linux 子系统），也可以使用模拟类似环境的软件，如 Cygwin 和 [MSYS2][msys2] 等。
 
@@ -75,7 +75,7 @@ Windows 已经带有 Win32 控制台和 PowerShell 环境，这为我们提供�
 > MSYS2 为我们提供了类似 Linux 发行版的操作环境。在 MSYS2 的安装目录下有一个“home”目录，这个目录就是我们 MSYS2 环境中的家目录。MSYS2 环境中，Windows 下的各盘符被挂载在根目录下对应的目录上，比如“C盘”被挂载在 `/c/` 下，“D盘”被挂载在 `/d/` 下。
 >
 > 在“MSYS2 MinGW 64-bit”环境中，C/C++ 编译器为“MinGW gcc 64-bit”，如前所述，其可以生成 Windows 平台下原生的可执行文件（exe）。其包管理器安装的软件也是由 MinGW gcc 构建的软件。我们把这一整套称为“MSYS2 MinGW 64-bit”工具链。
-> 
+>
 > 当然，用户可以不使用 MSYS2，只安装 MinGW-w64 gcc 作为编译器，并手动安装其他需要的工具和包。
 
 ### 多个开发工具链
@@ -160,7 +160,7 @@ JetBrains 系的 IDE 也是跨平台的，社区版免费；同时提供学生�
 
 ## 扩展阅读
 
-- [MinGW、MinGW-w64 与 TDM-GCC 应该如何选择？ - 知乎](https://www.zhihu.com/question/39952667)- 
-- [如果仅考虑 Windows 平台，不用 msvc 而去用 gcc 的理由有哪些？ - 知乎](https://www.zhihu.com/question/41733001)- 
+- [MinGW、MinGW-w64 与 TDM-GCC 应该如何选择？ - 知乎](https://www.zhihu.com/question/39952667)-
+- [如果仅考虑 Windows 平台，不用 msvc 而去用 gcc 的理由有哪些？ - 知乎](https://www.zhihu.com/question/41733001)-
 - [如何评价 MSYS2 以及未来发展方向如何？](https://www.zhihu.com/question/37025275)
 - [MinGW-64-bit - Qt Wiki](https://wiki.qt.io/MinGW-64-bit)
