@@ -9,9 +9,9 @@
 
 观察下面的命令：
 
-```bash
-gcc test1.c -o test1
-apt list --upgradable
+```console
+$ gcc test1.c -o test1
+$ apt list --upgradable
 ```
 
 这里的“`list`”“`--upgradable`”都是传递给“`apt`”程序的参数；或者说，“`--upgradable`”是用来修饰“`list`”命令的**命令行选项**。
@@ -21,17 +21,17 @@ apt list --upgradable
 如今，很多软件遵从 GNU 规范的风格设计命令行参数，但这并不能说明其是一个硬性的要求。
 
 
-```bash
-pacman -Syu
-jar cvf app1.jar app1
+```console
+$ pacman -Syu
+$ jar cvf app1.jar app1
 ```
 
 比如，也有些软件会采用如同“`-Syu`”这样的格式，“`S`”“`y`”“`u`”三个字母各有含义。而像“`cvf`”这种没有任何前缀字符的命令行选项格式，由于历史原因，至今也仍在使用。
 
 此外，“sub-command”的情况也比较常见：
 
-```
-git commit -m "message"
+```console
+$ git commit -m "message"
 ```
 
 总的来说，不同命令行选项的格式都是历史上探寻最佳设计过程中的产物。请读者阅读 [Command-Line Options (catb.org)](http://catb.org/~esr/writings/taoup/html/ch10s05.html) 以获得更详细的介绍：
@@ -83,7 +83,7 @@ Unix 传统鼓励使用命令行参数来控制程序的运行，因为这样可
 
 Linux / Unix 操作系统下，以“`.`”开头的文件为隐藏文件，需要用 `-a` 参数才能显示
 
-```bash
+```console
 $ ls -a      # 显示目录下的所有文件/目录
 $ ls -a -l   # 以列表方式显示目录下的所有文件/目录的详细信息
 ```
@@ -98,7 +98,7 @@ $ ls -a -l   # 以列表方式显示目录下的所有文件/目录的详细信�
 
 注意：Linux 所有的 **目录** 和 **文件名** 都是大小写敏感的
 
-```bash
+```console
 $ cd ..      # 切换到上级目录
 ```
 
@@ -118,16 +118,16 @@ $ cd ..      # 切换到上级目录
 
 直接在终端中执行 `pwd`，即可获得当前目录的路径。
 
-```bash
-pwd
+```console
+$ pwd
 ```
 
 ### 使用输出重定向创建文件
 
 我们可以用**输出重定向**的方式新建一个文件。
 
-```bash
-echo "" > hello.txt 
+```console
+$ echo "" > hello.txt 
 ```
 
 上述的命令将会输出空内容到“hello.txt”文件，如果文件不存在，则将会创建一个新文件；如果文件已存在，则将覆盖掉文件原有的内容。
@@ -136,7 +136,7 @@ echo "" > hello.txt
 
 > 新建目录的名称不能与当前目录中**已有的目录或文件**同名
 
-```bash
+```console
 $ mkdir workspace
 $ cd workspace
 $ cd ..

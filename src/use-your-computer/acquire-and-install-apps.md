@@ -113,7 +113,7 @@ Apple 公司生产的移动设备中一般预装其开发的 iOS 操作系统，
 
 #### Firefox 浏览器
 
-读者可以尝试访问 [Firefox 火狐浏览器](https://www.firefox.com.cn/) 下载火狐浏览器。
+读者可以尝试访问 [Firefox 火狐浏览器](https://www.mozilla.org/zh-CN/firefox/new/) 下载火狐浏览器。
 
 #### Visual Studio Code
 

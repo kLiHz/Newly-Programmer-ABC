@@ -20,25 +20,20 @@
 
 关于这款工具的使用这里不详细介绍。假设小 A 的工作目录为“campus-guide”。下面为小 A 工作目录的结构。
 
-```text
+```
 campus-guide
-|
-|   book.toml // 告诉 mdBook 如何生成书籍产物，如格式等可选项
-|
-+---book // mdBook 生成的网页默认会输出在这个目录
-\---src  // 用来生成书籍的源文件目录
-    |
-    |   SUMMARY.md // 描述目录结构的文件
-    |
-    +---chapt-1  // 存放第 1 章节的目录
-    |       1-A.md
-    |       1-B.md
-    |       README.md // 章节开始介绍性的文档
-    |
-    \---chapt-2 // 存放第 2 章节的目录
-            2-A.md
-            2-B.md
-            README.md // 章节开始介绍性的文档
+├── book.toml   // 告诉 mdBook 如何生成书籍产物，如格式等可选项
+├── book/       // mdBook 生成的网页默认会输出在这个目录
+└── src/        // 用来生成书籍的源文件目录
+    ├── SUMMARY.md   // 描述目录结构的文件
+    ├── chapt-1/     // 存放第 1 章节的目录
+    |   ├── 1-A.md
+    |   ├── 1-B.md
+    |   └── README.md   // 章节开始介绍性的文档
+    └── chapt-2/     // 存放第 2 章节的目录
+        ├── 2-A.md
+        ├── 2-B.md
+        └── README.md   // 章节开始介绍性的文档
 ```
 
 相应的，小 A 的 `SUMMARY.md` 可能为如下内容：
@@ -68,29 +63,25 @@ campus-guide
 - [食在校园](./dinning-on-campus/README.md)
     - [食堂就餐流程](./dinning-on-campus/dinning-procedure.md)
     - [食堂特色菜品](./dinning-on-campus/specialties.md)
+
 ```
 
 相应的的目录结构：
 
-```text
+```
 campus-guide
-|
-|   book.toml
-|
-+---book
-\---src
-    |
-    |   SUMMARY.md
-    |
-    +---basic-facilities
-    |       README.md
-    |       south-teaching-building.md
-    |       student-dinning-hall.md
-    |
-    \---dinning-on-campus
-            dinning-procedure.md
-            README.md
-            specialties.md
+├── book.toml
+├── book/
+└── src/
+    ├── SUMMARY.md
+    ├── basic-facilities/
+    |   ├── README.md
+    |   ├── south-teaching-building.md
+    |   └── student-dinning-hall.md
+    └── dinning-on-campus/
+        ├── dinning-procedure.md
+        ├── README.md
+        └── specialties.md
 ```
 
 > mdBook 可以根据 `SUMMARY.md` 文件直接生成缺失的目录和文件。因此用户只需写好 `SUMMARY.md` 即可，执行一次 `mdbook build` 即可实现目录和文件的新建。
@@ -103,7 +94,7 @@ campus-guide
 
 > 这里有一个秩事，1998 年，KDE 开始开发自己的浏览器渲染引擎 KHTML，不久，Apple 发现了这一开源项目，并创建了自己的分支 WebKit。根据 KHTML 采用的 LGPL 协议，Apple 必须公布自己修改后的源码。但是 Apple 使用了极其阴险的方式：他们公开的是没有修改记录（版本历史）的最终源码包，并且里面混杂了大量的 Apple 专有代码。这使得 KDE 无法利用 VCS（版本控制系统）摘取有用的代码修改，浪费了大量人力，并且导致 WebKit 的改进无法被 KHTML 上游吸收，最终这两个渲染引擎分道扬镳。
 
-经过一番调查后，小 A 决定使用 Git 来对自己的项目进行管理。
+经过一番调查后，小 A 决定使用 Git 管理自己的项目。
 
 ## 获得 Git
 
@@ -113,7 +104,7 @@ campus-guide
 
 Git 自带有一个简易的图形化界面客户端。此外，也有许多 [第三方为 Git 设计的图形化客户端](https://git-scm.com/downloads/guis)。对于一般用户来说，使用客户端可以免去记忆和输入命令的苦恼。
 
-关于 Git 的具体使用，读者可以参考 [Git 的官方文档](https://git-scm.com/doc)，以及 [Pro Git](https://git-scm.com/book) 一书。
+关于 Git 的具体使用，读者可以参考 [Git - OI Wiki](https://oi-wiki.org/tools/git/)、[Git 的官方文档](https://git-scm.com/doc)，以及 [Pro Git](https://git-scm.com/book) 一书。
 
 ## 本地和远程仓库的建立
 
@@ -123,13 +114,19 @@ Git 自带有一个简易的图形化界面客户端。此外，也有许多 [�
 
 项目中有些内容是小 A 不应该提交到版本控制系统中的。比如，小 A 使用的 mdBook 工具会将构建产物输出在项目同级的 `book` 目录下。对于使用 Git 的小 A，可以通过在目录下的 `.gitognore` 文件中标记出需要被版本控制系统忽略的某些目录或某些文件。
 
+> 用户可能还需要配置 `.gitattributes` 文件：
+>
+> [git - What is the purpose of `text=auto` in `.gitattributes` file? - Stack Overflow](https://stackoverflow.com/questions/21472971/what-is-the-purpose-of-text-auto-in-gitattributes-file)
+>
+> [什么是 .gitattributes ？ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/108266134)
+
 现在，小 A 完成了本地仓库的初始化。而如果要和小 B 一起合作，还需要建立一个“远程仓库”。
 
 对于小 A 这样的普通用户，它可以选择使用现有的代码托管平台，比如 [GitHub](https://github.com)。注册成为网站的用户后，小 A 可以创建一个属于自己的仓库，也可以创建一个组织（比如“本书编写组”），并将仓库建立在组织名下。
 
 小 A 需要给自己的仓库起一个名字。名称可以是任意的，但为了清晰表示仓库的内容和目的，小 A 决定采用“Campus-Guide-Book”作为仓库的名称。
 
-由于仓库是公开的，为了别人更好的了解仓库中的内容，小 A 可能还需要为自己的项目添加一个 `README` 文件进行说明。根据对应托管平台的情况，小 A 可以使用托管平台支持的标记语言，比如 Markdown，来书写项目的自述文件；也可以采用纯文本文件。
+由于仓库是公开的，为了别人更好的了解仓库中的内容，小 A 可能还需要为自己的项目添加一个 `README` 文件（自述文件）进行说明。根据对应托管平台的情况，小 A 可以使用托管平台支持的标记语言——如 Markdown——或者纯文本文件，来书写项目的自述文件。
 
 除此之外，为了保护自己的知识产权，小 A 可能还需要为自己的仓库添加许可证。
 
@@ -157,13 +154,15 @@ Git 自带有一个简易的图形化界面客户端。此外，也有许多 [�
 
 因此，小 A 和小 B 应该事先约定好分工的部分，并在不同的分支上进行各自的修改，并在需要汇入时从该分支向主分支发起“pull request”，简称“PR”，检查（review）无冲突后，即可将修改合并入主分支。
 
+> 在汇入主分支时，有几种不同的方式。一般，如果为了保持主分支版本迭代线的整洁，会对待合并分支进行 rebase 操作之后合并。
+
 一般来说，对于一个较为稳定的项目，任何参与者每次针对某个问题的修改，都应新建一个分支进行操作。
 
 比如，每当小 A 或小 B 准备开始一个新的章节时，都可以新建一个分支，并在完成后汇入主分支。
 
 > 如果小 A 和小 B 的工作之间存在互相引用的情况，则需要实现设计好引用的接口。
 
-## 第三方的参与
+## 外部人员的参与
 
 为了能够帮助更多的人、同时邀请到更多的人参与进来，小 A 将自己在代码托管平台上的仓库设置为了公开仓库。
 
@@ -192,8 +191,8 @@ Git 自带有一个简易的图形化界面客户端。此外，也有许多 [�
 （待补充）
 
 
----
+## 参考
 
-参考链接：
+- [Git 教程 - 菜鸟教程](https://www.runoob.com/git/git-tutorial.html)
 
-- https://www.runoob.com/git/git-tutorial.html
+- https://zhuanlan.zhihu.com/p/250493093

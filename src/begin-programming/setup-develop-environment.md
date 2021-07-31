@@ -98,20 +98,20 @@ Windows 已经带有 Win32 控制台和 PowerShell 环境，这为我们提供�
 
 Ubuntu 默认没有安装编译器，我们可以通过包管理器安装所需的软件工具等。
 
-```bash
-sudo apt update
-sudo apt install build-essential
-sudo apt install cmake
+```console
+$ sudo apt update
+$ sudo apt install build-essential
+$ sudo apt install cmake
 ```
 
 ### Ubuntu 的包管理器 apt
 
 常用的 `apt` 命令主要有 `update`、`install` 和 `upgrade`。使用这些命令，一般需要管理员权限。
 
-```bash
-sudo apt update      # 刷新本地的软件包信息，计算哪些软件包可以更新
-sudo apt install gcc # 安装名为“gcc”的包
-sudo apt upgrade     # 升级有更新的包
+```console
+$ sudo apt update      # 刷新本地的软件包信息，计算哪些软件包可以更新
+$ sudo apt install gcc # 安装名为“gcc”的包
+$ sudo apt upgrade     # 升级有更新的包
 ```
 
 “本地的软件包信息”相当于从软件源下载到本地的一份索引，其中记录了软件源提供的软件包的版本和**依赖关系**等信息。只有更新了软件源缓存信息，才能知道是否有更新的软件包可以更新；同理，**添加了新的软件源后，也需要执行这个操作**，以获得到新添加的软件源上的信息，这样在执行 `install` 命令时，才能够搜索到需要的包。
@@ -122,8 +122,8 @@ sudo apt upgrade     # 升级有更新的包
 
 首先，我们要安装一些基础的命令行工具。Xcode 是 Apple 的开发工具，我们可以选择只安装命令行工具。
 
-```bash
-xcode-select --install
+```console
+$ xcode-select --install
 ```
 
 键入以上命令后，macOS 会开始安装 Xcode 命令行工具，其中包括我们需要的编译器（Apple-Clang）。
