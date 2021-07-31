@@ -1,0 +1,56 @@
+<svg width="2218" height="669" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="590" y="488" width="2218" height="669" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)" transform="translate(-590 -488)">
+		<rect x="607" y="497" width="2201" height="633" fill="#3B3838" />
+		<text fill="#BFBFBF" font-family="Courier New,monospace" font-weight="400" font-size="83" transform="matrix(1 0 0 1 640.394 586)">
+			$<tspan font-size="83" x="98.5417" y="0">echo</tspan>
+			<tspan font-size="83" x="344.896" y="0">"</tspan>
+			<tspan fill="#A9D18E" font-weight="700" font-size="83" x="394.167" y="0">
+				^[
+			</tspan>
+			<tspan font-size="83" x="492.708" y="0">[31m</tspan>
+			<tspan font-size="83" x="739.063" y="0">hello</tspan>
+			<tspan fill="#A9D18E" font-weight="700" font-size="83" x="1034.69" y="0">
+				^[
+			</tspan>
+			<tspan font-size="83" x="1133.23" y="0">[0m"</tspan>
+			<tspan fill="#CC3300" font-size="83" x="49.2709" y="99">
+				hello
+			</tspan>
+			<tspan font-size="83" x="0" y="198">$</tspan>
+			<tspan font-size="83" x="98.5417" y="198">echo</tspan>
+			<tspan font-size="83" x="344.896" y="198">"</tspan>
+			<tspan fill="#A9D18E" font-weight="700" font-size="83" x="394.167" y="198">
+				^[
+			</tspan>
+			<tspan font-size="83" x="492.708" y="198">[32m</tspan>
+			<tspan font-size="83" x="739.063" y="198">hello</tspan>
+			<tspan fill="#A9D18E" font-weight="700" font-size="83" x="1034.69" y="198">
+				^[
+			</tspan>
+			<tspan font-size="83" x="1133.23" y="198">[0m"</tspan>
+			<tspan fill="#339933" font-size="83" x="49.2709" y="297">
+				hello
+			</tspan>
+			<tspan font-size="83" x="0" y="396">$</tspan>
+			<tspan font-size="83" x="98.5417" y="396">echo</tspan>
+			<tspan font-size="83" x="344.896" y="396">"</tspan>
+			<tspan fill="#A9D18E" font-weight="700" font-size="83" x="394.167" y="396">
+				^[
+			</tspan>
+			<tspan font-size="83" x="492.708" y="396">[1;32m</tspan>
+			<tspan font-size="83" x="837.604" y="396">hello</tspan>
+			<tspan fill="#A9D18E" font-weight="700" font-size="83" x="1133.23" y="396">
+				^[
+			</tspan>
+			<tspan font-size="83" x="1231.77" y="396">[0m"</tspan>
+			<tspan fill="#00FF00" font-size="83" x="49.2709" y="495">
+				hello
+			</tspan>
+		</text>
+	</g>
+</svg>

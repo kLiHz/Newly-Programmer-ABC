@@ -141,22 +141,21 @@ Markdown 没有一个统一的规范，可以说，只规定了最基础的一�
 | ----------------------- | --------------------- |
 | `$f(x) = x^2 + 2x + 1$` | \\(f(x) = x^2 + 2x + 1\\) |
 
+[CommonMark][CommonMark] 是一个对 Markdown 的规范化的语法标准，“Common”表示其兼顾了广泛的 Markdown 使用习惯，读者可以访问 [commonmark.org][CommonMark] 查看 Markdown 的介绍以及其“[60 秒快速入门教程][Learn-MD-in-60s]”。
+
+[CommonMark]: https://commonmark.org/
+[Learn-MD-in-60s]: https://commonmark.org/help/
+
 关于 Markdown 语法的教程，读者可以访问下面的网页：
 
 - Markdown 的基本语法及注意事项：[markdownguide.org/basic-syntax](https://www.markdownguide.org/basic-syntax)
 - Markdown 语法速查表：[markdownguide.org/cheat-sheet](https://www.markdownguide.org/cheat-sheet)
-
+- Markdown 语法教程：[markdown.com.cn](https://markdown.com.cn/)
+- Makrdown Guide 中文站：[markdown.xyz](https://www.markdown.xyz/)
 
 Markdown 文档的文件后缀名一般为 `.md` 或 `.markdown`。
 
-
-### reStructuredText
-
-（待补充）
-
-### AsciiDoc
-
-（待补充）
+本教程还会在之后继续介绍 Markdown。
 
 ## 富文本编辑器
 

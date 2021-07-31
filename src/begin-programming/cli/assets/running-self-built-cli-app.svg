@@ -5,11 +5,10 @@
 		</clipPath>
 	</defs>
 	<g clip-path="url(#clip0)">
-		<rect x="0" y="0" width="850" height="260" fill="#FFFFFF" />
-		<path d="M247.16 56.5311 314.16 56.5311 314.16 77.5311 247.16 77.5311Z" fill="#FFFF00" fill-rule="evenodd" />
-		<text font-family="Courier New,monospace" font-weight="400" font-size="19" transform="translate(34.9929 49)">
+		<rect x="0" y="0" width="850" height="260" fill="#336699" />
+		<text fill="#FFFFFF" font-family="Courier New,monospace" font-weight="400" font-size="19" transform="translate(34.9929 49)">
 			PS C:\Users\Henry&gt;
-			<tspan fill="#BF9000" font-size="19" x="212.167" y="0">
+			<tspan fill="#FFCC00" font-size="19" x="212.167" y="0">
 				g++
 			</tspan>
 			cmd-line-test.cpp -o test
@@ -19,7 +18,7 @@
 				PS C:\Users\Henry&gt;
 			</tspan>
 
-			<tspan fill="#BF9000" font-size="19" x="212.167" y="23">
+			<tspan fill="#FFCC00" font-size="19" x="212.167" y="23">
 				./test
 			</tspan>
 			<tspan font-size="19" x="290.333" y="23">

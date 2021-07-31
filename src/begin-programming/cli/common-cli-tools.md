@@ -67,7 +67,7 @@ PowerShell
 
 ```console
 PS> $Env:abc=12345
-PS> $Env:abc="$ENv:abc;123"
+PS> $Env:abc="$Env:abc;123"
 PS> echo $Env:abc
 12345;123
 ```
@@ -91,6 +91,8 @@ export PATH=/path/to/dir:$PATH
 ```
 
 但这样添加之后，用户一旦退出 Shell，修改就会丢失。如果想保留，则应该将该命令添加到用户的 `bash.rc` 中，该文件中的命令会在每次开启 bash 时执行，于是相当于添加了一个用户环境变量。
+
+**Windows**：
 
 在 Windows 上，建议用户通过图形界面来修改。用户可以直接在 Windows Search 中输入“环境变量”（或“Environment Variable”），即可打开对应的设置页面。用户也可以右键“此电脑”，选择“属性”，选择“高级”，即可看到“环境变量”选项；也可以在命令行中输入 `sysdm.cpl`，可以打开同样的页面。
 
