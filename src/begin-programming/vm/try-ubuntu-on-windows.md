@@ -66,8 +66,8 @@ Ubuntu 上默认的包管理器是 apt-get。（这里暂时不解释什么是�
 
 输入命令时，请**注意命令中字符串之间的空格**。
 
-```bash
-sudo apt-get update
+```console
+$ sudo apt-get update
 ```
 
 > 如果读者是命令行的初学者，可以暂时不用思考命令的含义。我们将在下一章介绍命令行的使用。
@@ -78,8 +78,8 @@ sudo apt-get update
 
 之后命令行会闪过很多信息，等待操作完成后，我们再执行**升级软件包的操作**：
 
-```bash
-sudo apt-get upgrade
+```console
+$ sudo apt-get upgrade
 ```
 
 这之后便会下载需要升级的软件包，并进行安装操作，又会花费一些时间。
@@ -88,32 +88,32 @@ sudo apt-get upgrade
 
 接下来我们再尝试使用包管理器安装一个小应用：
 
-```bash
-sudo apt-get install cowsay
+```console
+$ sudo apt-get install cowsay
 ```
 
 命令中 `install` 的后面跟的是要安装的包的名称（package name）。安装完成后，就可以使用 `cowsay` 了。
 
 然后我们在终端中输入如下命令：
 
-```bash
-cowsay hello
+```console
+$ cowsay hello
 ```
 
 ![包管理示范](assets/ubuntu-package-manager-example.jpg)
 
 接下来还可以安装构建所需要的工具：
 
-```bash
-sudo apt-get install build-essential
+```console
+$ sudo apt-get install build-essential
 ```
 
 正如 `build-essential` 其字面上所表示的那样，执行命令将会自动安装构建所必要的若干软件包。
 
 可能还需要安装 CMake：
 
-```bash
-sudo apt-get install cmake
+```console
+$ sudo apt-get install cmake
 ```
 
 ### 安装 VMware Tools

@@ -85,36 +85,36 @@ add_executable(bye-bye bye.cpp)
 
 首先，需要安装编译器。Apple 的 XCode 提供有实用的命令行工具。在程序列表中找到“终端”，执行以下命令：
 
-```bash
-xcode-select --install
+```console
+$ xcode-select --install
 ```
 
 安装完成后即可使用命令行编译器了。
 
 在某目录下以纯文本形式保存 C++ 程序的源代码，并切换到工作路径。注意，将命令中的“path/to/your/cpp/file”替换为实际的路径。
 
-```bash
-cd path/to/your/cpp/file
+```console
+$ cd path/to/your/cpp/file
 ```
 
 假设源代码文件名为“src.cpp”，则我们可以使用如下命令编译、链接生成可执行程序“test1”。
 
-```bash
-c++ src.cpp -o test1
+```console
+$ c++ src.cpp -o test1
 ```
 
 之后，在命令行运行生成的可执行程序：
 
-```bash
-./test1
+```console
+$ ./test1
 ```
 
 ## Ubuntu
 
 在终端中，使用包管理器 APT 安装构建所需要的命令行工具：
 
-```bash
-sudo apt install build-essential
+```console
+$ sudo apt install build-essential
 ```
 
 其余步骤与 macOS 类似。

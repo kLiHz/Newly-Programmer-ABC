@@ -53,18 +53,18 @@ add_executable(cmake_testapp main.cpp)
 
 Unix 下会默认生成 Makefile，生成后执行 make 命令，就会根据 Makefile 中的内容进行一系列操作。
 
-```bash
-mkdir build && cd build
-cmake ..
-make
+```console
+$ mkdir build && cd build
+$ cmake ..
+$ make
 ```
 
 Windows 下默认生成 Visual Studio 的项目文件 `*.vcxproj`。
 
 也可以使用`-G`命令指定生成的构建文件。如果之前生成的是其他构建文件，需要先删除构建目录下的 `CMakeCache.txt`。
 
-```bash
-cmake -G "MinGW Makefiles" ..
+```console
+$ cmake -G "MinGW Makefiles" ..
 ```
 
 一个项目中可以有多个目标，我们可以指定**多个**生成可执行文件的目标。
@@ -319,8 +319,8 @@ target_link_libraries(solution_test ${PROJECT_SOURCE_DIR}/lib/libtest_library.a)
 
 可以在运行CMake时指定参数：
 
-```bash
-cmake -DCMAKE_BUILD_TYPE=Debug ..
+```console
+$ cmake -DCMAKE_BUILD_TYPE=Debug ..
 ```
 
 命令行中的`-D`表示参数设置，将`CMAKE_BUILD_TYPE`的值设置为`Debug`。

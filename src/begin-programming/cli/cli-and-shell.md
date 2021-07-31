@@ -81,8 +81,8 @@ Windows 常用的 Shell 有 cmd 和 PowerShell，\*nix 系统上常用的有 bas
 
 如果一个参数中含有空格，我们需要用引号将其包裹起来，比如：
 
-```bash
-process_name Tom Lucy "Jane Doe"
+```console
+$ process_name Tom Lucy "Jane Doe"
 ```
 
 ## ⚡ 补充：目录和文件
@@ -158,8 +158,8 @@ Unix 一般用正斜杠“`/`”（forward slash）分割路径，Windows 一般
 
 尝试解释下面这行命令的含义：
 
-```bash
-echo "hello!"
+```console
+$ echo "hello!"
 ```
 
 然后在终端中输入这条命令，**按 Enter 键提交输入**，观察终端的反应。注意，命令中的引号“`"`”为**英文引号**，且字段间有**空格**，输入时需要注意。
@@ -180,9 +180,9 @@ Shell 提供输入输出重定向的功能，一般可以使用“`<`”和“`>
 
 在终端依次输入如下命令：
 
-```bash
-echo "hello!" > hello.txt
-cat hello.txt
+```console
+$ echo "hello!" > hello.txt
+$ cat hello.txt
 ```
 
 观察执行命令后的输出。
@@ -207,11 +207,11 @@ cat hello.txt
 
 观察执行每条命令后的输出：
 
-```bash
-echo "Hello Cello" > text.txt
-cat text.txt
-grep "ello" text.txt
-cat text.txt | grep "ello"
+```console
+$ echo "Hello Cello" > text.txt
+$ cat text.txt
+$ grep "ello" text.txt
+$ cat text.txt | grep "ello"
 ```
 
 注：对于 PowerShell，需要使用下面的命令：
@@ -235,8 +235,8 @@ cat text.txt | Select-String -Pattern "ello"
 
 常见的命令比如：
 
-```bash
-g++ test.cpp -o test $(pkg-config --libs --cflags opencv4)
+```console
+$ g++ test.cpp -o test $(pkg-config --libs --cflags opencv4)
 ```
 
 
@@ -263,9 +263,9 @@ CLI 程序只能以文本形式将信息显示给我们，当信息量比较大�
 
 在终端中输入如下命令，观察终端的输出：
 
-```bash
-echo "^[[31m hello ^[[0m"
-echo "^[[32m hello ^[[0m"
+```console
+$ echo "^[[31m hello ^[[0m"
+$ echo "^[[32m hello ^[[0m"
 ```
 
 **注意**：“`^[`”为一个整体，是终端对 ESC 这个字符的表示，需要通过上一张幻灯片介绍的方式键入。
@@ -278,8 +278,8 @@ echo "^[[32m hello ^[[0m"
 
 而在 \*nix 中，可以给“echo”命令加一个参数“`-e`”，使其解析字符串中的转义字符，然后使用“转义字符”表示 ESC 字符。
 
-```bash
-ehco -e "\033[31m hello \033[0m"
+```console
+$ echo -e "\033[31m hello \033[0m"
 ```
 
 如果实在无法输入字符，可以只观察一下图片中的示例即可。在之后的内容中会指引读者通过编程的方式输出“转义序列”。

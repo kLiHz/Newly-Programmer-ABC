@@ -8,8 +8,8 @@
 
 可能是在终端中的输入的命令：
 
-```bash
-cat 1.txt 2.txt > 3.txt
+```console
+$ cat 1.txt 2.txt > 3.txt
 ```
 
 一些代码语句：
