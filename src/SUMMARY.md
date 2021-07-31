@@ -20,8 +20,9 @@
     - [建立安全的网络连接](use-your-computer/safe-internet-connection.md)
     - [获取、安装应用程序](use-your-computer/acquire-and-install-apps.md)
 
-- [网上冲浪]()
+- [网上冲浪](web-surfing/README.md)
     - [掌握一门外语——英语](web-surfing/learn-english.md)
+    - [信息获取与搜索技巧](web-surfing/obtain-information.md)
     - [Mastodon 介绍](web-surfing/intro-to-mastodon.md)
     - [更好的浏览体验](web-surfing/better-web-experience.md)
 
