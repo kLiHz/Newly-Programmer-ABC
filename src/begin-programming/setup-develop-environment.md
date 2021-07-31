@@ -12,11 +12,11 @@
 
 我们先来介绍一下工具链（Toolchains）的概念。顾名思义，其意为一套“连锁”的工具，一般可以指我们构建软件过程中所需的编辑器、编译器、调试器等工具，以及开发软件所依赖的软件和软件库，也可以包含用于安装程序所依赖的软件库的包管理器等。
 
-> 比如，在 Ubuntu 上，我们通常使用 GNU GCC 作为编译器，使用 APT 作为包管理。
+> 比如，在 Ubuntu 上，我们通常使用 GCC (GNU Compiler Collection) 作为编译器，使用 APT 作为包管理。
 >
-> 在 macOS 上，我们使用 Apple-Clang 编译器，并可以选择 Homebrew 作为包管理器。
-> 
-> 在 Windows 上，我们可以使用 MSVC 作为编译器，使用 vcpkg 管理包（也可以手动管理各种软件包）；也可以安装 MSYS2，使用其提供的 MinGW-w64 gcc 作为编译器，使用其携带的包管理器 pacman 管理软件包；也可以使用 WSL 上的环境（Linux 环境）进行开发。
+> 在 macOS 上，我们使用 Apple-Clang 编译器，并可以选择 Homebrew 作为包管理器，也可以选择比较少见的 MacPorts 作为包管理器。
+>
+> 在 Windows 上，我们可以使用 MSVC 作为编译器，使用 vcpkg 管理包（也可以手动管理各种软件包）；也可以安装 MSYS2，使用其提供的 MinGW-w64 GCC 作为编译器，使用其携带的包管理器 pacman 管理软件包；也可以使用 WSL 上的环境（Linux 环境）进行开发。
 
 为了构建适用不同的平台的软件，我们往往需要不同的工具链。在一台计算机上为其他不同平台或新平台构建软件的过程叫做“交叉编译（cross-compiling）”。
 
@@ -47,8 +47,10 @@ Linux 发行版一般会自带有相应的包管理器，如 apt、pacman 等。
 Windows 已经带有 Win32 控制台和 PowerShell 环境，这为我们提供了基础的命令行工作的环境的。当然，除此之外，我们可以再选择使用一些包管理器管理自己的软件包。
 
 比如，用户可以通过安装 Chocolatey，并通过其安装一些预构建好的软件（通常是闭源的）。
+也可以使用 [Scoop](https://scoop.sh/)，这个比较适宜没有管理员权限的情况，并且软件也多一点。缺点是与国际互联网连接性较差时容易安装失败，且从安装失败的状态恢复比较麻烦。
+亦可以使用 MS 官方的 [WinGet](https://github.com/microsoft/winget-cli)，缺点是只能安装而不能卸载。
 
-> macOS 以及诸多 Linux 的发行版的命令行工作环境是类似的（默认都为 bash，也可选择 zsh，其使用也与 bash类似）。两者之间有着类似的工具，命令几乎可以通用。而 Windows 的 PowerShell 命令则别出一格，很多功能、操作的实现所用的命令并不相同。
+> macOS 以及诸多 Linux 的发行版的命令行工作环境是类似的（Linux 发行版中大多为 bash；macOS 默认为 zsh，其使用与 bash 类似，也可选择 bash）。两者之间有着类似的工具，命令几乎可以通用。而 Windows 的 PowerShell 命令则别出一格，很多功能、操作的实现所用的命令并不相同。
 
 而如果读者希望体验类 Unix 的开发环境、使用类 Unix 的命令行工具，可以使用虚拟机软件安装相关的系统，或者使用 Windows 提供的 WSL 功能（Windows Linux 子系统），也可以使用模拟类似环境的软件，如 Cygwin 和 [MSYS2][msys2] 等。
 
@@ -60,7 +62,7 @@ Windows 已经带有 Win32 控制台和 PowerShell 环境，这为我们提供�
 
 > 假如只安装 MSVC 生成工具，读者可能需要搭配使用其他的代码编辑器编写代码，或者使用其他 IDE 或工具来获得图形化的代码编写与调试体验。
 
-当然，有的用户并不希望使用 MSVC，希望在 Windows 上继续使用 GNU GCC 作为自己的编译工具（毕竟有些应用程序针对某一编译器做了相应的优化，更换编译器需要对代码进行较多的修改，而维护两个或多个版本是一件耗费精力的事情）。一个使 GCC 在 Windows 上可用的项目就叫做 MinGW，即 Minimal GNU on Windows。目前在 Windows 上常用的为 [MinGW-w64](http://mingw-w64.org/doku.php)，其为 MinGW 项目的一个分支，支持了 64 位系统以及新的 API。
+当然，有的用户并不希望使用 MSVC，希望在 Windows 上继续使用 GCC 作为自己的编译工具（毕竟有些应用程序针对某一编译器做了相应的优化，更换编译器需要对代码进行较多的修改，而维护两个或多个版本是一件耗费精力的事情）。一个使 GCC 在 Windows 上可用的项目就叫做 MinGW，即 Minimal GNU on Windows。目前在 Windows 上常用的为 [MinGW-w64](http://mingw-w64.org/doku.php)，其为 MinGW 项目的一个分支，支持了 64 位系统以及新的 API。
 
 有了编译器，用户就可以自己编译喜欢的应用了。但重新编译自然是耗时、耗费精力的过程。所以一些项目维护者本身，或者其他第三方组织，会提供构建好的二进制版本。但这就像我们之前说的，更新应用程序的操作需要用户手动操作。而有了包管理器，用户就可以通过包管理器轻松地实现软件包的获取和更新。
 
@@ -70,10 +72,10 @@ Windows 已经带有 Win32 控制台和 PowerShell 环境，这为我们提供�
 
 > MSYS2 安装后有三个子环境，“MSYS2 MSYS”、“MSYS2 MinGW 64-bit”、“MSYS2 MinGW 32-bit”。我们常用的是就是“MSYS2 MinGW 64-bit”环境。
 >
-> MSYS2 为我们提供了类似 Linux 发行版的操作环境。在 MSYS2 的安装目录下有一个“home”目录，这个目录就是我们 MSYS2 环境中的家目录。MSYS2 环境中，Windows 下的各盘符被挂载在根目录下对应的目录上，比如“C盘”被挂载在“`/c/`”下，“D盘”被挂载在“`/d/`”下。
+> MSYS2 为我们提供了类似 Linux 发行版的操作环境。在 MSYS2 的安装目录下有一个“home”目录，这个目录就是我们 MSYS2 环境中的家目录。MSYS2 环境中，Windows 下的各盘符被挂载在根目录下对应的目录上，比如“C盘”被挂载在 `/c/` 下，“D盘”被挂载在 `/d/` 下。
 >
 > 在“MSYS2 MinGW 64-bit”环境中，C/C++ 编译器为“MinGW gcc 64-bit”，如前所述，其可以生成 Windows 平台下原生的可执行文件（exe）。其包管理器安装的软件也是由 MinGW gcc 构建的软件。我们把这一整套称为“MSYS2 MinGW 64-bit”工具链。
-> 
+>
 > 当然，用户可以不使用 MSYS2，只安装 MinGW-w64 gcc 作为编译器，并手动安装其他需要的工具和包。
 
 ### 多个开发工具链
@@ -158,7 +160,7 @@ JetBrains 系的 IDE 也是跨平台的，社区版免费；同时提供学生�
 
 ## 扩展阅读
 
-- [MinGW、MinGW-w64 与 TDM-GCC 应该如何选择？ - 知乎](https://www.zhihu.com/question/39952667)- 
-- [如果仅考虑 Windows 平台，不用 msvc 而去用 gcc 的理由有哪些？ - 知乎](https://www.zhihu.com/question/41733001)- 
+- [MinGW、MinGW-w64 与 TDM-GCC 应该如何选择？ - 知乎](https://www.zhihu.com/question/39952667)
+- [如果仅考虑 Windows 平台，不用 msvc 而去用 gcc 的理由有哪些？ - 知乎](https://www.zhihu.com/question/41733001)
 - [如何评价 MSYS2 以及未来发展方向如何？](https://www.zhihu.com/question/37025275)
 - [MinGW-64-bit - Qt Wiki](https://wiki.qt.io/MinGW-64-bit)
