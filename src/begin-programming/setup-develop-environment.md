@@ -14,7 +14,7 @@
 
 > 比如，在 Ubuntu 上，我们通常使用 GCC (GNU Compiler Collection) 作为编译器，使用 APT 作为包管理。
 >
-> 在 macOS 上，我们使用 Apple-Clang 编译器，并可以选择 Homebrew 作为包管理器。
+> 在 macOS 上，我们使用 Apple-Clang 编译器，并可以选择 Homebrew 作为包管理器，也可以选择比较少见的 MacPorts 作为包管理器。
 > 
 > 在 Windows 上，我们可以使用 MSVC 作为编译器，使用 vcpkg 管理包（也可以手动管理各种软件包）；也可以安装 MSYS2，使用其提供的 MinGW-w64 GCC 作为编译器，使用其携带的包管理器 pacman 管理软件包；也可以使用 WSL 上的环境（Linux 环境）进行开发。
 
