@@ -22,6 +22,8 @@
 
 - [网上冲浪]()
     - [掌握一门外语——英语](web-surfing/learn-english.md)
+    - [Mastodon 介绍](web-surfing/intro-to-mastodon.md)
+    - [更好的浏览体验](web-surfing/better-web-experience.md)
 
 
 - [开始编程](begin-programming/README.md)
