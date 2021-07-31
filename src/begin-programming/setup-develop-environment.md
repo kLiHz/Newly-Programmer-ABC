@@ -50,7 +50,7 @@ Windows 已经带有 Win32 控制台和 PowerShell 环境，这为我们提供�
 也可以使用 [Scoop](https://scoop.sh/)，这个比较适宜没有管理员权限的情况，并且软件也多一点。缺点是与国际互联网连接性较差时容易安装失败，且从安装失败的状态恢复比较麻烦。
 亦可以使用 MS 官方的 [WinGet](https://github.com/microsoft/winget-cli)，缺点是只能安装而不能卸载。
 
-> macOS 以及诸多 Linux 的发行版的命令行工作环境是类似的（macOS 默认为 zsh，也可选择 bash，其使用也与 bash 类似；Linux 大多默认 bash）。两者之间有着类似的工具，命令几乎可以通用。而 Windows 的 PowerShell 命令则别出一格，很多功能、操作的实现所用的命令并不相同。
+> macOS 以及诸多 Linux 的发行版的命令行工作环境是类似的（Linux 发行版中大多为 bash；macOS 默认为 zsh，其使用与 bash 类似，也可选择 bash）。两者之间有着类似的工具，命令几乎可以通用。而 Windows 的 PowerShell 命令则别出一格，很多功能、操作的实现所用的命令并不相同。
 
 而如果读者希望体验类 Unix 的开发环境、使用类 Unix 的命令行工具，可以使用虚拟机软件安装相关的系统，或者使用 Windows 提供的 WSL 功能（Windows Linux 子系统），也可以使用模拟类似环境的软件，如 Cygwin 和 [MSYS2][msys2] 等。
 
