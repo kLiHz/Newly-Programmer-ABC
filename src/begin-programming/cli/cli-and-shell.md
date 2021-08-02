@@ -71,11 +71,17 @@ Windows 常用的 Shell 有 cmd 和 PowerShell，\*nix 系统上常用的有 bas
 
 ## 什么是命令？
 
-如图为一条命令：由**若干以空格相间的字符串**组成。这些字段统称**命令行参数**。注意：每一字段间至少需要有一个空格。
+如下为一条命令：
 
-下图中的“`gcc`”“`hello.c`”“`-o`”“`hello`”即为四个命令行参数。
+```bash
+gcc hello.cpp -o hello
+```
 
-![命令示例](./assets/shell-command-example.svg)
+命令中的“`gcc`”“`hello.c`”“`-o`”“`hello`”字段**由空格相间**。这些字段统称**命令行参数**。
+
+命令中的第一个的字段一般为要使用的程序名称，之后的字段用来控制程序的运行。
+
+![上述命令构成的示意图](./assets/shell-command-example.svg "命令构成的示意图")
 
 > 如果你不明白这个命令，别着急，我们会在“命令行工具”中讲到它。
 
@@ -257,6 +263,9 @@ $ g++ test.cpp -o test $(pkg-config --libs --cflags opencv4)
 
 > 更详细的关于转义字符的介绍，请阅读后续章节。
 
+> 不过要留意不同平台的快捷键，比如 Win 和 Mac，或者说常用应用程序和shell 里面，同样的快捷键可能会有截然不同的意义。比如关于终止输入（EOF），Linux系统内的终止输入是 `Ctrl` + `D`，Windows 是 `Ctrl` + `Z`。再比如 `Ctrl` + `C` 在一般应用里是“复制”操作的快捷键，而在终端里面则用来终止当前进程。
+>
+
 ### 🧪 实验：控制终端输出文本的颜色
 
 CLI 程序只能以文本形式将信息显示给我们，当信息量比较大时，我们就不容易阅读信息了。后来出现了彩色终端，程序可以通过向终端输出一些特定的字符，控制终端输出内容的格式。现在的（虚拟）终端一般能支持针对字体的颜色（color）、强度（intensity，可以理解成颜色的暗淡或高亮）、斜体、下划线等属性（attributes）的调节。
@@ -272,7 +281,16 @@ $ echo "^[[32m hello ^[[0m"
 
 输出结果：
 
-![控制终端输出文本的颜色](./assets/terminal-color-control.svg)
+```console
+$ echo "^[[31m hello ^[[0m"
+hello 
+$ echo "^[[32m hello ^[[0m" 
+hello 
+$ echo "^[[1;32m hello ^[[0m"
+hello
+```
+
+![效果图，执行上述命令后，终端上输出不同颜色的“hello”文本](./assets/terminal-colorful-text-demo.svg "终端上输出彩色文本效果图")
 
 如果无法键入 ESC 字符，在 Windows 上可以尝试升级或更换所使用的**终端**。
 
@@ -314,9 +332,20 @@ int main(int argc, char* argv[]) {
 
 输出结果：
 
-![在终端中运行自己构建的 CLI 程序](./assets/running-self-built-cli-app.svg)
+![示意图：在运行着 PowerShell 的终端中构建并运行自己的 CLI 程序](./assets/running-self-built-cli-app.svg "示意图：在 PowerShell 中构建并运行自己的 CLI 程序")
 
-图片的 `test` 是一个可执行程序，但 `test` 不是一个全局可用的命令，它只在当前目录下可用，因此我们采用如 `./test` 这样通过**路径**的方式来访问/执行它。有些时候，我们也会通过绝对路径的方式访问某个可执行程序，如：
+```console
+PS C:\Users\Henry> g++ cmd-line-test.cpp -o test 
+PS C:\Users\Henry> ./test 123 abc hello bye! 
+Received 5 command-line argument(s). 
+0. C:\Users\Henry\test.exe 
+1. 123 
+2. abc 
+3. hello
+4. bye!
+```
+
+上述构建出的 `test` 是一个可执行程序，但 `test` 不是一个全局可用的命令，它只在当前目录下可用，因此我们采用如 `./test` 这样通过**路径**的方式来访问/执行它。有些时候，我们也会通过绝对路径的方式访问某个可执行程序，如：
 
 ```bash
 C:/Users/Henry/test 123 abc hello
@@ -360,15 +389,16 @@ C:/Users/Henry/test 123 abc hello
 
 不一定需要记忆各种命令。可以准备一份速查表 / 备忘单（Cheatsheet），在需要时查阅。
 
+## 其他
+
+1\. 以上只是在命令行中逐语句键入命令，但我们也可以将若干条命令存储在一个文本文件中。这个该过程称为编写 Shell 脚本。
+
+2\. 了解正则表达式；
+
+3\. 阅读参考资料。
+
 ## 参考资料
 
 - [命令行界面（CLI）、终端（Terminal）、Shell、TTY，傻傻分不清楚？ - PRIN BLOG - printempw.github.io](https://printempw.github.io/the-difference-between-cli-terminal-shell-tty/)
 - [脱字符表示法 - 维基百科](https://zh.wikipedia.org/wiki/%E8%84%B1%E5%AD%97%E7%AC%A6%E8%A1%A8%E7%A4%BA%E6%B3%95)
 
-## 作业
-
-1\. 我们刚刚只是在命令行中逐语句键入命令，但我们也可以将若干条命令存储在一个文本文件中。这个该过程称为编写 Shell 脚本。尝试通过编写 Shell 脚本新建名为 folder01 ~ folder10 的 10 个目录。
-
-2\. 了解正则表达式；
-
-3\. 阅读参考资料。

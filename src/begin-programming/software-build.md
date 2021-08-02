@@ -36,9 +36,7 @@
 - 如果您添加了 API 并且该改动是**向后兼容**的，则将次版本号递增；
 - 如果您修改了 API 但是它并不向后兼容，则将主版本号递增。
 
----
-
-参考资料：
+## 参考资料
 
 - [构建系统、代码测试以及依赖管理 - The Missing Semester](https://missing-semester-cn.github.io/2020/metaprogramming/)
 - [Software build - Wikipedia](https://en.wikipedia.org/wiki/Software_build)

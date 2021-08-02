@@ -1,3 +1,6 @@
 
 # mdbook build files
 book/
+
+# plan in the future
+src/later/

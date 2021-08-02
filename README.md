@@ -39,9 +39,17 @@ mdBook 本身具有对 MathJax 的支持，但目前需要使用 `\( \)` 和 `\[
 
 - [计算机入门指南](https://github.com/Computer-Literacy-Primer/Computer-Literacy-Primer)：一个同类项目
 - [OI Wiki](https://oi-wiki.org) 项目仓库地址：[GitHub](https://github.com/OI-wiki/OI-wiki/)
-- [浅見沙織的笔记](https://t.me/NoteOfAsamiSaori)（Telegram 频道）
-- @空忧居士 - [CSDN](https://me.csdn.net/qq_45871272)
-- @Par - [Github](https://github.com/ouoqwq1)
+- [浅見沙織的笔记 - Telegram 频道](https://t.me/NoteOfAsamiSaori)
+- @Coelacanthus
+    - [Coelacanthus@GitHub](https://github.com/CoelacanthusHex)
+- @空忧居士
+    - [空忧居士@CSDN](https://me.csdn.net/qq_45871272)
+- @Par
+    - [Par@Github](https://github.com/ouoqwq1)
+- 上交生存手册
+    - 仓库：[SurviveSJTU/SurviveSJTUManual - GitHub](https://github.com/SurviveSJTU/SurviveSJTUManual)
+    - 阅读地址：[SurviveSJTUManual - GitBook](https://survivesjtu.gitbook.io/survivesjtumanual/)
+- ...
 
 ## 参考资料
 

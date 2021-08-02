@@ -94,7 +94,11 @@ Windows 已经带有 Win32 控制台和 PowerShell 环境，这为我们提供�
 
 ### vcpkg
 
-对于开发人员，我们不得不介绍一下 vcpkg。（待补充）
+vcpkg 是一个在 Windows、Linux 和 macOS 上通用的包管理器，可以帮助用户管理 C/C++ 库。
+
+- 微软官方文档：[vcpkg: a C++ package manager for Windows, Linux, and macOS - Microsoft Docs](https://docs.microsoft.com/en-us/cpp/build/vcpkg)
+- GitHub仓库地址：[microsoft/vcpkg](https://github.com/Microsoft/vcpkg)
+
 
 ## Ubuntu 配置开发环境
 
