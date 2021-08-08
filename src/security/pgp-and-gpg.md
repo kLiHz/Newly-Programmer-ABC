@@ -57,12 +57,134 @@ To Be Done（笔者不会）
 
 #### 生成密钥
 
+在终端中输入 `gpg --full-generate-key` 来生成一对密钥，GPG 会逐个询问每个配置项。
+
+首先会询问你想要的密钥类型：
+```
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+  (14) Existing key from card
+Your selection? 
+```
+关于各加密方式的实现和安全性，可以自行查阅资料，这里不再赘述。   
+对于我们的一般需求选择默认的 `(1) RSA and RSA (default)` 就好。
+
+接下来，GPG 会询问密钥长度：
+```
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 
+```
+可选 1024 至 4096 的任意一个值，对 RSA 默认值为 3072，为了更好的更长久的安全性，这里推荐设置成 4096。
+
+然后会询问你密钥的有效期限：
+```
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 
+```
+默认是密钥永不过期，但是，**极度不建议使用永不过期**，这不是一个好的安全实践。
+
+笔者推荐设置为两年，并设置日历提醒自己在有效期限临近的时候[重新设置有效期限](#设置有效期限)。
+
+键入 `2y`，回车，`y`，然后再回车。
+
+输入你的用户名和邮件地址还有注释（如果不想填可直接回车留空）。
+
+然后设置密码。
+
+最后得到的密钥如下：
+```
+pub   rsa4096/39156228415722AD 2021-08-08 [SC] [expires: 2023-08-08]
+uid                              Your Name (For intro to GPG) <mail@example.org>
+sub   rsa4096/F0BB252EA3DF854B 2021-08-08 [E] [expires: 2023-08-08]
+```
+
+##### 生成子密钥
+
+首先使用 `gpg --list-keys` 查看所有的 key，`rsa4096/` 后面的40位16进制数就是密钥的指纹（fingerprint）。
+
+可以看到，GPG 在创建主密钥的过程中已经为我们创建了一个用于加密的子密钥。
+
+然后，执行 `gpg --edit-key <fingerprint>`，注意将 `<fingerprint>` 换为你自己的密钥指纹，以下同理。
+
+然后执行 `addkey`，根据用途自行选择，注意选 RSA 的。
+
+最后执行 `save`。
+
 #### 导出密钥
+
+如果要导出公钥，执行
+```console
+$ gpg --armor --output <filename> --export <uid>
+```
+`<filename>` 是导出的文件的名称，`<uid>` 可以是你的姓名，邮箱，密钥指纹，只要能惟一确定密钥即可。注意如果导出子密钥的话，使用密钥指纹需要在后面加个感叹号。
+
+如果要导出私钥，主密钥将 `--export` 替换为 `--export-secret-keys`，子密钥替换为 `--export-secret-subkeys` 即可。
+
+<keyserver, To Be Done>
 
 #### 导入密钥
 
+公钥的话 `gpg --import <filename>` 即可，私钥用 `gpg --allow-secret-key-import --import <filename>`。
+
+<keyserver, To Be Done>
+
 #### 文件加解密
+
+加密：
+```console
+$ gpg --recipient <uid> --output example.txt.gpg --encrypt example.txt
+```
+uid 意义同上文，将 `example.txt` 使用 uid 指定的密钥加密，保存到 `example.txt.gpg`。
+
+解密：
+```console
+$ gpg --output example.txt --decrypt example.txt.gpg
+```
+将 `example.txt.gpg` 解密，保存到 `example.txt`。
 
 #### 签名与校验签名
 
+对文件签名：
+```console
+$ gpg --armor --detach-sign example.txt
+```
+会在同目录下生成一个 `example.txt.asc` 签名文件（纯 ASCII），如果不加 `--armor` 则生成的是二进制文件 `example.txt.sig`
+
+验证签名：
+将文件和签名文件放在同一目录，然后执行：
+```console
+$ gpg --verify example.txt.sig example.txt
+```
+
+签名消息:
+执行 `gpg --clear-sign`，输入消息，然后 Ctrl+D 结束输入。
+
 #### 为你的 Git Commit 签名
+
+只需对 Git 进行如下配置即可：
+```console
+$ git config --global user.signingkey <uid>
+```
+
+然后 commit 的时候加 `-S` 就可以签名了，如果想要每次 commit 都自动签名，执行：
+```console
+$ git config --global commit.gpgsign true
+```
+
+在 GitHub 的设置里上传你的 GPG 公钥就能获得小绿勾啦。
+
+#### 设置有效期限
+
+执行 `gpg --edit-key <fingerprint>`，注意将 `<fingerprint>` 换为你自己的密钥指纹。
+
+如果要修改子密钥的，需要先手动执行 `key <fingerprint>` 切换到对应 key.
+
+然后执行 `expire`，选择期限，执行 `save`。
