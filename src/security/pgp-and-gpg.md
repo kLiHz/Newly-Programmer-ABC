@@ -130,13 +130,15 @@ $ gpg --armor --output <filename> --export <uid>
 
 如果要导出私钥，主密钥将 `--export` 替换为 `--export-secret-keys`，子密钥替换为 `--export-secret-subkeys` 即可。
 
-<keyserver, To Be Done>
+如果要将密钥上传到公钥服务器，执行 `gpg --send-keys <uid> --keyserver <keyserver url>` 即可。
 
 #### 导入密钥
 
 公钥的话 `gpg --import <filename>` 即可，私钥用 `gpg --allow-secret-key-import --import <filename>`。
 
-<keyserver, To Be Done>
+如果要从公钥服务器获取公钥，执行 `gpg --keyserver <keyserver url> --search-keys <uid>`。
+
+如果对方使用了 WKD，那么执行 `gpg --locate-keys <email>` 即可
 
 #### 文件加解密
 
