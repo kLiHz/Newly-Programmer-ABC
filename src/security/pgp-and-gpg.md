@@ -1,6 +1,8 @@
 # PGP 与 GPG
 
-PGP（aka Pretty Good Privacy）是一套用于加密和认证的工具，由菲尔·齐默曼开发。PGP 本身是商业软件，但菲尔·齐默曼于1997年与 IETF 制定了 OpenPGP 标准 [RFC2440](https://tools.ietf.org/html/rfc2440)（最新版本为 [RFC4880](https://tools.ietf.org/html/rfc4880)）。
+PGP（aka Pretty Good Privacy）是一套用于加密和认证的工具，由菲尔·齐默曼（Phil Zimmermann）开发。PGP 本身是商业软件，但菲尔·齐默曼于1997年与 IETF 制定了 OpenPGP 标准 [RFC2440](https://tools.ietf.org/html/rfc2440)（最新版本为 [RFC4880](https://tools.ietf.org/html/rfc4880)）。
+
+> 1991年，菲尔·齐默曼写了第一个个人可以用的高强度加密软件 PGP，PGP 使用的密钥长度大于128位，远远超过了美国政府的管制规定。之后他把源代码放到互联网上让人们随便下载。当美国之外也有人下载的时候，这件事就惊动了美国政府，美国政府开始对他进行调查。齐默曼决定利用美国宪法第一修正案来保护 PGP 的自由发行，他通过 MIT 出版社出版了一本书，书的内容就是 PGP 的全部源代码，这样，PGP 的源代码就成为了受美国宪法第一修正案保护的言论自由。人们开始通过这种手段对抗管制。最终，在新世纪到来之后，这类案件分别在第六巡回上诉法庭和第九巡回上诉法庭得到了同样的判决：软件源代码是言论自由，受宪法第一修正案的保护。自此，美国政府再也不能试图限制软件源代码流通了
 
 自由软件基金会编写了他们的 OpenPGP 自由软件实现 GPG（GNU Privacy Guard, aka GnuPG），在事实上成为了 OpenPGP 系列软件的标准。
 
