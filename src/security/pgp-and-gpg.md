@@ -190,3 +190,14 @@ $ git config --global commit.gpgsign true
 如果要修改子密钥的，需要先手动执行 `key <fingerprint>` 切换到对应 key.
 
 然后执行 `expire`，选择期限，执行 `save`。
+
+#### 生成吊销证书与吊销密钥
+
+```console
+$ gpg --output master-key.rev --gen-revoke <uid>
+```
+注意只能导出主密钥的吊销证书。此外gpg默认已经为我们生成了一份吊销证书，位于 `$GPGHOME/openpgp-revocs.d/`。
+
+如要吊销主密钥，执行 `gpg --import master-key.rev` 即可。
+
+如要吊销子密钥，执行 `gpg --edit-key <fingerprint>`，然后执行 `key <fingerprint>` 切换到对应 key，执行 `revkey`。
