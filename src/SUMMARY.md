@@ -84,4 +84,8 @@
     - [How To Become A Hacker](anecdotes/hacker-how-to.md)
     - [大学生活指北](anecdotes/college-life.md)
 
+- [计算机安全漫谈](security/README.md)
+    - [TLS 与 HTTPS]()
+    - [PGP 与 GPG](security/pgp-and-gpg.md)
+    - [木马与病毒]()
 
