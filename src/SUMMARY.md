@@ -28,7 +28,7 @@
     - [利用网络解决问题](web-surfing/search-for-help.md)
     - [做笔记](web-surfing/notes-taking.md)
     - [Markdown 技巧](web-surfing/markdown-tips.md)
-    - [无障碍](web-surfing/accessiblilty.md)
+    - [Web 无障碍](web-surfing/web-accessibility-intro.md)
     - [Mastodon 介绍](web-surfing/intro-to-mastodon.md)
     - [更好的浏览体验](web-surfing/better-web-experience.md)
 
