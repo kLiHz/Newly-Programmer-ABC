@@ -36,7 +36,9 @@ C++ 语言本身主要有以下这些知识点：
 关于参考网站：
 
 - [语言基础简介 - OI Wiki](https://oi-wiki.org/lang/)
-- [cppreference.com](https://en.cppreference.com/)：字典式的网站
+- [C++ Beginner's Guide - hacking C++ - hackingcpp.com](https://hackingcpp.com/cpp/beginners_guide.html)：该教程同时包含 C++ 编程的最佳实践
+- [cppreference.com](https://en.cppreference.com/) 以及 [C++ language - cppreference.com](https://en.cppreference.com/w/cpp/language)：C++ 百科全书
+- [《现代 C++ 教程》：高速上手 C++ 11/14/17/20](https://changkun.de/modern-cpp/)
 
 关于参考书籍：
 
