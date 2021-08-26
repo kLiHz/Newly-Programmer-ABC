@@ -64,7 +64,7 @@ HTML、CSS、JavaScript 共同造就了我们如今看到的网络页面。
 
 ### Firefox 
 
-[Firefox 火狐浏览器](http://www.firefox.com.cn/) 是 Mozilla 领导下的开源浏览器，其以“隐私保护”“快速”等特性而闻名。
+[Firefox 火狐浏览器](https://www.mozilla.org/zh-CN/firefox/new/) 是 Mozilla 领导下的开源浏览器，其以“隐私保护”“快速”等特性而闻名。
 
 > 本书会在后边介绍隐私保护相关的知识。
 
