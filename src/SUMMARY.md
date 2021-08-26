@@ -14,6 +14,7 @@
     - [整理自己的文件](use-your-computer/organize-your-files.md)
     - [与计算机交互](use-your-computer/interact-with-pc.md)
     - [字体与字体渲染](use-your-computer/font-and-font-rendering.md)
+    - [输入输出设备](know-your-computer/io-devices.md)
     - [标记语言和富文本](use-your-computer/markup-lang-and-rich-text.md)
     - [网络和互联网](use-your-computer/network-and-internet.md)
     - [如何浏览互联网](use-your-computer/browsing-internet.md)

@@ -11,7 +11,7 @@
 通过图形界面与计算机交互：
 
 - [与计算机交互](./interact-with-pc.md)
-- [输入输出设备](know-your-computer/io-devices.md)
+- [输入输出设备](./io-devices.md)
 
 使用互联网：
 
@@ -19,5 +19,6 @@
 - [网络和互联网](./network-and-internet.md)
 - [如何浏览互联网](./browsing-internet.md)
 - [互联网能做什么](./what-can-internet-do.md)
-- [获取、安装应用程序](./acquire-and-install-apps.md)
 - [建立安全的网络连接](./safe-internet-connection.md)
+- [获取、安装应用程序](./acquire-and-install-apps.md)
+- [高效使用计算机](./work-efficiently.md)

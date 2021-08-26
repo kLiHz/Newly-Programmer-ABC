@@ -95,7 +95,7 @@ HTML，即“超文本标记语言(**H**yper **T**ext **M**arkup **L**anguage)�
 
 上面链接显示出来的文本“必应 Bing”叫做**链接文本**，点击链接后的跳转到的地址“`https://bing.com`”称为**链接地址**。
 
-> 上面的链接地址中的“`https://`”称为协议头，表示了协议头后面地址所对应的内容的传输方式。HTTP（超文本传输协议，Hyper Text Transfer Protocol）就是一种传递超文本的协议，我们平时访问网页使用的一般就是这种协议。
+> 上面的链接地址中的 `https://` 称为协议头，表示了协议头后面地址所对应的内容的传输方式——“HTTPS“。HTTP（超文本传输协议，Hyper Text Transfer Protocol）就是一种传递超文本的协议，我们平时访问网页使用的一般就是这种协议。而 HTTPS 是一种更安全的协议，HTTPS 下建立的连接能够在一定程度上保证用户访问的是真实而不是仿造的网站。
 >
 > “`bing.com`”称为域名（domain）。域名代表了一个**网站**，是一个网站实际地址的代称，我们需要通过“域名解析”获取到网页提供方在互联网上实际的地址。域名中的“`com`”段称为顶级域名，“`com`”表明这是一个商业网站。每个国家有其相应的顶级域名，中国的顶级域名为“`cn`”。
 >
@@ -113,7 +113,7 @@ HTML，即“超文本标记语言(**H**yper **T**ext **M**arkup **L**anguage)�
 
 > 考虑到网页可能被印刷在纸张上（点击印刷在在纸张上的文字肯定不会出现跳转），或者复制粘贴时文本格式的丢失，有些时候，链接文本即为链接的地址。比如：[bing.com](https://bing.com)。或者，我们也可以同时给出文本和链接，并将超链接设置在文本或链接上。但事实上，使用屏幕阅读器（Screen Reader）的读者通常是遍历页面上的每个超链接；此外，用户速览页面时，也会被特殊显示出的超链接而吸引。因此，链接文本应当恰当地说明链接的目的。
 >
-> 参考链接：[创建链接最佳实践 - 使用清楚的连接措辞 - MDN - developer.mozilla.org](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用清晰的链接措辞)
+> 参考链接：[创建链接最佳实践 - 使用清楚的链接措辞 - MDN - developer.mozilla.org](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用清晰的链接措辞)
 
 由于编写 HTML 文档的过程中涉及到大量标签的键入，尽管使用纯文本编辑器完全可以完成撰写，但用户一般会使用专业的程序来更高效率地编写 HTML 文档。
 

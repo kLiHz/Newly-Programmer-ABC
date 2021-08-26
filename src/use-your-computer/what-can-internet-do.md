@@ -122,6 +122,10 @@ YouTube 这样一个视频网站由其创始人想到，并且（在收购后）
 - [谁也成为不了中国的 YouTube - 微信](https://mp.weixin.qq.com/s/TT-TC85BNhXgKC_mvees8Q)
 - [大家都想成为的YouTube到底牛在哪？ - 微信](https://mp.weixin.qq.com/s/w9zSwu4O0ZZs8j-9R2PIJA)
 
+### 代码和软件
+
+同样，代码和软件也可以是用户分享的内容。
+
 ### 综合类
 
 也有的网站会同时提供针对以上几种内容的分享功能。
