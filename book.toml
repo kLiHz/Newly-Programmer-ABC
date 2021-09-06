@@ -7,4 +7,5 @@ src = "src"
 
 [output.html]
 git-repository-url = "https://github.com/tsagaanbar/Newly-Programmer-ABC"
+edit-url-template = "https://github.com/tsagaanbar/Newly-Programmer-ABC/edit/main/{path}"
 mathjax-support = true
