@@ -1,0 +1,432 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>命令行与 Shell 程序 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../../begin-programming/cli/cli-and-shell.html" class="active"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="命令行与-shell"><a class="header" href="#命令行与-shell">命令行与 Shell</a></h1>
+<h2 id="编程使计算机得以工作"><a class="header" href="#编程使计算机得以工作">编程使计算机得以工作</a></h2>
+<p>要使用计算机，也就是使用计算机做有意义的事情，就需要编程。</p>
+<p>计算机程序的本质就是一串 CPU 能够理解的二进制数码。最初，我们可能需要通过连线、齿轮转盘或者拨动开关等方式，才能对计算机进行编程，以实现我们想要的计算操作。后来，人们在纸带上打孔，通过光电手段（遮挡相应位置的光，进而在光电传感器产生高低电平的信号）或其他手段，将打孔转化为二进制数码，进而输送给 CPU。</p>
+<p>但是每次使用都需要编写程序是非常麻烦的。于是我们可以将常用的程序存储下来，根据需要反复调用。</p>
+<h2 id="通过命令行操作计算机shell-程序"><a class="header" href="#通过命令行操作计算机shell-程序">通过命令行操作计算机、Shell 程序</a></h2>
+<p>再后来，人们发明出通过键盘操作计算机的方式；相比于接线，从键盘输入需要编写<strong>额外的程序</strong>来获得用户的按键以及解析用户输入的词组。</p>
+<p>这个程序就是 Shell。用户输入的、由字符构成命令叫 Shell 命令。Shell 使用户得以操作计算机，比如读写文件。Shell 简化了操作电脑的方式，处理数据效率提升了不少。</p>
+<p>这种通过命令操作计算机的界面就叫做“命令行（command line）”。</p>
+<p>当然，在 Shell 之下，还有一些更基础的程序，这些程序负责和计算机的硬件通信，以及硬件的正常工作等。读者可以观察下面这副图像，大致了解 Shell 处在整个计算机使用层面的哪一个层级。</p>
+<p><img src="./assets/shell-hierarchy.svg" alt="操作系统层级" /></p>
+<p>可以看到，Shell 程序像一个壳（shell），将系统调用层面的内容封装了起来。</p>
+<p>用户也可以通过 Shell 启动计算机上的其他程序，也可以通过 Shell 对操作系统进行设置。用户也可以使用 Shell 进行<strong>编程</strong>，即将一些 Shell 命令有机的组合起来，实现批量化的操作；通过 Shell 也能实现对数据的一些处理，比如将存储在文本文件中的数字相加，等等。</p>
+<p>用户可以将一些 Shell 命令组合，进而方便使用的一些常用的过程，这就属于编程。但是 Shell 的应用场景毕竟有限，随着时代的发展，我们需要更多种类的程序来完成多种多样操作。</p>
+<p>高级语言就为我们开发程序提供了极大的便利。</p>
+<p>之前我们说到，使用计算机的目的无外乎处理数据。而数据，也就是存储在磁盘上的记录。对于纯文本文件来说，其中的信息一目了然。而对于更复杂的文件格式，可能就需要编写或者使用已经编写好的更高级的程序来对其中的信息进行读取、处理等操作。</p>
+<p>Shell 程序为用户提供一些<strong>基础的命令</strong>以及一个<strong>交互式的环境</strong>，使得用户可以访问、查看、（调用程序）处理<strong>磁盘上的数据</strong>。有些编程语言也提供一个交互式的环境，用户可以通过在这个交互环境中，键入该编程语言规定的语句，来创建、处理、操作<strong>程序中的数据</strong>，甚至也可以将磁盘上的数据载入进这个环境中进行处理。而我们平时说的编程，编写的基本上就是数据的处理方式，这就包括如何读入数据、从哪里读入数据、数据在程序中如何存储、如何输出数据。</p>
+<h2 id="cli-程序"><a class="header" href="#cli-程序">CLI 程序</a></h2>
+<p>CLI（Command-Line Interface），即“命令行界面”。我们上面所说的 Shell 程序，以及我们刚开始编程时设计的很多“程序”，都属于 CLI 程序。这些程序通过<strong>文本字符</strong>和用户交流，完成输入输出。</p>
+<p>CLI 程序获取用户在终端上的输入，并以文本形式将自己的信息输出在终端上。而我们目前计算机上见到的，大多数都是图形界面（GUI，Graphics User Interface）程序，这些程序<strong>通过图形化的界面</strong>与用户交流——获取用户的输入，以及输出信息给用户。<strong>虚拟终端</strong>就是一种图形化程序，它模拟传统的终端，与 CLI 程序交流。</p>
+<p>由于只和字符打交道，一般情况下，CLI 应用程序的开发成本和难度比较低。</p>
+<h2 id="终端"><a class="header" href="#终端">终端</a></h2>
+<p>最初，计算机向人们回显字符使用的是打字机。后来，打字机变成了可以显示字符的屏幕。再后来，的一些终端不但可以显示文字，而且可以显示矢量图形和位图。</p>
+<p>而这种可以接受用户输入、并且显示计算机输出的设备等就称作“<strong>终端</strong>（Terminal）”，用户可以通过终端向计算机输入数据，终端也可以向用户显示计算结果。简单地说，终端也就是用户与计算机交互的设备。</p>
+<p>随着计算机的发展，我们和计算机交流的方式变成了液晶屏幕、键盘、鼠标等，用户也很少通过键入命令使用计算机，而大多使用图形化的方式和计算机交互了。如今，<strong>专门的</strong>计算机终端已经很少见了。现代的操作系统中的“终端”一般为<strong>虚拟终端</strong>（也称作“终端模拟器”）。</p>
+<p>打开终端后，其中一般自动运行着 Shell 程序。在终端键入命令后，会交给 Shell 进行<strong>解析和执行</strong>。</p>
+<h2 id="为什么要学习命令行"><a class="header" href="#为什么要学习命令行">为什么要学习命令行？</a></h2>
+<p>上文说到 CLI 程序，就只能通过命令行界面执行（常称作“命令行”程序）；也有些工作，通过命令行操作计算机的<strong>效率可能会更高</strong>；而作为程序员，则<strong>可能经常会使用命令行</strong>操作计算机。</p>
+<p>但是我们也不必盲目崇拜命令行操作。对于很多任务，很可能有除命令行之外更高效的操作方式。</p>
+<h2 id="常见-shell-程序"><a class="header" href="#常见-shell-程序">常见 Shell 程序</a></h2>
+<p>Windows 常用的 Shell 有 cmd 和 PowerShell，*nix 系统上常用的有 bash 和 zsh。</p>
+<blockquote>
+<p>一般，关于命令行的资料多为针对于 *nix 系统的，其次是针对 Windows 下 cmd 的。专门针对 PowerShell 的教程可能不是很多。另外，很多在 Unix 上的命令，在 PowerShell 上是不通用的。</p>
+<p>如果想要在 Windows 上运行类 *nix 环境，可以安装虚拟机软件以使用真正的 Unix / Linux 系统，也可以安装 MSYS2。</p>
+<p>接下来，本教程尽量使用 Win32 / *nix 平台下通用的命令，但为了避免一部分问题，我们建议读者在类 *nix 环境下学习本教程。但这不意味着我们建议推崇 *nix 环境。</p>
+<p>链接：【转】不要盲目崇拜 *nix 下的开发环境：https://www.cnblogs.com/feichengwulai/articles/3628014.html</p>
+</blockquote>
+<h2 id="什么是命令"><a class="header" href="#什么是命令">什么是命令？</a></h2>
+<p>如下为一条命令：</p>
+<pre><code class="language-bash">gcc hello.cpp -o hello
+</code></pre>
+<p>命令中的“<code>gcc</code>”“<code>hello.c</code>”“<code>-o</code>”“<code>hello</code>”字段<strong>由空格相间</strong>。这些字段统称<strong>命令行参数</strong>。</p>
+<p>命令中的第一个的字段一般为要使用的程序名称，之后的字段用来控制程序的运行。</p>
+<p><img src="./assets/shell-command-example.svg" alt="上述命令构成的示意图" title="命令构成的示意图" /></p>
+<blockquote>
+<p>如果你不明白这个命令，别着急，我们会在“命令行工具”中讲到它。</p>
+</blockquote>
+<p>如果一个参数中含有空格，我们需要用引号将其包裹起来，比如：</p>
+<pre><code class="language-console">$ process_name Tom Lucy &quot;Jane Doe&quot;
+</code></pre>
+<h2 id="-补充目录和文件"><a class="header" href="#-补充目录和文件">⚡ 补充：目录和文件</a></h2>
+<h3 id="目录和文件的表示"><a class="header" href="#目录和文件的表示">目录和文件的表示</a></h3>
+<p>文件、目录都有一个名字，比如“apple”可以是一个文件夹的名字，也可以是一个目录的名字；</p>
+<p>一个目录下可以有多个文件或目录；</p>
+<p>通常，用“<code>.</code>”表示<strong>当前目录</strong>，“<code>..</code>”表示<strong>上一级目录</strong></p>
+<p>Unix 一般用正斜杠“<code>/</code>”（forward slash）分割路径，Windows 一般用反斜杠“<code>\</code>”（backslash）。</p>
+<p>举几个例子：</p>
+<ul>
+<li>以“<code>/usr/local/</code>”为例，最开始的“/”表示<strong>根目录</strong>，即根目录下的“usr”目录下的“local”目录。</li>
+<li>以“<code>files/1.txt</code>”为例，它表示（当前目录下）files目录中的名为“1.txt”的这个文件。也可以写作“<code>./files/1.txt</code>”。</li>
+<li>以“<code>1.png</code>”为例，它表示（当前目录下）的名为“1.png”的文件。</li>
+</ul>
+<h3 id="文件的分类"><a class="header" href="#文件的分类">文件的分类</a></h3>
+<p>我们将文件分为<strong>可执行文件</strong>和普通文件。则可执行文件的名称（路径）可以作为 Shell 命令的第一项，也就是告诉 Shell 我们要调用的程序。</p>
+<h2 id="打开计算机上的终端虚拟终端"><a class="header" href="#打开计算机上的终端虚拟终端">打开计算机上的终端（虚拟终端）</a></h2>
+<h3 id="windows-下打开终端虚拟终端"><a class="header" href="#windows-下打开终端虚拟终端">Windows 下打开终端（虚拟终端）</a></h3>
+<p>（其中一种方法）按下“Windows 徽标键 + R”打开“运行”，输入“powershell”，然后按下“Enter”键或者点击“确定”。</p>
+<p><img src="./assets/win-run-dialog.png" alt="Windows 的“运行”对话框" /></p>
+<p><img src="./assets/powershell-in-win32-console.png" alt="运行着 PowerShell 的 Win32 控制台" /></p>
+<p>观察到窗口标题栏上有“Windows PowerShell”字样。接下来，观察窗口中的内容：</p>
+<p>“<code>C:\Users\Henry</code>”表示当前所在的工作路径：“C盘”下的“Users”目录下的“Henry”目录</p>
+<p>通常，打开终端后所在的目录为用户（User）的“<strong>家目录</strong>（Home）”，可以理解成<strong>用户存放个人文件的大本营</strong>。</p>
+<p>因此，也不难理解“<code>C:/Users/Henry</code>”表示的就是“Henry”这个用户的文件夹。</p>
+<blockquote>
+<p>需要注意的地方：</p>
+<p>你可能会注意到，我们在“运行”窗口中输入的“powershell”其实是一个程序名。但实际上我们看到的是，出现了一个窗口，里面运行着 PowerShell。</p>
+<p>这是因为当启动一个文本界面程序时，Windows 会自动将其依附到一个 <strong>Win32</strong> <strong>控制台</strong>上。</p>
+<p>Windows <strong>默认的终端</strong>为“Win32 控制台（Win32 Console）” 。</p>
+<p>在过去，一般用户操作的叫做“终端”，而管理员操作的叫做“控制台”。至于现在，控制台和终端基本没什么区别了。</p>
+</blockquote>
+<h3 id="ubuntu-下打开终端虚拟终端"><a class="header" href="#ubuntu-下打开终端虚拟终端">Ubuntu 下打开终端（虚拟终端）</a></h3>
+<p>在程序列表中寻找“终端”应用；或者尝试按下“Ctrl + Alt + T”。</p>
+<p><img src="./assets/terminal-in-ubuntu-gnome.png" alt="Ubuntu 20.04 的默认终端" /></p>
+<p>接下来，观察“<code>nan@Nan-Machine:~$</code>”这个字符串中不同的字段：</p>
+<table><thead><tr><th>字段</th><th>解释</th></tr></thead><tbody>
+<tr><td><code>nan@Nan-Machine</code></td><td>“nan”是当前终端登入的用户名， “Nan-Machine”为所登入计算机的名称。</td></tr>
+<tr><td><code>~</code></td><td>表示当前所处的路径。Unix 下用“~”表示用户的<strong>家目录</strong></td></tr>
+<tr><td><code>$</code></td><td>表示当前的权限为普通用户权限，这时不能访问一些系统文件和目录，当为“<code>#</code>”时表示处于“超级用户（Super User）”模式。关于如何执行需要提权的命令，将在稍后解释。</td></tr>
+</tbody></table>
+<h3 id="macos"><a class="header" href="#macos">macOS</a></h3>
+<p>（等待补充）</p>
+<h3 id="-练习-1初识命令"><a class="header" href="#-练习-1初识命令">✏️ 练习 1——初识命令</a></h3>
+<p>尝试解释下面这行命令的含义：</p>
+<pre><code class="language-console">$ echo &quot;hello!&quot;
+</code></pre>
+<p>然后在终端中输入这条命令，<strong>按 Enter 键提交输入</strong>，观察终端的反应。注意，命令中的引号“<code>&quot;</code>”为<strong>英文引号</strong>，且字段间有<strong>空格</strong>，输入时需要注意。</p>
+<h2 id="标准输入输出"><a class="header" href="#标准输入输出">标准输入输出</a></h2>
+<p>对于一个文本界面（CLI）程序，其输入，除了命令行参数，还有<strong>标准输入</strong>，默认会从终端读取，也就是用户输入的字符。</p>
+<p>而程序的标准输出，默认显示/<strong>打印</strong>（print）在终端/控制台上。</p>
+<h3 id="输入输出重定向"><a class="header" href="#输入输出重定向">输入输出重定向</a></h3>
+<p>通过输入输出重定向，可以将程序的标准输入<strong>重定向</strong>为“从文件读取”，或者将程序的标准输出重定向为“写入到文件”。</p>
+<p>Shell 提供输入输出重定向的功能，一般可以使用“<code>&lt;</code>”和“<code>&gt;</code>”符号。详情参见下面的练习。</p>
+<h3 id="-练习-2输出重定向"><a class="header" href="#-练习-2输出重定向">✏️ 练习 2——输出重定向</a></h3>
+<p>在终端依次输入如下命令：</p>
+<pre><code class="language-console">$ echo &quot;hello!&quot; &gt; hello.txt
+$ cat hello.txt
+</code></pre>
+<p>观察执行命令后的输出。</p>
+<h2 id="管道"><a class="header" href="#管道">管道</a></h2>
+<p>通过管道，可以将一个命令执行后的<strong>标准输出</strong>，作为另一个程序的<strong>标准输入</strong>。</p>
+<p>在 Unix 系统上常用的 Shell 中，使用“<code>|</code>”符号表示管道。</p>
+<p>如：<code>FirstProgram | AnotherProgam</code></p>
+<h3 id="-补充正则表达式"><a class="header" href="#-补充正则表达式">⚡ 补充：正则表达式</a></h3>
+<p>正则表达式用来匹配（match）符合一定规则的字符串。</p>
+<p>参考资料：第 6 章 正则表达式 – 现代 C++ 教程：https://changkun.de/modern-cpp/zh-cn/06-regex/index.html</p>
+<h3 id="-练习-3管道"><a class="header" href="#-练习-3管道">✏️ 练习 3——管道</a></h3>
+<p>观察执行每条命令后的输出：</p>
+<pre><code class="language-console">$ echo &quot;Hello Cello&quot; &gt; text.txt
+$ cat text.txt
+$ grep &quot;ello&quot; text.txt
+$ cat text.txt | grep &quot;ello&quot;
+</code></pre>
+<p>注：对于 PowerShell，需要使用下面的命令：</p>
+<pre><code class="language-powershell">echo &quot;Hello Cello&quot; &gt; text.txt
+cat text.txt
+Select-String -Path text.txt -Pattern &quot;ello&quot;
+cat text.txt | Select-String -Pattern &quot;ello&quot;
+</code></pre>
+<h2 id="命令替换符"><a class="header" href="#命令替换符">命令替换符</a></h2>
+<p>将另一个命令的输出，替换到另一个命令的某个位置。</p>
+<p>通常使用 <code>$()</code> 符号来实现命令替换；这种方法比较通用，并且比较明显；</p>
+<p>在 *nix 系统上，也有用反引号（backticks）“`”进行命令替换的，但是反引号不容易与一般引号区分，因此建议使用 <code>$()</code>。</p>
+<p>常见的命令比如：</p>
+<pre><code class="language-console">$ g++ test.cpp -o test $(pkg-config --libs --cflags opencv4)
+</code></pre>
+<h2 id="续行符"><a class="header" href="#续行符">续行符</a></h2>
+<p>在一行的结尾输入“<code>\</code>”，表示该命令尚未完结，需要<strong>另起一行继续输入</strong>。</p>
+<h2 id="控制序列脱字符表示法转义字符"><a class="header" href="#控制序列脱字符表示法转义字符">控制序列、脱字符表示法、转义字符</a></h2>
+<p>在 ASCII 字符中，有一些字符，并不会 / 无法被终端<strong>打印</strong>出来。但他们通常可以让终端做一些事情，比如更改字体颜色、发出响声等。</p>
+<p><strong>脱字符表示法</strong>（Caret notation）是对 ASCII 码不可打印的控制字符的一种表示法。用一个脱字符（^）后跟一个大写字符来表示一个控制字符的ASCII码值。当终端遇到这些控制字符时，一般会以脱字符的形式显示给用户。</p>
+<p>举个例子，键盘上的 ESC 键，在 ASCII 码中为第 27 个，其脱字符表示法为“<code>^[</code>”。要在终端中输入脱字符，通常是按住 Ctrl，并键入对应字符。</p>
+<p>而在文本内容中，我们通常会用“转义字符（escaped characters）”的方式表示一些控制字符。顾名思义，转义字符，其表示的便不再是其本身的意思。转义字符通常以反斜线开始。比如：<code>\a</code> 表示响铃，<code>\n</code>表示换行等等。</p>
+<blockquote>
+<p>更详细的关于转义字符的介绍，请阅读后续章节。</p>
+</blockquote>
+<blockquote>
+<p>不过要留意不同平台的快捷键，比如 Win 和 Mac，或者说常用应用程序和shell 里面，同样的快捷键可能会有截然不同的意义。比如关于终止输入（EOF），Linux系统内的终止输入是 <code>Ctrl</code> + <code>D</code>，Windows 是 <code>Ctrl</code> + <code>Z</code>。再比如 <code>Ctrl</code> + <code>C</code> 在一般应用里是“复制”操作的快捷键，而在终端里面则用来终止当前进程。</p>
+</blockquote>
+<h3 id="-实验控制终端输出文本的颜色"><a class="header" href="#-实验控制终端输出文本的颜色">🧪 实验：控制终端输出文本的颜色</a></h3>
+<p>CLI 程序只能以文本形式将信息显示给我们，当信息量比较大时，我们就不容易阅读信息了。后来出现了彩色终端，程序可以通过向终端输出一些特定的字符，控制终端输出内容的格式。现在的（虚拟）终端一般能支持针对字体的颜色（color）、强度（intensity，可以理解成颜色的暗淡或高亮）、斜体、下划线等属性（attributes）的调节。</p>
+<p>在终端中输入如下命令，观察终端的输出：</p>
+<pre><code class="language-console">$ echo &quot;^[[31m hello ^[[0m&quot;
+$ echo &quot;^[[32m hello ^[[0m&quot;
+</code></pre>
+<p><strong>注意</strong>：“<code>^[</code>”为一个整体，是终端对 ESC 这个字符的表示，需要通过上一张幻灯片介绍的方式键入。</p>
+<p>输出结果：</p>
+<pre><code class="language-console">$ echo &quot;^[[31m hello ^[[0m&quot;
+hello 
+$ echo &quot;^[[32m hello ^[[0m&quot; 
+hello 
+$ echo &quot;^[[1;32m hello ^[[0m&quot;
+hello
+</code></pre>
+<p><img src="./assets/terminal-colorful-text-demo.svg" alt="效果图，执行上述命令后，终端上输出不同颜色的“hello”文本" title="终端上输出彩色文本效果图" /></p>
+<p>如果无法键入 ESC 字符，在 Windows 上可以尝试升级或更换所使用的<strong>终端</strong>。</p>
+<p>而在 *nix 中，可以给“echo”命令加一个参数“<code>-e</code>”，使其解析字符串中的转义字符，然后使用“转义字符”表示 ESC 字符。</p>
+<pre><code class="language-console">$ echo -e &quot;\033[31m hello \033[0m&quot;
+</code></pre>
+<p>如果实在无法输入字符，可以只观察一下图片中的示例即可。在之后的内容中会指引读者通过编程的方式输出“转义序列”。</p>
+<p>有关彩色输出控制序列在此不过多介绍了，感兴趣的同学可以自行查找相关资料。</p>
+<h2 id="-实验编写自己的可执行程序"><a class="header" href="#-实验编写自己的可执行程序">🧪 实验：编写自己的可执行程序</a></h2>
+<p>任务：在命令行中运行自己编写的程序，同时体验程序如何接收命令行参数。</p>
+<p>这里我们采用 C++ 编写这个程序。代码会在下面给出。</p>
+<p>如果尚未掌握基础的 C++ 知识（如何编译、运行），可以跳过实际操作过程，观察给出的程序的表现即可。</p>
+<p>源代码：</p>
+<pre><code class="language-cpp">// cmd-line-test.cpp
+
+#include &lt;iostream&gt;
+
+int main(int argc, char* argv[]) {
+    std::cout &lt;&lt; &quot;Received &quot; &lt;&lt; argc &lt;&lt; &quot; command-line argument(s).\n&quot;;
+    for (int i = 0; i &lt; argc; i++) {
+        std::cout &lt;&lt; i &lt;&lt; &quot;. &quot; &lt;&lt; argv[i] &lt;&lt; &quot;\n&quot;;
+    }
+    std::cout &lt;&lt; std::endl;
+}
+</code></pre>
+<p>输出结果：</p>
+<p><img src="./assets/running-self-built-cli-app.svg" alt="示意图：在运行着 PowerShell 的终端中构建并运行自己的 CLI 程序" title="示意图：在 PowerShell 中构建并运行自己的 CLI 程序" /></p>
+<pre><code class="language-console">PS C:\Users\Henry&gt; g++ cmd-line-test.cpp -o test 
+PS C:\Users\Henry&gt; ./test 123 abc hello bye! 
+Received 5 command-line argument(s). 
+0. C:\Users\Henry\test.exe 
+1. 123 
+2. abc 
+3. hello
+4. bye!
+</code></pre>
+<p>上述构建出的 <code>test</code> 是一个可执行程序，但 <code>test</code> 不是一个全局可用的命令，它只在当前目录下可用，因此我们采用如 <code>./test</code> 这样通过<strong>路径</strong>的方式来访问/执行它。有些时候，我们也会通过绝对路径的方式访问某个可执行程序，如：</p>
+<pre><code class="language-bash">C:/Users/Henry/test 123 abc hello
+</code></pre>
+<p>有时候，文件名中可能包含空格，这需要转义。或者，我们可以使用引号将整个路径括起来，像下面这样：</p>
+<pre><code class="language-bash">&quot;/path/to/an/executable&quot; 123 abc hello
+</code></pre>
+<blockquote>
+<p>至于如何让一个应用在全局可用，我们会在之后讲解“环境变量”。</p>
+</blockquote>
+<h2 id="如何执行需要提权的命令"><a class="header" href="#如何执行需要提权的命令">如何执行需要提权的命令？</a></h2>
+<h3 id="windows运行提权的-shell"><a class="header" href="#windows运行提权的-shell">Windows：运行提权的 Shell</a></h3>
+<p><img src="./assets/windows-search-powershell.png" alt="在开始菜单的搜索框中搜索“PowerShell”" /></p>
+<p>如果看不到“🔎”按钮，可能是因为没有在任务栏中启用搜索按钮。</p>
+<p>也有可能是因为关闭了 Windows 的“Windows Search”功能。</p>
+<h3 id="nix执行提权命令"><a class="header" href="#nix执行提权命令">*nix：执行提权命令</a></h3>
+<p>在命令前加上 sudo 字样，然后执行，之后会要求输入密码。</p>
+<p>注意，密码不会回显，输入完成后直接按“Enter”键提交即可。</p>
+<h2 id="使用其他的终端或者-shell"><a class="header" href="#使用其他的终端或者-shell">使用其他的终端或者 Shell</a></h2>
+<p>当然，使用什么终端或者 Shell 是我们可以选择的。</p>
+<p>不同的 Shell 可能会有不同的“行为（Behavior）”或者功能，但是他们的根本目的是一样的——执行命令操作计算机。</p>
+<h2 id="结语"><a class="header" href="#结语">结语</a></h2>
+<p>现在，你只了解了基础的概念，如果要熟练掌握命令行，还需要了解一些常用的命令。</p>
+<p>众多命令行工具的大门已经向您打开，如……</p>
+<p>不一定需要记忆各种命令。可以准备一份速查表 / 备忘单（Cheatsheet），在需要时查阅。</p>
+<h2 id="其他"><a class="header" href="#其他">其他</a></h2>
+<p>1. 以上只是在命令行中逐语句键入命令，但我们也可以将若干条命令存储在一个文本文件中。这个该过程称为编写 Shell 脚本。</p>
+<p>2. 了解正则表达式；</p>
+<p>3. 阅读参考资料。</p>
+<h2 id="参考资料"><a class="header" href="#参考资料">参考资料</a></h2>
+<ul>
+<li><a href="https://printempw.github.io/the-difference-between-cli-terminal-shell-tty/">命令行界面（CLI）、终端（Terminal）、Shell、TTY，傻傻分不清楚？ - PRIN BLOG - printempw.github.io</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%84%B1%E5%AD%97%E7%AC%A6%E8%A1%A8%E7%A4%BA%E6%B3%95">脱字符表示法 - 维基百科</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../begin-programming/what-is-programming.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../begin-programming/cli/common-commands.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../begin-programming/what-is-programming.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../begin-programming/cli/common-commands.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

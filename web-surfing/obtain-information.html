@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>信息获取与搜索技巧 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../web-surfing/obtain-information.html" class="active"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="信息获取与搜索技巧"><a class="header" href="#信息获取与搜索技巧">信息获取与搜索技巧</a></h1>
+<h2 id="获取信息知识"><a class="header" href="#获取信息知识">获取信息知识</a></h2>
+<h3 id="选择合适的资料解决问题"><a class="header" href="#选择合适的资料解决问题">选择合适的资料解决问题</a></h3>
+<p>如果想要系统的学习一个课程，那么建议<strong>阅读相关书籍</strong>或<strong>观看视频课程</strong>等。</p>
+<p>如果是解决一个问题，可以直接查阅现成的解决方案，往往会通过互联网完成这个任务。</p>
+<h3 id="搜索引擎"><a class="header" href="#搜索引擎">搜索引擎</a></h3>
+<p>互联网时代，要在互联网上查找信息，最常用的可能就是<strong>搜索引擎</strong>了。搜索引擎通过不停爬取各个网站的内容、记录不同页面被引用和点击的次数，因此能根据用户输入的关键字，展示一些相对来说不错的结果。</p>
+<p>有时我们还需要在指定网站中搜索、在指定时间段内搜索、从搜索中排除关键字，搜索引擎提供相应的<strong>高级搜索</strong>功能，能够更精准的找到需要的信息。</p>
+<p>常用的搜索引擎有 <a href="baidu.com">百度</a>、<a href="bing.com">必应</a>、<a href="google.com">谷歌</a> 等。</p>
+<p>一般，搜索国内信息或者本地化内容，如院校排名、企业信息，使用百度可能会取得更好的效果。</p>
+<p><a href="https://cn.bing.com">中国区 Bing</a> 提供“国内版”和“国际版”两种搜索模式，内容会更加国际化。</p>
+<p>Google 也是比较好用的，但是可能需要手动在设置页选择搜索结果的语言。目前来说，在中国大陆访问谷歌需要使用代理服务。</p>
+<p>针对计算机/编程的学习，建议在“搜索结果语言”页中勾选“简体中文”“繁体中文”“English”，多一种语言，意味着多一片天地。</p>
+<p>同时，建议使用 Bing 和 Google 查找需要的资料，在同样为简体中文的搜索结果时，它们的结果比百度的更具有参考价值。另外还需注意，针对外文的搜索，百度几乎不能胜任。</p>
+<p>除此之外，还有 Duck Duck Go、Yandex 等搜索引擎，它们有各自的优势，这里暂不详细列举。</p>
+<h3 id="暗网"><a class="header" href="#暗网">暗网</a></h3>
+<p>互联网上还有很大一部分是“暗网”。“暗网”指的是那些并不是对任何用户都可见的网站，比如公司、组织内部的网络。</p>
+<p>有一些网站的内容不会被搜索引擎记录下来，比如某些论坛、博客、购物网站、视频网站等。这些网站通过明确标记不希望被收录进搜索引擎，因而其中的内容无法由用户搜索引擎而检索得到。此外，一些网站由于内容更新频繁，搜索引擎也不能很好地收录其中的信息。</p>
+<blockquote>
+<p>对于简体中文互联网，淘宝、京东等购物网站，微信公众平台，个别网站等，都属于上述提到的网站。这些网站中通常也包含了许多内容，</p>
+</blockquote>
+<p>不过，上述的这些网站可能会提供内部搜索引擎，供用户检索信息。</p>
+<blockquote>
+<p>比如，对于微信公众平台上发布的文章，用户可以尝试通过“微信”应用程序中提供的搜索工具，或使用“搜狗”搜索引擎。</p>
+</blockquote>
+<p>这些网站可能还会给用户提供兴趣推荐和订阅选项，这样可以让用户更容易看到自己想看的东西。</p>
+<h2 id="搜索技巧"><a class="header" href="#搜索技巧">搜索技巧</a></h2>
+<h3 id="多平台查找信息"><a class="header" href="#多平台查找信息">多平台查找信息</a></h3>
+<p>比如，用户想购买一款产品，则可以在多个社交平台以及媒体网站上浏览评测和使用体验，也可尝试在购物网站的买家评论中上查看到更多角度、更贴近实际的图片。</p>
+<h3 id="信息的聚合性"><a class="header" href="#信息的聚合性">信息的聚合性</a></h3>
+<p>正如你看到书中的某个句子一见倾心，可能会去翻看整本书。即，如果用户对一个网页的内容感兴趣，那么该用户很可能也对该内容的发布者创作的其他内容感兴趣，或者对整个站点都感兴趣。</p>
+<p>具体来说，用户可以在相关网站内搜索信息，可能会得到相关性更高的结果。</p>
+<p>用户也可以从一个搜索结果，可以找出来源页面/网站或者内容的作者，在该网站/作者页面下可能会获取到相关的其他信息。</p>
+<h3 id="信息溯源"><a class="header" href="#信息溯源">信息溯源</a></h3>
+<p>互联网每天都有大量的信息产生和消失。用户可能会将自己觉得有趣的内容“搬运”到其他平台，甚至可能进行一些再加工。良好的习惯是标注出信息的来源或出处，但并不是所有时候信息的来源都是可用的。</p>
+<p>假如用户觉得自己看到的内容有意思，但发现内容是转载的，想找到信息的源头，或者想获得未经再加工的原始信息，或者需要确定自己获得到的信息的真实性，这时往往需要使用到反向搜索。</p>
+<p>有时用户还需要判断内容来源的平台、文化背景，以便更有针对性地进行反向搜索。</p>
+<h4 id="文字"><a class="header" href="#文字">文字</a></h4>
+<p>常常，我们会遇到要找信息的源头的时候，比如看到一篇写的很好的文章，但是因为多次转载，一些图片或者格式丢失了。这时候我们可以用文章内部的特征性内容再次搜索；甚至，可以（通过蛛丝马迹）判断文章的类型：</p>
+<ul>
+<li>如果有翻译的痕迹，可以尝试回译；</li>
+<li>如果有一定的平台特征，可以在可能的来源的平台上查找。</li>
+</ul>
+<blockquote>
+<p>比如，每个段落都为较短的语句的文章，很可能来自微信公众平台。</p>
+</blockquote>
+<h4 id="图片"><a class="header" href="#图片">图片</a></h4>
+<p>有时候我们会看到喜欢的图片，那么我们可以通过图片的内容大概判断类型（照片或是插画）以及来源（国内或国外）进行针对性的搜索。</p>
+<p>常用的反向图片搜索引擎有百度、谷歌、TinEye。</p>
+<blockquote>
+<p>很多网站提供的拍照搜也是个很好的工具。</p>
+</blockquote>
+<h4 id="视频"><a class="header" href="#视频">视频</a></h4>
+<p>用户可以观察视频上的水印文字推断来源网站或作者。也可以使用文字描述视频的特征，使用搜索引擎进行搜索。或者使用视频中代表性的截图（比如视频第 1 ~ 3 秒钟的截图）进行图像反向搜索。</p>
+<h4 id="音乐"><a class="header" href="#音乐">音乐</a></h4>
+<p>用户可以描述歌曲中的歌词，或者使用专门的音乐反向搜索工具检索音频。</p>
+<h2 id="信息处理"><a class="header" href="#信息处理">信息处理</a></h2>
+<p>对于日常接受到的信息，可以设计一个适合用户自己的整理方式。比如，可以使用一个笔记软件管理他们。</p>
+<p>至于收藏感兴趣的网页，可以从一开始养成良好的书签管理习惯，亦可以将页面上的内容作为笔记保存，甚至添加自己的注解。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../web-surfing/learn-english.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../web-surfing/search-for-help.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../web-surfing/learn-english.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../web-surfing/search-for-help.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

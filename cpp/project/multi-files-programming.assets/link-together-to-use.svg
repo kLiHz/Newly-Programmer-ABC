@@ -1,0 +1,47 @@
+<svg width="680" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="0" y="0" width="1280" height="720" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)">
+		<rect x="0" y="0" width="680" height="480" fill="#FFFFFF" />
+		<rect x="350.5" y="33.5001" width="315" height="126" stroke="#3B3838" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(466.526 57)">
+			sub.cpp
+			<tspan font-weight="400" font-size="17" x="-107.08" y="23">int subtract(int n, int m)</tspan>
+			<tspan font-weight="400" font-size="17" x="-107.08" y="46">{</tspan>
+			<tspan font-weight="400" font-size="17" x="-65.7467" y="68">return n - m;</tspan>
+			<tspan font-weight="400" font-size="17" x="-107.08" y="90">}</tspan>
+		</text>
+		<rect x="38.5001" y="33.5001" width="293" height="126" stroke="#3B3838" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(143.834 57)">
+			add.cpp
+			<tspan font-weight="400" font-size="17" x="-96.08" y="23">int add(int n, int m)</tspan>
+			<tspan font-weight="400" font-size="17" x="-96.08" y="46">{</tspan>
+			<tspan font-weight="400" font-size="17" x="-54.7467" y="68">return n + m;</tspan>
+			<tspan font-weight="400" font-size="17" x="-96.08" y="90">}</tspan>
+		</text>
+		<rect x="259.5" y="203.5" width="342" height="239" stroke="#3B3838" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(383.008 228)">
+			main.cpp
+			<tspan font-weight="400" font-size="17" x="-114.833" y="46">int add(int n, int m);</tspan>
+			<tspan font-weight="400" font-size="17" x="-114.833" y="68">int subtract(int n, int m);</tspan>
+			<tspan font-weight="400" font-size="17" x="-114.833" y="113">int main()</tspan>
+			<tspan font-weight="400" font-size="17" x="-114.833" y="135">{</tspan>
+			<tspan font-weight="400" font-size="17" x="-73.5" y="158">add(6,7);</tspan>
+			<tspan font-weight="400" font-size="17" x="-73.5" y="180">subtract(8,9);</tspan>
+			<tspan font-weight="400" font-size="17" x="-114.833" y="202">}</tspan>
+		</text>
+		<rect x="244" y="244" width="328" height="66" stroke="#7C7C7C" stroke-width="2" stroke-miterlimit="8" fill="none" />
+		<path d="M0.257062-0.615113 102.968 42.3087 102.454 43.5389-0.257062 0.615113ZM103.023 38.719 108.862 45.4944 99.9379 46.1003Z" fill="#7C7C7C" transform="matrix(1 0 0 -1 135.5 322.994)" />
+		<text font-family="KaiTi,sans-serif" font-weight="400" font-size="19" transform="translate(50.9229 346)">
+			编译时只需函数的声
+			<tspan font-size="19" x="28" y="22">明即可通过；</tspan>
+			<tspan font-size="19" x="0" y="45">但是最终需要链接在</tspan>
+			<tspan font-size="19" x="18.6667" y="66">一起才能使用。</tspan>
+		</text>
+		<path d="M251.083 90.1765 339.365 249.221 338.2 249.868 249.917 90.8236ZM341.633 246.438 342.018 255.374 334.638 250.32Z" fill="#7C7C7C" />
+		<path d="M0.635974-0.199954 58.0418 182.385 56.7699 182.785-0.635974 0.199954ZM60.8217 180.113 59.4052 188.945 53.19 182.513Z" fill="#7C7C7C" transform="matrix(-1 0 0 1 573.905 88.5001)" />
+	</g>
+</svg>

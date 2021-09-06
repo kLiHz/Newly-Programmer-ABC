@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>文件格式 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../use-your-computer/file-format.html" class="active"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="文件的格式"><a class="header" href="#文件的格式">文件的格式</a></h1>
+<p>开始这篇内容前，读者需要：</p>
+<ul>
+<li>理解计算机中“文件”的概念</li>
+</ul>
+<h2 id="编码"><a class="header" href="#编码">编码</a></h2>
+<p>在“什么是计算机”一章中，我们说到，要让计算机存储、处理数据，就需要按一定规则将现实中的事物抽象，并用数字表示下来。</p>
+<blockquote>
+<p>比如，我们可以给字母、符号编号，这样我们就能用若干数字表示一段文本了；比如，我们可以用 1 ~ 100 的 100 个数字，表示 100 种颜色，而用很多个颜色点——更一般的叫法是“像素”——便能拼出一幅图像了；比如，我们可以在波形上选取若干点，便可以用数字记录一个波形，进而记录一段声音了……</p>
+</blockquote>
+<p>对于文本编码，最初的是“美国标准信息交换码（ASCII）”，它只覆盖了一些控制字符、英文字母以及阿拉伯数字等。该编码仅使用一个字节就能表示字符集中所有的字符。</p>
+<p>而对于其他国家的用户来说，要想表示自己所用的文字，ASCII 编码显然是不够用的。于是各国便开始设计自己的编码方式，比如 GBK、Big5 等等，但是因为这些都是独立开发的，同一个数码在不同的编码下会表示不同的字符，即不同编码间会有冲突，于是 Unicode 编码应运而生。</p>
+<p>要涵盖地球上所有的文字，一个字节显然不够用，我们可能需要 2 个、3 个甚至更多字节，才能表示所有的字符。但对于一篇皆为英文字符的文章，对每个字母都使用 2、3 或 4 个字节编码显然不合适，会造成很多空间的浪费。于是，Unicode 推出了变长字符编码的方式，如 UTF-8，其对英文字母等字符采用 1 个字节，而对于其他字符采用更多字节，通过每个字节开始的一些位来区分接下来的字符由几个字节组成。关于 Unicode 更详细的说明在这里不过多展开。</p>
+<p>而对于一般图像，我们采用将其转化为像素平面的方式，从而实现图像的数字化。这个过程叫做“栅格化”，即在原图像上划分出若干栅格，取最能代表每个栅格色彩的颜色，作为所得数字图像对应位置的色点。这个过程也成为“采样”。我们划分栅格的数量，即为数字图像的“分辨率”。这种方式产生的图像，叫做“位图”。出于人眼感知色彩的三原色理论，我们一般用红、绿、蓝三种色光的强度，来表示人能看到的色彩。</p>
+<p>我们可以用纯文本方式记录图像。在下面的例子中，“6”“4”代表图像的大小——宽度为 6 像素、高度为 4 像素。接下来的“255”，意味着图像中每个色点的最大值为 255。接下来的每一个数字就代表对应点色彩的强度。这里，仅有一个表示色彩强度的指标（即“<strong>单通道</strong>（Channel）”），我们把这样的图像称作灰度图。如果要表示彩色图，那么每个点可能需要三个指标才行，也即“三通道”。</p>
+<pre><code class="language-text">6 4
+255
+24  0   38  129 4   154
+12  73  227 40  0   0
+12  173 127 20  0   0
+21  73  87  230 1   0
+</code></pre>
+<p>可见，这个过程中，我们只能表示 0 ~ 255 共 256 个状态。曾经连续的光强信号，现在只能用<strong>离散</strong>的指标来表示了。</p>
+<p>能表示图像，自然也能表示视频了。只需要将表示一个动作过程的若干连续图像按照顺序组合起来，即可形成“视频”，或者说“动画”。由于我们不可能存储无限张图片，可见，这个过程也是离散化的。</p>
+<p>实际上，用文本文件表示图像的方法是非常低效的，浪费了太多的空间。文件中大量的空格是一种浪费。另外，我们常常要用 2 个甚至 3 个字符来表示一个像素的指标，这也造成了大量浪费。举个例子，如果要用二进制表示 0 ~ 255 之间的任意一个数，只需要 8 个二进制比特位；而如果使用字符表示法，仅仅表示一个字符就需要 8 个二进制比特位了。因此，实际情况下通常使用二进制记录这些数。除此之外，还有可能会采取各种压缩算法，降低数据量，从而降低传输、存储过程中的成本。</p>
+<p>但是压缩不可避免的会带来信息的丢失。一般，视频、图像是人们最希望能够压缩的对象，因为其往往会占用相当大的数据量。举个例子，一幅分辨率为 1920 × 1080 的三通道 8 位位图图像，再不压缩的情况下，其最少需要 1920 × 1080 × 3 = 6,220,880 字节来存储，也就是 6,075 千字节（KB），这是一个很大的数目了。而我们日常使用中，同分辨率的图像经过压缩后，一般只有 200 ~ 2000 千字节左右。</p>
+<p>由此就出现了形容视频、图像的一个指标——<strong>质量</strong>。也有更为专业的衡量指标，叫做“码率”，可以理解为单位时间内描述内容所用的数码的多少的意思。可以想见，数码越多、信息量越大，往往越能还原真实的视频、图像。</p>
+<blockquote>
+<p>为什么有些视频网站上的「高清」资源，画质能糊穿地心？ - 哔哩哔哩：https://www.bilibili.com/video/BV1S64y127Jc</p>
+</blockquote>
+<h2 id="解码decode"><a class="header" href="#解码decode">解码（Decode）</a></h2>
+<p>将数字化后的数值，重现还原成人类可读（或者说编码前的状态）的形式的过程，叫做解码。</p>
+<p>比如，将压缩后的图像，还原为一个个表示像素强度的数值，甚至以文本形式、画面形式（人类可读性逐渐增强）显示出来，即为图像的解码过程。</p>
+<p>总而言之，只要文件的制作软件和解读软件（如图像查看软件，音频、视频播放软件）遵循相同的格式约定，用户就可以在文件解读软件中看到文件的内容。</p>
+<h2 id="文件的格式-1"><a class="header" href="#文件的格式-1">文件的格式</a></h2>
+<p>之前我们提到，<strong>文件的格式</strong>就是，文件的<strong>创建者</strong>和<strong>解释者</strong>（使用文件的软件）约定好的、对于的数据编码以及存储方式。</p>
+<p>许多文件格式都有公开的、不同程度规范或者建议的<strong>格式</strong>。这些规范或者建议描述了数据如何编码，如何排列。有时也规定了是否需要特定的计算机程序读取或处理。有两种情况下，文件格式没有公开。第一种情况是：开发者将文件格式视作商业秘密不愿公开；第二种情况是：开发者不愿或花去很少的时间用于规范文档。</p>
+<h3 id="如何区分文件的格式"><a class="header" href="#如何区分文件的格式">如何区分文件的格式</a></h3>
+<p>那么怎么区分文件的格式呢？最容易的就是在<strong>文件名</strong>中体现这一点，即给文件的名称加上一个扩展名（extension）。比如，我们有一个关于狗狗的图像文件，它的名称为“my-dog”，假如这是一个 PNG 格式的文件，则它的文件名可以为“my-dog.png”。这样，当我们看到一个文件的“<strong>后缀名</strong>”——因为扩展名在文件名的最后，所以我们有时也这样称呼文件的扩展名——为“png”，则我们有理由相信，这是一个 PNG 格式的图像文件。</p>
+<p>但是，使用文件名来确定文件格式有个问题，因为文件的名称很容易修改，我们完全可以通过修改文件名，就能让其被当作不同的文件被处理。这样就会出问题，由于解码方按照错误的方式解码编码者提供的信息，那么非常有可能得到错误的、完全不能理解的信息。可能对于能够理解文件内容并修改其信息的行家老手来说，这项技巧会显得很有用；但对于不那么专业的用户来说，可能会在不经意间错误的重命名某文件，结果使文件变得“不可用”了。</p>
+<p>因此，一些操作系统默认对用户隐藏文件的扩展名，以防止用户无意中更改了文件类型。我们会在后续章节介绍如何更改这个选项。</p>
+<p>但是这又带来一个问题，当文件夹下又若干同名文件时，就会产生混淆。</p>
+<p>比如有一个关于狗狗的文本文档，名称为“my-dog”，这就会和我们上文关于狗狗的图像文件“my-dog”形成冲突。虽然计算机不会混淆两个文件，但是会给用户造成一定的困扰。好在操作系统一般会给选项的旁边为用户标明<strong>文件类型</strong>，而图形化界面的操作系统一般还会给用户配上对应的图标——比如图片文件会用一个“照片”形状的图标来代替，文本文件会用“纸张”形状的图标来代替。</p>
+<blockquote>
+<p>这些可爱的图标会给一些恶意程序带来可乘之机。程序也是文件，其中包含的是一连串操作计算机的指令。在图形化界面操作系统中，可执行程序往往会有一个自己的图标，而这个图标是可以由程序的制造者自定义的。因此，一个看起来像是“图片”的文件，可能是有心者精心制作的恶意程序。当用户看似是正常的通过双击打开文件时，实际上是执行了这个恶意程序。因此，在打开文件前，最好事先认真观察文件的类型。</p>
+</blockquote>
+<p>图形化操作系统一般还是<strong>通过文件的扩展名</strong>来确定该选择哪个程序来打开文件，这样的程序叫做<strong>关联程序</strong>：当用户安装一个应用程序时，程序会告诉计算机自己能打开哪些后缀名的文件。这样，当用户选择打开一个文件时，操作系统会找到相应的程序来打开它。当有多个程序可用时，操作系统会选择用户设定的默认打开应用，或者让用户在若干程序中选择一个。而当文件没有扩展名时，操作系统就会询问用户，让用户来选择要使用的程序。</p>
+<p>为了使解码软件能够明白一个文件是否为自己能读取的格式、为哪种格式，文件更多的还是会在自身的数据里标识自己的格式类型。一般，这个位置位于文件数据流的前 2 个字节。这样，无论文件的扩展名为何，（支持多种格式的）解码软件都有可能正确打开这个文件。</p>
+<blockquote>
+<p>事实上，恶意程序有很多种类型，有些是通过在正常的文件中嵌入可执行的代码，利用解码软件的漏洞，在用户打开该文件的时候，在用户的计算机上执行设计好的操作。</p>
+</blockquote>
+<p>还有些系统会在自己的文件系统中记录文件的类型相关信息。但这样有个问题，当文件在不同的文件系统之间迁移时，可能会发生文件属性丢失或者不支持的情况。</p>
+<h2 id="常见文件格式"><a class="header" href="#常见文件格式">常见文件格式</a></h2>
+<h3 id="纯文本文件"><a class="header" href="#纯文本文件">纯文本文件</a></h3>
+<p>如我们之前所说，纯文本文件中的数码，都可以被翻译成人类可读的字符（前提是以正确的编码方式解码）。比如存储十进制数“123”，以纯文本形式存储即为“1”“2”“3”三个文字字符。</p>
+<h3 id="二进制文件"><a class="header" href="#二进制文件">二进制文件</a></h3>
+<p>一般来说，当我们以便于程序处理的形式（而不是人类易读的形式）存储数据、或者需要提高存储的效率时，所形成的文件通常为二进制文件。比如存储十进制数“123”，我们可以将其存储为二进制串“01111011”。如果以文本形式显示这个数据，我们得到的是“123”这个编码所对应的<strong>字符</strong>，而不是数字“1”“2”“3”。</p>
+<p>“二进制文件”这一概念很广泛，可以说，几乎所有计算机中存储的文件都可以称之为二进制文件，而常见的文件如图像、视频等也都常以二进制进行存储。当数据信息以二进制存储进文件时，我们习惯使用“bin”作为后缀名。</p>
+<h3 id="图像文件"><a class="header" href="#图像文件">图像文件</a></h3>
+<p>在计算机中，常见的图像为位图，即用色点形成的平面表示的图像。与位图相对的是矢量图，矢量图通过记录绘图指令来描述图像，可以借助数学中“根据函数在坐标系中画出图像”来理解。</p>
+<p>常见的位图文件的扩展名有“jpg”“png”“bmp”等，矢量图文件的扩展名有“svg”等。</p>
+<h3 id="视频文件"><a class="header" href="#视频文件">视频文件</a></h3>
+<p>我们将连续的、形成画面的一系列图像称作动画。以一定的形式将这些图像组合起来，进行编码，即形成视频文件。</p>
+<p>动画时间持续时间短的一般称为动态图像文件，持续时间较长的一般称为视频文件。</p>
+<p>常见的动态图像文件的扩展名有“gif”，视频文件的扩展名有“mp4”“avi”等。</p>
+<h3 id="音频文件"><a class="header" href="#音频文件">音频文件</a></h3>
+<p>记录音频的文件称为音频文件。常见的音频文件的扩展名有“mp3”“wav”“m4a”“flac”等。</p>
+<h3 id="压缩文件"><a class="header" href="#压缩文件">压缩文件</a></h3>
+<p>我们之前说到，如图像、视频等文件在存储时一般会采用一定的压缩算法。我们也可以对一个或多个文件采取“压缩”操作。</p>
+<p>对于文件的压缩，我们不希望有数据的损失。因此“压缩”的核心思想即为减少重复部分，以更少的数据记录原始信息。比如，我们有若干文本文件，其中每个文件中都有一段相同的内容，则压缩时对于这段内容，只需一次完整的记录即可。</p>
+<p>除了缩小文件大小外，我们使用压缩文件还有另外的目的，即方便传输。假如要传输 100 个文件，在传输时就要分别对这 100 个文件执行传输所必要的额外操作，接收方也需要分别检查和接收这 100 个文件。这会带来很多时间开销。而我们可以根据情况选择事先将这些文件打包，这样传输时只需要传输 1 个文件即可。对于文件的校验操作，可以交由解压缩软件进行。</p>
+<p>由于一般压缩文件中包含若干文件，如同邮递时使用的包裹，于是我们也形象地将压缩文件称为“压缩包”。</p>
+<p>常见的压缩文件的后缀名有“zip”“tar.gz”“rar”等。</p>
+<h3 id="办公文件"><a class="header" href="#办公文件">办公文件</a></h3>
+<p>使用计算机办公，通常有文档、表单、幻灯片这几种文件。Microsoft 的办公套件——如“Word”“Excel”“PowerPoint”——所使用的文件扩展名分别为“doc”“xls”“ppt”以及“docx”“xlsx”“pptx”等。像 Word 这样的办公套件是排版用的软件，这些文件也就是记录文档排版信息的文件。为了方便用户，这些文档会把用户使用的图片、视频等媒体也一并存入文件当中，以便达到便携的目的。实际上，这些文件就是一个若干文件的压缩包。</p>
+<blockquote>
+<p>读者可以尝试使用压缩文件程序查看这些文件。可以在压缩文件程序的选项菜单中选择打开这个文件，也可以尝试修改文件的后缀名，从而可以使用其他程序打开这个文件。</p>
+</blockquote>
+<p>常见的还有 PDF 文件，这种文件格式由 Adobe 公司创立。PDF 文档中可以有文字、图片、图形等诸多元素。不同于排版软件所使用的文档，PDF 一般作为一种固定的、不易被修改的格式，其预览效果和格式在不同设备上一般无明显差异，通常作为排版软件导出成品所使用的格式。</p>
+<h3 id="可执行文件"><a class="header" href="#可执行文件">可执行文件</a></h3>
+<p>记录计算机可执行指令的文件称为可执行文件。我们通常使用的应用程序即为可执行文件。当然，很多应用程序还具有相应的资源文件，如图片、音频、视频等。</p>
+<p>从某种程度上说，包含了执行命令的脚本文件也可以称作可执行文件。这些文件一般是纯文本形式的，常用来实现一些自动化的操作，因此也属于编程。脚本文件运行时交由 Shell 执行。常见的脚本文件扩展名有“bat”“cmd”“sh”等。</p>
+<blockquote>
+<p>Shell 指一类应用程序，其最为接近操作系统，处在用户和操作系统之间，形如一层壳（shell），因此得名。一般运行在命令行界面中，可以解析用户的命令，提供一些操作计算机的功能。关于 Shell 我们在后续内容中还有介绍。</p>
+</blockquote>
+<p>参考链接：</p>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%AA%94%E6%A1%88%E6%A0%BC%E5%BC%8F">文件格式 - 维基百科</a></li>
+<li><a href="https://en.wikipedia.org/wiki/File_format">File format - Wikipedia</a></li>
+</ul>
+<h2 id="端序字节存储序"><a class="header" href="#端序字节存储序">端序（字节存储序）</a></h2>
+<p>比如有一个 32 位的二进制数，用 16 进制表示为 <code>0x12345678</code>，那么怎么将这个数存在计算机中呢？</p>
+<blockquote>
+<p>一个 16 进制数代表 4 位 2 进制数。比如，十进制的 2，用 4 位 2 进制数表示为 <code>0010</code>，而用 1 位 16 进制数表示则为 <code>2</code>；十进制数 12，用 4 位 2 进制数表示为 <code>1100</code>，用 1 位 16 进制数表示则为 <code>C</code>。<code>0x</code> 表示其后的数字为十六进制数。</p>
+</blockquote>
+<p>我们知道，数位越高，表示的数值越重要，即其带来的影响比低位数字大得多。比如一个十进制数“111”，我们将百位的“1”改为“2”，其带来的影响远大于将个位的“1”改为“2”。</p>
+<p>一般来说，计算机中最小的数据单位为字节，而一个 32 位的数显然需要用多个字节来存放。我们可以将 <code>0x12345678</code> 这个数分割成 <code>0x12</code>、<code>0x34</code>、<code>0x56</code> 和 <code>0x78</code> 四个字节，那么按照如何的顺序存放这四个字节，就称为端序。</p>
+<p>端序（字节存储序）主要分为<strong>大端序</strong>（Big Endian）和<strong>小端序</strong>（Little Endian）。我们将计算机的内存按照顺序编号，得到地址，编号小的叫低地址，编号大的叫高地址。</p>
+<p>下面的表格，以 16 进制的形式，展示了使用不同的数据存储方式后，内存中的数据情况：</p>
+<table><thead><tr><th align="center">地址</th><th align="center">Little Endian</th><th align="center">Big Endian</th></tr></thead><tbody>
+<tr><td align="center">……</td><td align="center">……</td><td align="center">……</td></tr>
+<tr><td align="center">1001</td><td align="center"><code>0x78</code></td><td align="center"><code>0x12</code></td></tr>
+<tr><td align="center">1002</td><td align="center"><code>0x56</code></td><td align="center"><code>0x34</code></td></tr>
+<tr><td align="center">1003</td><td align="center"><code>0x34</code></td><td align="center"><code>0x56</code></td></tr>
+<tr><td align="center">1004</td><td align="center"><code>0x12</code></td><td align="center"><code>0x78</code></td></tr>
+<tr><td align="center">……</td><td align="center">……</td><td align="center">……</td></tr>
+</tbody></table>
+<p>总的来说，可以用下面的话来总结两种方法：</p>
+<ul>
+<li>Big Endian：高位字节存入低地址，低位字节存入高地址</li>
+<li>Little Endian：低位字节存入低地址，高位字节存入高地址</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../use-your-computer/files-and-directories.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../use-your-computer/organize-your-files.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../use-your-computer/files-and-directories.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../use-your-computer/organize-your-files.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

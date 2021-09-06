@@ -1,0 +1,26 @@
+<svg width="650" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="0" y="0" width="650" height="500" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)">
+		<rect x="0" y="0" width="650" height="500" fill="#FFFFFF" />
+		<path d="M239.5 240C239.5 208.796 273.303 183.5 315 183.5 356.698 183.5 390.5 208.796 390.5 240 390.5 271.204 356.698 296.5 315 296.5 273.303 296.5 239.5 271.204 239.5 240Z" stroke="#000000" stroke-width="1.33333" stroke-miterlimit="8" fill="#D0CECE" fill-rule="evenodd" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(290.448 248)">
+			硬件
+		</text>
+		<path d="M163.5 240C163.5 177.316 231.329 126.5 315 126.5 398.671 126.5 466.5 177.316 466.5 240 466.5 302.684 398.671 353.5 315 353.5 231.329 353.5 163.5 302.684 163.5 240Z" stroke="#000000" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(290.448 163)">
+			内核
+		</text>
+		<path d="M88.5001 240C88.5001 145.835 189.908 69.5001 315 69.5001 440.093 69.5001 541.5 145.835 541.5 240 541.5 334.165 440.093 410.5 315 410.5 189.908 410.5 88.5001 334.165 88.5001 240Z" stroke="#000000" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(235.114 107)">
+			系统调用、API
+		</text>
+		<path d="M12.5001 240C12.5001 114.908 147.934 13.5001 315 13.5001 482.066 13.5001 617.5 114.908 617.5 240 617.5 365.093 482.066 466.5 315 466.5 147.934 466.5 12.5001 365.093 12.5001 240Z" stroke="#000000" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(190.781 50)">
+			应用程序（包括 Shell）
+		</text>
+	</g>
+</svg>

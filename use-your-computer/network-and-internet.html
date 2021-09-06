@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>网络和互联网 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../use-your-computer/network-and-internet.html" class="active"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="网络和互联网"><a class="header" href="#网络和互联网">网络和互联网</a></h1>
+<p>简单的来说，我们可以把若干计算机以一定方式连接起来，这就形成了计算机网络。将世界各地不同的网络（network）连接在一起，就形成了互联网（internet）。</p>
+<p>请读者观看下面链接指向的视频：</p>
+<p><a href="https://www.bilibili.com/video/BV1nb411s7EG/">互联网是如何工作的 -哔哩哔哩</a></p>
+<blockquote>
+<p>上述链接为“二进制学院”制作的中文字幕版视频。视频源来自 <a href="https://code.org/">code.org</a>。视频共包含 8 个分集，总时长约为 40 分钟。分集列表如下：</p>
+<ul>
+<li><strong>What is the Internet?</strong> - 什么是互联网</li>
+<li><strong>Wires, Cables &amp; Wi-Fi</strong> - 电缆和 Wi-Fi</li>
+<li><strong>IP Address &amp; DNS</strong> - IP 地址和 DNS</li>
+<li><strong>HTTP &amp; HTML</strong> - HTTP 和 HTML</li>
+<li><strong>Encryption &amp; Crime</strong> - 加密和公钥</li>
+<li><strong>Cybersecurity &amp; Crime</strong> - 网络安全</li>
+<li><strong>How Search Works</strong> - 搜索引擎</li>
+</ul>
+</blockquote>
+<h2 id="局域网广域网ip-地址"><a class="header" href="#局域网广域网ip-地址">局域网、广域网、IP 地址</a></h2>
+<p>我们可以通过 IP 地址来标记网络上的计算机。</p>
+<p>请读者点击下面的链接观看视频：</p>
+<p><a href="https://www.bilibili.com/video/BV1DD4y127r4">IP 地址是什么东西？IPV6 和 IPV4 有什么区别？公网 IP 和私有 IP 又是什么？ - 硬件茶谈 - 哔哩哔哩</a></p>
+<p>每个在网络上的设备都有自己的 IP 地址。在同一个网络下的设备可以通过 IP 地址互相访问，并使用不同的协议传输不同的内容（比如，传输网页使用 HTTP 协议，传输文件使用 FTP 协议）。</p>
+<blockquote>
+<p>一般来说，计算机上运行的用来支持不同协议的不同程序会侦听不同的端口，有一些端口有固定的用途，比如 80 端口等。用来负责提供服务的（远程）计算机称作“服务器（server）”或者主机（Host），用户使用的一般叫“客户机（client）”。客户机从服务机获得数据的过程称作“下载（download）”，也称“下行”；相反，向服务器发送数据称为“上载”。而在服务器端，这些概念是相对的，即“上载”意味着向客户端发送数据，“下载”意味着从客户端发送数据。</p>
+<p>由于用户在浏览网络的过程中，下载的数据远大于上行的数据，因此网络服务提供商分配给用户的下行带宽往往远大于上行带宽，并不是对等的。当然，对于服务器来说也是如此。</p>
+</blockquote>
+<p>当访问的是一个主机名（域名）时，计算机会先在本机的 <code>HOSTS</code> 文件中查找对应的 IP 地址，未找到后再去访问 DNS。</p>
+<h2 id="互联网的物质基础"><a class="header" href="#互联网的物质基础">互联网的物质基础</a></h2>
+<p>要将计算机连接起来，必然需要线缆，或能实现同样效果的传输方式。对于家庭使用来说，可能 Wi-Fi 就足以将家庭中的各设备连接起来。而连接两块大陆上的计算机，一般情况则需要通过在海底铺设光缆来实现。</p>
+<p>而网络提供商（ISP）具体是怎么样将网络提供给用户的呢？</p>
+<p>曾经，网络是通过电话线提供的，用户还需要通过“拨号（dial）”才能上网。因为数据传输的制式不同，因此需要“调制解调器（modulator/demodulator）”来进行数模信号的转换。调制解调器简称“modem”，简体中文环境下有时会取其谐音“猫”来指代这个设备，为其平添一层可爱的含义。</p>
+<p>当然，通过电话线传输的网络是十分缓慢的。互联网用户有时也用“拨号上网”来形容那个年代。</p>
+<p>之后，有线电视（cable）服务商为了向用户销售网络接入服务，会服用同轴电缆传输信息，其提供的带宽一般大于电话线。当然，也有更快的通过“数字用户线路（DSL）”提供网络的方法。</p>
+<p>使用上面两种方式接入互联网也需要对应的“猫”，不过一般可能会称作“宽带猫”，以便区别于调制解调器。</p>
+<blockquote>
+<p>参考链接：<a href="https://www.computerhope.com/jargon/m/modem.htm">What is a Modem (Modulator/Demodulator)? - computerhope.com</a></p>
+</blockquote>
+<p>有些时候，接入用户家的网线直接是一根 RJ45 的线缆。这是网络服务商将光纤等数据网络接入到用户所在的小区，并直接从“猫”分出网线接到用户家。</p>
+<p>如今，家用用户接入互联网可能仍需要进行“拨号”的操作，以便运营商为其分配一个可用的 IP 地址。当然，这个 IP 地址有可能会有一定的使用期限，因此可能会存在需要“续租”或者需要“重新拨号”的概念。现如今，用户购买到并使用的路由器可能会配备拨号以及自动重拨的功能，这样，局域网下的设备便不需要额外拨号就能上网。</p>
+<blockquote>
+<p>用户往往会使用一种叫做路由器（router）的设备，使得自己的多台设备都能接入同一个网络。计算机的网络卡一般使用 RJ45 接口。路由器的 WAN（广域网）接口一般用来接入外部的广域网络，而 LAN（局域网）接口则用来接入局域网内的设备。而支持设备通过无线方式（Wi-Fi）接入的路由器就称作无线路由器。</p>
+</blockquote>
+<h3 id="公网-ip-与内网-ip"><a class="header" href="#公网-ip-与内网-ip">公网 IP 与内网 IP</a></h3>
+<p>简单来说，就是任何接入互联网的用户都能发布信息，因为我们可以通过 IP 地址访问到网络上的任意计算机。使用 HTML 语言和 HTTP 协议，理论上任何人都能制作自己的网站和网页。而通过互联网协议，我们还能操作远程的计算机（上面的程序）来完成我们想要完成的各种事情，比如数值计算、文件存储与读取，本质上也都是数据的传输。</p>
+<p>不过，在如今的网络条件下，一般用户并没有一个稳定的 IP。这一方面是因为用户所使用的网络一般是由网络运营商提供的。网络运营商对外——也就是在公网上——会有一批 IP，而产生更多的“内网 IP”分发给用户，（并通过端口映射）使得更多用户能够接入互联网，正常收发数据；而这些 IP 地址往往是会动态调整的。</p>
+<p>另一方面，用户平时往往通过与多人组建一个局域网，以共同访问到互联网，这之中又存在一次 IP 的分发，即同一个局域网下的各个设备也涉及到 IP 地址的分配。</p>
+<p>当设备的 IP 地址为固定的时候，我们称之为“静态 IP 地址”；若设备的 IP 地址是每次登入时由路由器分配的，则为“动态 IP 地址”。</p>
+<p>因此，用户如果希望其他用户能稳定地访问到自己，一般需要一个固定的 IP。而在广域网上，一般，用户可以向网络运营商申请“公网 IP”，这样，自己接入互联网时，使用的就是一个稳定的 IP 了；接着，用户可以配置自己的路由器，使得来自公网的请求可以访问到自己局域网内的设备上。</p>
+<p>为了使得任何人任何时间都能访问到自己的网站或服务，这台负责处理外部请求的计算机（也称作“服务器”）必须一直处于开机状态。如果机器出现故障，网站就不能被访问了。</p>
+<p>因此，用户还可以选择租借一些第三方提供的专用的服务器，这样一可以省去公网 IP 的烦恼，二来可以减少设备断电或故障的忧虑——专用的机房往往会有不同于一般设备的保障。</p>
+<h2 id="互联网是怎样工作的"><a class="header" href="#互联网是怎样工作的">互联网是怎样工作的</a></h2>
+<h3 id="客户端和服务器"><a class="header" href="#客户端和服务器">客户端和服务器</a></h3>
+<pre><code>+--------+     requests    +--------+
+|        | &lt;-------------- |        |
+| Server |                 | Client |
+|        | --------------&gt; |        |
++--------+    responses    +--------+
+</code></pre>
+<ul>
+<li>
+<p>服务器（server）是存储网页，站点和应用的计算机。当一个客户端设备想要获取一个网页时，一份网页的拷贝将从服务器上下载到客户端机器上来在用户浏览器上显示。</p>
+</li>
+<li>
+<p>客户端是典型的Web用户入网设备（比如连接了Wi-Fi的电脑，或接入移动网络的手机）和设备上可联网的软件（比如像 Firefox 和 Chrome 一样的浏览器）。</p>
+</li>
+</ul>
+<h3 id="其他部分"><a class="header" href="#其他部分">其他部分</a></h3>
+<p>下面的例子来自 MDN Web Docs 的一篇中译文 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works">万维网是如何工作的 - 学习 Web 开发 - MDN - developer.mozilla.org</a>：</p>
+<p>现在，让我们假设 Web 就是一条路。路的一端是客户端，就像你的家。另一端则是服务器，就像你想去的商店。</p>
+<ul>
+<li><strong>网络连接</strong>：允许你在互联网上发送和接受数据。基本上和你家到商店的街道差不多。</li>
+<li><strong>TCP/IP</strong>：传输控制协议和因特网互连协议是定义数据如何传输的通信协议。这就像你去商店购物所使用的交通方式，比如汽车或自行车（或是你能想到的其他可能）。</li>
+<li><strong>DNS</strong>：域名系统服务器像是一本网站通讯录。当你在浏览器内输入一个网址时，浏览器获取网页之前将会查看域名系统。浏览器需要找到存放你想要的网页的服务器，才能发送 HTTP 请求到正确的地方。就像你要知道商店的地址才能到达那。</li>
+<li><strong>HTTP</strong>：超文本传输协议是一个定义客户端和服务器间交流的语言的协议（<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Protocol">protocol</a> ）。就像你下订单时所说的话一样。</li>
+<li>组成文件：一个网页由许多文件组成，就像商店里不同的商品一样。这些文件有两种类型：
+<ul>
+<li><strong>代码</strong>：网页大体由 HTML、CSS、JavaScript 组成，不过你会在后面看到不同的技术。</li>
+<li><strong>资源</strong>：这是其他组成网页的东西的集合，比如图像、音乐、视频、Word 文档、PDF 文件。</li>
+</ul>
+</li>
+</ul>
+<p>下面是文章的译者给出的另一个例子：</p>
+<blockquote>
+<p>假如你生活在一个封闭的村子叫做“盘溪新村”，村子盛产苹果。</p>
+<ul>
+<li><strong>互联网</strong>：好比地球上众横交错的道路。</li>
+<li><strong>网络连接</strong>：道路通到了村子路口。从此，村子里的苹果就可以运出去卖了。</li>
+<li><strong>TCP/IP</strong>：为了将村里的苹果能规范有效的运卖出去而不出问题，村长作出如下规定：“用规格刚好 20 cm * 20 cm * 20 cm 的泡沫箱来装，之后外面又用相应规格的纸箱包裹上，最后打上透明胶”。并且要求，对方收到时，一定要外包装完好，不然就会补发。而且还给对方发了一张发货单，明确说明了，苹果有多少，是用什么方法包装的，只有货和发货单对上了，对方才会确认收货。</li>
+<li><strong>DNS</strong>：突然一天，郭德纲想吃苹果，就跟于谦说，“我听说盘溪新村（域名）的苹果好，要他们那个套餐一选项啊！”，于谦一听，得，也不知道盘溪新村在哪，打开地图查（DNS）吧，一查，好嘛，江苏省苏州市（IP 地址），于是于谦去了苏州，找了村子，告诉村长，要套餐一，要用顺丰快递，并且留下了北京德云社的地址。</li>
+<li><strong>HTTP</strong>：过了几天，德云社的人一看，有快递来了，来了这么一句，“只收‘顺丰’，拒收其他快递”。司机忙说，“是顺丰，是顺丰”，这才对上暗号，德云社的人收下了货。</li>
+<li><strong>组成文件</strong>：送来的货可不止一车，而且也不止一种苹果，这车是红富士，那车黄富士的。
+<ul>
+<li><strong>代码</strong>：有点像，村长事先安排的说明书，让司机到了地方，如何卸车，货放到什么位置，而德云社的看说明书，知道什么样的苹果放到什么位置上，什么样苹果如何食用最佳，等等。</li>
+<li><strong>资源</strong>：不同种类的苹果。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="域名"><a class="header" href="#域名">域名</a></h2>
+<p>不过这一长串的 IP 地址不便于记忆，因此，人们想到用有意义的文本来代替这串 IP 地址。</p>
+<p>对于一个网站，它可以注册一个域名，这样，其 IP 地址就和这个域名关联了起来。我们在浏览器中输入域名，计算机访问“域名解析服务器（DNS）”，获得到域名对应的 IP 地址，进而使我们能够访问网络上对应的计算机。</p>
+<h3 id="国际化域名"><a class="header" href="#国际化域名">国际化域名</a></h3>
+<p>最初，互联网的域名仅由 ASCII 字符来组成。为了满足其他语言文字出现在域名中的需要，需要将这些文字的 Unicode 编码以一定的方法转换为 ASCII 字符，以便域名解析服务器可以检索。</p>
+<h3 id="url-编码"><a class="header" href="#url-编码">URL 编码</a></h3>
+<p>对于 URL 中出现的 Unicode 字符，需要以一定的形式进行转换，比如“网络”可能会转换为“<code>%E7%BD%91%E7%BB%9C</code>”。</p>
+<h2 id="dns-污染"><a class="header" href="#dns-污染">DNS 污染</a></h2>
+<p><a href="https://www.bilibili.com/video/BV1Rp4y1a7xQ">详解DNS服务，DNS解析，DNS劫持和污染 - 硬件茶谈 - 哔哩哔哩</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../use-your-computer/markup-lang-and-rich-text.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../use-your-computer/browsing-internet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../use-your-computer/markup-lang-and-rich-text.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../use-your-computer/browsing-internet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

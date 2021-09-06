@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>编译运行第一个 C/C++ 程序 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../begin-programming/first-cpp-program.html" class="active"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="编译运行第一个-cc-程序"><a class="header" href="#编译运行第一个-cc-程序">编译运行第一个 C/C++ 程序</a></h1>
+<h2 id="cc-代码如何变成程序"><a class="header" href="#cc-代码如何变成程序">C/C++ 代码如何变成程序？</a></h2>
+<p>在之前的章节中我们说到，可执行程序的本质就是一连串二进制机器码。C/C++ 代码写成的程序要想执行，一般是需要通过编译器，直接翻译为机器指令来执行的。</p>
+<blockquote>
+<p>不同于 C/C++，其他的语言可能会采取解释执行的方式，即编译器不会将程序的源代码编译成机器码来执行，而是编译到一种介于源代码和机器码之间的形态。</p>
+</blockquote>
+<p>在“编译”过程中，一般又可以分为一下若干步骤。</p>
+<ul>
+<li>
+<p>预处理器对代码进行预处理，如条件编译、<code>include</code> 指令、宏展开等等操作都是在这一步执行的。</p>
+</li>
+<li>
+<p>预处理的代码经过分析、处理，变为机器能理解的指令，最后生成“目标文件（Object File）”。</p>
+</li>
+</ul>
+<p>“目标文件”还不能直接执行，因为代码可能会调用外部的代码，因此接下来还需要根据这些调用，寻找相应外部代码的所在，比如外部的变量、函数等，统称为寻找外部符号。这一步叫做“链接（Link）”。假如要链接到的是库文件中的代码，则会分为分为静态链接和动态链接。</p>
+<p>当然，在比较大的工程里面，我们的代码通常会分在不同的源代码文件里面。在编译过程中，每个源代码文件都是一个独立的编译单元，都会生成一个目标文件。在这个文件中（通过声明）使用到的符号，如果未在这个单元中找到，那么就是“外部符号”。链接器需要根据“外部符号表”去寻找这些符号的所在。</p>
+<blockquote>
+<p>将工程分为多个文件编译，不仅方便阅读和修改，更能节省编译的时间——每次重新编译时，未修改的文件就不用重新编译了，只需要编译修改过的部分，再重新执行链接操作即可。</p>
+</blockquote>
+<p>如果在其他目标文件中以及库文件中都没有找到对应符号的<strong>定义</strong>，那么这个被使用到的符号就是“未定义引用（undefined reference）”。</p>
+<p>如果没有未找到的符号，那么链接器就可以整合这些代码，着手生成最终的可执行文件了。不同目标文件中的指令以及静态链接的指令会复制进来，动态链接的库文件会在可执行文件执行时被加载到内存中。</p>
+<p>如果执行时，找不到或者缺失动态链接库的文件，那么程序将无法执行。</p>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<h3 id="visual-studio"><a class="header" href="#visual-studio">Visual Studio</a></h3>
+<p>针对 Windows 用户，我们先介绍安装 Visual Studio 的方法。Visual Studio 是一个完备的 IDE，也就是，提供编辑代码和编译、构建代码等一系列功能。</p>
+<p>笔者个人一开始并不喜欢 Visual Studio，觉得它过于庞大和复杂，配置启动项也比较麻烦，不易学习和掌握。但是随着学习的深入和观念的转变，发现 Visual Studio 还是最适合新手的，因为安装过程十分简单，而选择 CMake 作为项目构建管理工具会使得项目的配置过程轻松很多。</p>
+<blockquote>
+<p>读者也可以选择只安装 Visual Studio 的命令行工具，这会在“搭建命令行工作环境”中进行详细介绍。</p>
+</blockquote>
+<ul>
+<li>
+<p>打开浏览器，访问 <a href="https://visualstudio.microsoft.com/">visualstudio.microsoft.com</a>，选择 Visual Studio -&gt; Community 社区版（社区版是免费的），下载完成后直接运行即可。</p>
+<p>【2021/7/9】由于最近国际形势紧张，链接访问多有不畅，笔者将需要下载的文件的一份拷贝放在了微云上，链接：<a href="https://share.weiyun.com/wGvadaSF">share.weiyun.com/wGvadaSF</a>。</p>
+<p><img src="./assets/download-vs-installer.jpg" alt="在浏览器中打开 visualstudio.com，点击 Download Visual Studio" title="在 Visual Studio 官方网站上下载 Visual Studio Community 的安装器的页面" /> </p>
+</li>
+<li>
+<p>运行下载好的程序，需要一段时间配置安装器，配置好后，一般会直接进入选择“工作负载”的界面。这里我们只需<strong>勾选“C++ 桌面开发”套件</strong>。注意到，界面右下角提示安装需要 8 GB 的磁盘空间，如果有必要，可以更改 Visual Studio 的安装路径。之后确认即可，接下来只需等待下载安装完成。</p>
+<p><img src="./assets/choose-vs-workload.jpg" alt="Visual Studio Installer 选择工作负载的页面" title="安装 Visual Studio 时选择工作负载的页面，如图选择 Visual Studio 的工作负载即可" /></p>
+</li>
+</ul>
+<p><strong>至此环境就配置好了</strong>。接下来，我们要找一个存放我们写代码的地方。在计算机中新建一个文件夹，里面新建一个名为 CMakeLists.txt 的文本文档。</p>
+<p>打开 Visual Studio，选择打开现有文件夹，选择刚刚新建的这个文件夹，确定即可。</p>
+<p>然后就可以开始写代码了。</p>
+<p>我们可以在 Visual Studio 的“解决方案资源管理器”中，新建一个 C++ 源文件。</p>
+<blockquote>
+<p>也可以在刚刚建立的文件夹中直接新建文件（方法：先在资源管理器中选择“显示文件后缀名”，然后新建一个文本文档，默认的名称一般为“<strong>新建文本文档.txt</strong>”，我们将名称改为“<strong><em>某文件名</em>.cpp</strong>”）。</p>
+</blockquote>
+<p>在 Visual Studio 中的“解决方案资源管理器”打开 CMakeLists.txt，修改其中内容——比如源代码文件叫 hello.cpp，我们要添加这样的语句：</p>
+<pre><code class="language-cmake">add_executable(hello hello.cpp)
+</code></pre>
+<p>编辑好后保存即可。语句中的“<code>hello</code>”是“目标名”；“<code>add_executable</code>”表示我们要生成一个可执行文件，而目标名就是最后生成的可执行文件名。目标名可以自定义。“<code>hello.cpp</code>”表示要生成这个目标所需要的源文件。</p>
+<p>不出意外，执行完上述操作后，我们就能在界面上方的绿色箭头框的下拉菜单里找到刚刚的目标“hello”。这是选择启动项。</p>
+<blockquote>
+<p>启动项，即我们要运行的项目。它一般是我们在 CMakeLists.txt 中定义的可执行文件目标。</p>
+</blockquote>
+<p>要启动（launch）一个启动项，我们需要先生成（或者说构建）这个项对应的目标，也就是常说的编译链接。不过不用担心，你<strong>只需要点击绿色箭头</strong>，这一切都会自动完成。</p>
+<p>如果，我们想<strong>加入新的 C++ 源文件</strong>，就只需重复上边的操作。比如，我们编写了一个新的程序，存在名为“bye.cpp”的文件里。这时，我们就需要修改刚刚的 CMakeLists.txt 文件，<strong>确保它是下边的样子</strong>。（新建一个文件时，Visual Studio 会弹出是否将其添加到现有目标的对话框，我们选择取消）</p>
+<pre><code class="language-cmake">add_executable(hello hello.cpp)
+add_executable(bye-bye bye.cpp)
+</code></pre>
+<p>这样，我们的整个项目，就有了如上<strong>两个生成可执行程序的目标</strong>。</p>
+<p>需要注意，保存 CMake 配置文件后，我们需要在下拉框里选择对应的启动项，才能运行对应的程序。</p>
+<h2 id="macos"><a class="header" href="#macos">macOS</a></h2>
+<p>我们使用 macOS 来介绍如何使用命令行界面编译单个 C++ 源文件为可执行程序。</p>
+<p>首先，需要安装编译器。Apple 的 XCode 提供有实用的命令行工具。在程序列表中找到“终端”，执行以下命令：</p>
+<pre><code class="language-console">$ xcode-select --install
+</code></pre>
+<p>安装完成后即可使用命令行编译器了。</p>
+<p>在某目录下以纯文本形式保存 C++ 程序的源代码，并切换到工作路径。注意，将命令中的“path/to/your/cpp/file”替换为实际的路径。</p>
+<pre><code class="language-console">$ cd path/to/your/cpp/file
+</code></pre>
+<p>假设源代码文件名为“src.cpp”，则我们可以使用如下命令编译、链接生成可执行程序“test1”。</p>
+<pre><code class="language-console">$ c++ src.cpp -o test1
+</code></pre>
+<p>之后，在命令行运行生成的可执行程序：</p>
+<pre><code class="language-console">$ ./test1
+</code></pre>
+<h2 id="ubuntu"><a class="header" href="#ubuntu">Ubuntu</a></h2>
+<p>在终端中，使用包管理器 APT 安装构建所需要的命令行工具：</p>
+<pre><code class="language-console">$ sudo apt install build-essential
+</code></pre>
+<p>其余步骤与 macOS 类似。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../begin-programming/read-cpp.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../begin-programming/software-build.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../begin-programming/read-cpp.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../begin-programming/software-build.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

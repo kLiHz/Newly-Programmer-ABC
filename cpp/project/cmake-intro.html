@@ -1,0 +1,491 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CMake 入门 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../../cpp/project/cmake-intro.html" class="active"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="cmake入门"><a class="header" href="#cmake入门">CMake入门</a></h1>
+<p>为什么要使用CMake呢？随着工程变得庞大，构建它会有很多文件的参与，手写 Makefile 等构建文件变得愈发困难且容易出错，使用 CMake 可以简化这个过程；也许，有一个智能的IDE能够帮助你构建文件，但当你把源代码发给别人时，可能对方并没有相应的工具，只能面对源文件措手无策，或者重新编写构建文件，而如果有 CMake，则能由一个文件根据不同的平台生成相应的建构档，事情就会变得轻松而愉快。</p>
+<blockquote>
+<p>参考链接：</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/58949190">CMake 如何入门？ - 知乎</a></li>
+<li><a href="https://github.com/BrightXiaoHan/CMakeTutorial">BrightXiaoHan/CMakeTutorial: CMake中文实战教程 - github.com</a> </li>
+<li><a href="https://www.zhihu.com/question/276415476">如何评价 CMake？ - 知乎</a></li>
+<li>CLion的CMake快速入门教程：<a href="https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html">Quick CMake Tutorial</a></li>
+<li>Visual Studio关于CMake项目的讲解：<a href="https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio">CMake projects in Visual Studio</a></li>
+</ul>
+</blockquote>
+<h2 id="基本的cmake项目"><a class="header" href="#基本的cmake项目">基本的CMake项目</a></h2>
+<p>先从最简单的单文件做起，假设现在目录下有一个<code>main.cpp</code>文件：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+int main() {
+    std::cout &lt;&lt; &quot;Hello!&quot;;
+}
+</code></pre>
+<p>我们可以在<strong>和源代码相同的目录下</strong>新建一个<code>CMakeLists.txt</code>，然后写入这样的内容：</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.13)
+project(cmake_test)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(cmake_testapp main.cpp)
+</code></pre>
+<p>这个的例子来自 CLion 的教程。下面是每一行的解释：</p>
+<table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody>
+<tr><td><code>cmake_minimum_required(VERSION 3.13)</code></td><td>指定CMake的最低版本要求，如果不加会有警告</td></tr>
+<tr><td><code>project(cmake_test)</code></td><td><code>project</code>命令定义项目的名称</td></tr>
+<tr><td><code>set(CMAKE_CXX_STANDARD 14)</code></td><td><code>set</code>命令用来给变量赋值，这里<code>CMAKE_CXX_STANDARD</code>变量用来指定所需最低的C++版本，这里要求C++版本最低为C++14</td></tr>
+<tr><td><code>add_executable(cmake_testapp main.cpp)</code></td><td><code>add_executable</code>会添加一个生成可执行文件的“<strong>目标</strong>（target）”，目标的名字为<code>cmake_testapp</code>，其将从<code>main.cpp</code>被构建（build）</td></tr>
+</tbody></table>
+<p>请读者留意“目标（target）”的概念，这在现代 CMake 中很是重要。</p>
+<p>保存<code>CMakeLists.txt</code>文件，然后在命令行中输入<code>cmake .</code>，便会生成相应的构建文件。</p>
+<p>不过通常我们不会在源代码的文件夹里直接构建，因为构建过程会生成很多文件，和源代码会在一起，显得比较杂乱。通常会新建一个目录，可以在当前目录，也可以在任何喜欢的地方，只要在这个目录下将<code>CMakeLists.txt</code>的位置告诉 CMake 就可以，然后在这个文件夹里面执行构建的操作，称为“<strong>Out of source building</strong>”。</p>
+<p>比如我们在当前目录下新建一个 build 目录，然后在其中进行构建操作。这样，因为 <code>CMakeLists.txt</code> 的位置在<strong>上一级目录</strong>，可以用<code>..</code>表示。</p>
+<p>Unix 下会默认生成 Makefile，生成后执行 make 命令，就会根据 Makefile 中的内容进行一系列操作。</p>
+<pre><code class="language-console">$ mkdir build &amp;&amp; cd build
+$ cmake ..
+$ make
+</code></pre>
+<p>Windows 下默认生成 Visual Studio 的项目文件 <code>*.vcxproj</code>。</p>
+<p>也可以使用<code>-G</code>命令指定生成的构建文件。如果之前生成的是其他构建文件，需要先删除构建目录下的 <code>CMakeCache.txt</code>。</p>
+<pre><code class="language-console">$ cmake -G &quot;MinGW Makefiles&quot; ..
+</code></pre>
+<p>一个项目中可以有多个目标，我们可以指定<strong>多个</strong>生成可执行文件的目标。</p>
+<p>比如我们有 <code>test1.cpp</code> 和 <code>test2.cpp</code> 两个cpp，它们分别会生成不同的程序。可以新建两个名为 <code>test1</code> 和 <code>test2</code> 的目标（名字随意），修改后的<code>CMakeLists.txt</code>如下所示：</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.13)
+project(cmake_test)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(test1 test1.cpp)
+add_executable(test2 test2.cpp)
+</code></pre>
+<p>修改过 <code>CMakeLists.txt</code> 之后，需要重新执行 <code>cmake</code> 操作，重新生成 CMake 缓存以及构建脚本。如果使用的是IDE，那么可能会自动进行这个过程，或者提示用户进行这个操作。</p>
+<p>注：使用<code>make</code>时，可以用<code>make &lt;target&gt;</code>指定要生成的目标，比如<code>make test1</code>。如不指定，则默认全部执行。如果使用了 IDE，可能会有下拉框以供选择。</p>
+<h2 id="多文件一"><a class="header" href="#多文件一">多文件（一）</a></h2>
+<p>首先新建一个目录，这个目录就是我们的<strong>项目目录</strong>，比如“cmake_test”，我们的操作都在这个目录下执行，而 <code>CMakeLists.txt</code> 一般放在项目根目录下。</p>
+<pre><code>cmake_test
+|   CMakeLists.txt
+|   main.cpp
+|   solution.cpp
+|   solution.h
+|
+\---build
+</code></pre>
+<p>现在，我们的可执行文件的目标需要多个源代码文件生成，比如下面这样，其中 <code>solution.cpp</code>、<code>solution.h</code>、<code>main.cpp</code> 都在同一级目录（项目根目录）下：</p>
+<pre><code class="language-cpp">// solution.h
+
+#ifndef SOLUTION
+#define SOLUTION
+
+class Solution {
+public:
+    static int add(int a, int b);
+    static int subtract(int a, int b);
+    static int multiply(int a, int b);
+};
+
+#endif
+</code></pre>
+<pre><code class="language-cpp">// solution.cpp
+
+#include &quot;solution.h&quot;
+
+int Solution::add(int a, int b) {
+    return a + b;
+}
+int Solution::subtract(int a, int b) {
+    return a - b;
+}
+int Solution::multiply(int a, int b) {
+    return a * b;
+}
+</code></pre>
+<pre><code class="language-cpp">// main.cpp
+
+#include &lt;iostream&gt;
+#include &quot;solution.h&quot;
+
+int main() {
+    std::cout &lt;&lt; Solution::add(3, 5) &lt;&lt; ' ';
+    std::cout &lt;&lt; Solution::multiply(3, 3);
+}
+</code></pre>
+<p>注意<code>solution.cpp</code>和<code>main.cpp</code>中引用我们自定义的头文件的方式<code>#include &quot;solution.h&quot;</code>：编译器读取到<code>solution.cpp</code>里面的<code>&quot;solution.h&quot;</code>时，会根据相对路径寻找相应的文件进行包含，<code>solution.h</code>等效于<code>./solution.h</code>，也就是和该源代码文件相同目录下的<code>solution.h</code>文件，因此编译器能正确的包含（include）这份头文件到源代码文件里。</p>
+<p>然后我们的<code>CMakeLists.txt</code>这样写：</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.13)
+project(cmake_test)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(solution_test main.cpp solution.cpp)
+</code></pre>
+<p>这样<code>solution_test</code>就会由<code>solution.cpp</code>、<code>main.cpp</code>构建出来。</p>
+<p>是不是很简单？CMake只需要一条语句就能完成，而如果手动使用命令行编译则需要输入四五条命令，而且会随着文件的增多变得愈发棘手。</p>
+<h2 id="生成库文件"><a class="header" href="#生成库文件">生成库文件</a></h2>
+<blockquote>
+<p>参考阅读：</p>
+<ul>
+<li>
+<p><a href="https://cmake.org/cmake/help/latest/command/add_library.html">add_library — CMake 3.19.3 Documentation</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/henry_23/article/details/112691151">C++编译器与链接器工作原理_- CSDN博客</a></p>
+</li>
+</ul>
+</blockquote>
+<p>当一些<strong>相对固定</strong>的功能需要经常被其他程序调用，或者有些功能想发给别人但不希望给出源码，我们可以将这些功能生成函数库，这样在使用时只需和可执行文件进行链接，可以节省编译时间。</p>
+<p>也很简单，我们使用<code>add_library</code>命令即可。还是使用刚刚的代码。我们在上文的<code>CMakeLists.txt</code>中添加这样的语句。</p>
+<pre><code class="language-cmake">add_library(test_library STATIC solution.cpp)
+</code></pre>
+<p>语句中，<code>test_library</code>是我们生成的库的名称，<code>STATIC</code>表明生成的为静态链接库，<code>solution.cpp</code>则表示使用这个文件生成函数库。</p>
+<p>静态库在编译时链接到可执行文件里，而动态库（shared library）则在程序运行时被加载。动态库有时也被称为共享库（shared library）。</p>
+<blockquote>
+<p>注：生成的链接库的文件名会在指定的库名称的前边加上<code>lib</code>，搜索时也会根据指定的名称再在前边加上<code>lib</code>得到的名称进行搜索。比如，上述例子生成的库文件名就为<code>libtest_library</code>。</p>
+</blockquote>
+<p>编辑好<code>CMakeLists.txt</code>后，不要忘了重新运行一次CMake。</p>
+<p>执行生成函数库的这个目标（target）后，一个静态库就会生成在构建目录下。</p>
+<p>关于生成的函数库<strong>如何使用</strong>，我们<strong>稍后</strong>再讲解。</p>
+<h2 id="多文件二有层级的目录"><a class="header" href="#多文件二有层级的目录">多文件（二）：有层级的目录</a></h2>
+<p>当头文件和源代码文件被放在了不同的目录、不同层级的目录时，事情会变得稍微复杂一点。</p>
+<p>比如以我们刚刚的三个文件为例，<strong>现在</strong>把它们放在<strong>不同的目录</strong>里，层级如下图所示：</p>
+<pre><code>cmake_test
+|   CMakeLists.txt
+|   main.cpp
+|
++---include
+|       solution.h
+\---src
+        solution.cpp
+</code></pre>
+<p>我们依然可以使用相对路径来包含头文件：</p>
+<p><strong>main.cpp</strong></p>
+<pre><code class="language-cpp">#include &quot;include/solution.h&quot;
+...
+</code></pre>
+<p><strong>solution.cpp</strong></p>
+<pre><code class="language-cpp">#include &quot;../include/solution.h&quot;
+...
+</code></pre>
+<p>这样，编译器在编译<code>cpp</code>文件时依然能正确包含到相应的头文件，但是这样的写法不仅繁琐，也会给维护带来不少麻烦：比如随着代码的增多，代码根据新的逻辑被重新划分到了新的若干目录中，那么可能所有源代码中的<code>include</code>命令<strong>都要重新修改</strong>，才能让它们重新找到头文件。</p>
+<p>所以，对于我们自定义的头文件，我们可以在包含它时<strong>只写头文件的名字</strong>，然后为编译器指定相应的搜索路径，这样，编译器在遇到一个需要包含的头文件名时，就会在其知晓的搜索路径中查找这个文件，即系统头文件路径等、以及用户指定的包含路径（include path）。而当我们的文件目录层级发生变化时，只需要<strong>重新指定头文件的搜索路径</strong>，而不用去修改每一个源代码文件。</p>
+<h3 id="添加包含路径include-path"><a class="header" href="#添加包含路径include-path">添加包含路径（include path）</a></h3>
+<p>在CMake中，我们可以用<code>include_directories</code>命令指定包含路径。</p>
+<pre><code class="language-cmake">include_directories(include)
+</code></pre>
+<p>这行命令表示，我们把项目根目录下的<code>include</code>目录添加到头文件的搜索路径中。这项设置是全局的，也就是任何文件都能访问到<code>include</code>目录下的文件。</p>
+<p>现在我们的<code>CMakeLists.txt</code>应该长这样：</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.13)
+project(cmake_test)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(include)
+
+add_library(test_library STATIC src/solution.cpp)
+add_executable(solution_test main.cpp src/solution.cpp)
+</code></pre>
+<p>注意现在<code>solution.cpp</code>的路径发生了变化，应该写作<code>src/solution.cpp</code>。</p>
+<h2 id="链接函数库"><a class="header" href="#链接函数库">链接函数库</a></h2>
+<blockquote>
+<p>参考链接：</p>
+<ul>
+<li><a href="https://cmake.org/cmake/help/latest/command/find_library.html">find_library — CMake 3.19.3 Documentation</a></li>
+<li><a href="https://cmake.org/cmake/help/latest/command/target_link_libraries.html">target_link_libraries — CMake 3.19.2 Documentation</a></li>
+</ul>
+</blockquote>
+<p>之前我们执行了<code>test_library</code>目标后，生成了一个静态库文件<code>libtest_library.a</code>，现在来使用它。</p>
+<p>默认该文件生成在构建目录下。我们在项目根目录下新建一个<code>lib</code>目录，然后把静态库文件复制进去。</p>
+<p>我们使用CMake的<code>find_library</code>命令来寻找函数库文件：</p>
+<pre><code class="language-cmake">find_library (TEST_LIB test_library lib)
+</code></pre>
+<p>这条命令表示：在<code>lib</code>目录中查找名为<code>test_library</code>的库，并新建一个<code>TEST_LIB</code>变量，把结果存放其中。</p>
+<p>之后，还要使用<code>target_link_libraries</code>命令把库和我们的可执行文件链接起来，这样才能正确执行它。</p>
+<p>现在，我们的<code>CMakeLists.txt</code>应该这样写了：</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.13)
+project(cmake_test)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(include)
+
+add_library(test_library STATIC src/solution.cpp)
+add_executable(solution_test main.cpp)
+
+find_library (TEST_LIB test_library lib)
+target_link_libraries(solution_test ${TEST_LIB})
+</code></pre>
+<p>注意，这里我们<code>add_executable</code>命令中不再使用<code>src/solution.cpp</code>了，而是在最后将可执行文件和由其生成的库文件链接起来。</p>
+<p>其实，<code>target_link_libraries</code>命令还可以有其他的方式，比如<strong>项目中已有的</strong>“库文件目标”的名称，即使用<code>add_library()</code>创建的目标。这样就不需要<code>find_library</code>命令了：</p>
+<pre><code class="language-cmake">target_link_libraries(solution_test test_library)
+</code></pre>
+<p>也可以指定一个<strong>具体的路径下的</strong>库文件进行链接：</p>
+<pre><code class="language-cmake">target_link_libraries(solution_test ${PROJECT_SOURCE_DIR}/lib/libtest_library.a)
+</code></pre>
+<h2 id="选择构建类型build-type"><a class="header" href="#选择构建类型build-type">选择构建类型（build type）</a></h2>
+<p>构建类型有Debug和Release，其中Debug会包含调试信息，Release一般会进行额外的优化来提高运行效率，也会增加编译时间。</p>
+<p>可以在运行CMake时指定参数：</p>
+<pre><code class="language-console">$ cmake -DCMAKE_BUILD_TYPE=Debug ..
+</code></pre>
+<p>命令行中的<code>-D</code>表示参数设置，将<code>CMAKE_BUILD_TYPE</code>的值设置为<code>Debug</code>。</p>
+<p>如果使用IDE，也会有相应的设置。</p>
+<h2 id="使用其他包package"><a class="header" href="#使用其他包package">使用其他包（package）</a></h2>
+<p>编程中，我们会遇到需要使用其他包 / 函数库的时候，比如OpenCV、Boost等。</p>
+<p>为了清晰，我们新建一个目录，名为<code>opencv_test</code>。</p>
+<p>下面我们调用OpenCV，写一个简单的读取并显示图像的程序：</p>
+<p><strong>show-img.cpp</strong></p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;opencv2/opencv.hpp&gt;
+
+int main(int argc, char* argv[])
+{
+	std::string filename;
+	if (argc == 2) { filename = argv[1]; } 
+    else {
+		std::cout &lt;&lt; &quot;Input Filename: &quot;;
+		std::cin &gt;&gt; filename;
+	}
+	cv::Mat img = cv::imread(filename);
+	if (!img.empty()) {
+		std::cout &lt;&lt; &quot;Image loaded successfully.\n&quot;;
+		cv::namedWindow(filename, cv::WINDOW_NORMAL);
+		cv::imshow(filename, img);
+		cv::waitKey(0);
+	} else {
+		std::cout &lt;&lt; &quot;Unable to open '&quot; &lt;&lt; filename &lt;&lt; &quot;'.\n&quot;;
+	}
+	return 0;
+}
+</code></pre>
+<blockquote>
+<p>参考链接：</p>
+<ul>
+<li><a href="https://cmake.org/cmake/help/latest/command/find_package.html">find_package — CMake 3.19.3 Documentation</a></li>
+</ul>
+</blockquote>
+<p>然后，我们可以使用<code>find_package</code>命令：</p>
+<pre><code class="language-cmake">find_package(OpenCV REQUIRED)
+</code></pre>
+<p><code>REQUIRED</code>顾名思义，表示这个包是必须的，没有它不行；如果没有找到，则会中断进程，抛出错误信息。</p>
+<p>可以在后边跟一个<code>MODULE</code>，表示告诉<code>find_package</code>使用“Module”模式寻找指定的包。该模式下，CMake会寻找一个名叫<code>Find&lt;PackageName&gt;.cmake</code>的文件，在该例下就是<code>FindOpenCV.cmake</code>。首先，CMake会在<code>CMAKE_MODULE_PATH</code>寻找这个文件，默认情况下这个变量是空的；然后在安装CMake时提供的“寻找单元（Find Modules）”中寻找。</p>
+<p>在不指定<code>REQUIRED</code>的情况下，CMake会先使用“Module”模式寻找，如果寻找无果，则会进入另一种“Config”模式。这种模式下，CMake则会寻找<code>&lt;PackageName&gt;Config.cmake</code>文件，在该例下也就是<code>OpenCVConfig.cmake</code>文件。</p>
+<p>用户也可以将<code>CMAKE_FIND_PACKAGE_PREFER_CONFIG</code>的值设置成<code>TRUE</code>，这样<code>find_package</code>优先使用“Config”模式。当用户想要使用了一个常见库的自己编译的版本时，这项功能可能会比较实用。</p>
+<p>也可以直接指定<code>CONFIG</code>模式，或者使用其同义词<code>NO_MODULE</code>，这样只会进行“Config”模式的搜索。</p>
+<p>查找成功后，CMake会把<code>&lt;PackageName&gt;_DIR</code> 变量的值设置为其找到<code>.cmake</code>文件的路径，而文件一般会提供一些有用的信息，以变量的形式供用户使用。</p>
+<p>比如OpenCV会设置<code>OpenCV_INCLUDE_DIRS</code>、<code>OpenCV_LIBS</code>等变量，<code>OpenCV_INCLUDE_DIRS</code>是OpenCV的包含目录路径，<code>OpenCV_LIBS</code>则包含链接所需的OpenCV的库文件。</p>
+<blockquote>
+<p>注：虽然成功找到 OpenCV 的安装之后，会写入<code>OpenCV_DIRS</code>变量，但并不需要使用<code>include_directories(${OpenCV_INCLUDE_DIRS})</code>命令。</p>
+</blockquote>
+<p>所以，我们的<code>CMakeLists.txt</code>可以这样编写：</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.13)
+project(opencv_test)
+
+find_package(OpenCV REQUIRED)
+
+add_executable(show_img show_img.cpp)
+
+target_link_libraries(show_img ${OpenCV_LIBS})
+</code></pre>
+<p>如果正确安装了OpenCV，理论上就能找到。</p>
+<p>也可以给<code>&lt;PackageName&gt;_DIR</code> 变量指定值，则CMake会先在指定路径下寻找<code>.cmake</code>文件。</p>
+<h2 id="install"><a class="header" href="#install">install</a></h2>
+<p>https://blog.csdn.net/ktigerhero3/article/details/68941252/</p>
+<h2 id="configure_file"><a class="header" href="#configure_file">configure_file</a></h2>
+<h2 id="其他"><a class="header" href="#其他">其他</a></h2>
+<p>参见 CMake in VS Code</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../cpp/project/compile-and-link.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../cpp/modern/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../cpp/project/compile-and-link.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../cpp/modern/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

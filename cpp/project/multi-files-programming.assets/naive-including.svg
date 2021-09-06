@@ -1,0 +1,36 @@
+<svg width="680" height="420" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="0" y="0" width="1280" height="720" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)">
+		<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+		<rect x="37.5001" y="221.5" width="293" height="171" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(130.783 245)">
+			func2.cpp
+			<tspan font-weight="400" font-size="17" x="-84.4133" y="40">void func2(int a, int b)</tspan>
+			<tspan font-weight="400" font-size="17" x="-84.4133" y="62">{</tspan>
+			<tspan font-weight="400" font-size="17" x="-43.08" y="85">/*...*/</tspan>
+			<tspan font-weight="400" font-size="17" x="-84.4133" y="107">}</tspan>
+		</text>
+		<rect x="37.5001" y="25.5001" width="293" height="171" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(130.783 50)">
+			func1.cpp
+			<tspan font-weight="400" font-size="17" x="-84.4133" y="40">void func1(int a, int b)</tspan>
+			<tspan font-weight="400" font-size="17" x="-84.4133" y="62">{</tspan>
+			<tspan font-weight="400" font-size="17" x="-43.08" y="85">/*...*/</tspan>
+			<tspan font-weight="400" font-size="17" x="-84.4133" y="107">}</tspan>
+		</text>
+		<rect x="359.5" y="73.5001" width="293" height="239" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(458.77 98)">
+			main.cpp
+			<tspan font-weight="400" font-size="17" x="-90.2467" y="40">#include "func1.cpp"</tspan>
+			<tspan font-weight="400" font-size="17" x="-90.2467" y="62">#include "func2.cpp"</tspan>
+			<tspan font-weight="400" font-size="17" x="-90.2467" y="107">int main()</tspan>
+			<tspan font-weight="400" font-size="17" x="-90.2467" y="130">{</tspan>
+			<tspan font-weight="400" font-size="17" x="-48.9133" y="152">/*...*/</tspan>
+			<tspan font-weight="400" font-size="17" x="-90.2467" y="174">}</tspan>
+		</text>
+	</g>
+</svg>

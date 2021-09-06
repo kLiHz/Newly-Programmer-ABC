@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>购买一台计算机 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/buying-a-computer.html" class="active"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="挑选自己的爱机"><a class="header" href="#挑选自己的爱机">挑选自己的爱机</a></h2>
+<p>要使用物品总是需要付出的。去网吧需要按使用时长付费，购置自己的设备则需要一笔可观的资金。购置设备后，也还会有其他的费用支出，比如接入互联网的费用、维修保养的费用。</p>
+<p>如果你有幸有条件选购自己的计算机，那么这里有一些建议——虽然根据不同的价位，有不同配置的选择，也有诸如台式、便携、笔记本、二合一、Mini PC 等不同形式的选择，但无论如何，有一些方面总是要考虑的：</p>
+<h3 id="显示器"><a class="header" href="#显示器">显示器</a></h3>
+<p>现在的家用电脑一般都会有<strong>显示器</strong>，这样用户才能看到精美的图形界面，拥有良好的网页浏览和视频观看体验等等。因此，挑选一个好用的显示器很重要。</p>
+<p>首先要考虑的是显示器的<strong>色域</strong>。简单地说，色域的大小就是显示器能显示的色彩的多少；色域越高（广），显示的图像就会越生动、鲜艳。</p>
+<p>早些年的显示器因为工艺的限制，无法达到较高的色域，因此比较起来显示的内容会显得苍白，随着生产力的发展，现如今已经基本不存在这样的问题了。但是仍有厂家会售卖低色域的显示器，购买时需要注意。</p>
+<p>常见的用来度量显示器色域的色彩空间有 sRGB、NTSC、DCI-P3 等，一般来说，72% NTSC、100% sRGB、90% DCI-P3 是每个色彩空间度量下的标准配置；需要注意，虽然都是标准配置，但是它们并不完全等价。</p>
+<blockquote>
+<p>用简单的话来讲，色彩空间即是在一般人眼可见的所有色彩中划分的一个区域。通过指定色彩空间中最绿、最红、最蓝的颜色，就确定了一个色彩空间。实际使用中，指定了一个色彩空间，我们就可以通过红、绿、蓝三种颜色的强度，来表示其中的一个色彩，假设我们用从 0 到 1 的小数来表示，那么 0 意味着信号强度为 0，1 则意味着色彩达到规定的最强的强度。也就是说，同样的三个指标，在不同色彩空间下对应不同的颜色。而同一个颜色，在不同的色彩空间下有着不同的指标。显示器能显示的色彩的集合即为显示器的色域。在图像的捕捉、记录到还原中，如果我们使用相同的色彩空间，那么就能保证色彩的还原。如果色彩空间不匹配，那么就会导致还原出来过于鲜艳，或者过于平淡。比如，在一个更大的色彩空间下的图像信息，在低色域中无法表示，<strong>只能通过相应的算法做转换</strong>，使得转换后的颜色的偏差尽可能小、观感尽可能好；如果不进行转换直接输出（也就是用低色域直接表示同样的色彩指标），那得到的颜色相差会更大，一般来讲图片会变得比真实观感暗淡。如果在一个低色域下的颜色指标，直接在广色域下表示出来，则得到的颜色也是有偏差的。因此，显示器的色域并不是说越高越好。</p>
+<p>早些年的设备水平有限，不能涵盖很多的颜色，因此制定了 sRGB（standard RGB）色彩空间，以期同一幅图片能够在不同设备上达到尽可能一致的效果。不过现在的显示器大多能表现高于 sRGB 色彩空间中的色彩，因此如果不进行恰当的<strong>色彩管理</strong>，图片的显示就会出现问题。</p>
+<p>另外，显示器的色深也是一个需要考虑的因素。常见的有“8 bit”“10 bit”的色深。这主要形容的是显示器表现色彩的过渡能力。一般来说，计算机使用的都是 8 位 3 通道（也称 24 位）的图像，也就意味着每种颜色从无到最亮，一共有 2 的 8 次幂种过渡状态；三种颜色联合起来，就能表示 \(2^8 \times 2^8 \times 2^8 = (2^8)^3 = 16,777,216\) 种色彩，这也就是平时所说的 1600 百万色。同理，10 bit 色深的显示器就支持约 10.7 亿色。</p>
+<p>我们也会见到如“6 抖 8”和“8 抖 10”以及“原生 10 bit”等说法。所谓抖动，就是某一个像素点在两种颜色之间快速闪动，从而使人看起来像是介于两种颜色中间的颜色，进而实现超过显示器硬件能力的显示效果。</p>
+</blockquote>
+<p>其次，显示器的<strong>刷新率</strong>也需要考虑。如果想要获得良好的 FPS 类游戏的体验，那么你应该需要购买高刷新率的屏幕，一般会被商家简称为“高刷屏”“电竞屏”。</p>
+<p>现在常见的显示器的刷新率一般为 60 Hz，即每秒刷新 60 次，可以理解为每秒钟可以显示 60 帧画面。越高的刷新率，会带来越流畅的画面。但是同时也要注意<strong>响应时间</strong>和<strong>拖影</strong>的问题。</p>
+<p>还有显示器的<strong>分辨率</strong>。数字图像由像素组成，我们可以把显示器简单的想像成一面由很多能显示不同色彩的小小灯珠排列形成的矩阵，这样，当众多灯珠按照图像的像素组成而显示不同的颜色时，从宏观角度来看，就是一幅栩栩如生的画面了。当我们看到如“1280 × 720”和“1920 × 1080”这样的描述时，往往说的就是像素的数量了。理论上来说，像素越多，越能将一幅图像描述的更加精确。</p>
+<h3 id="便携性"><a class="header" href="#便携性">便携性</a></h3>
+<p>从装在机箱里的台式机，到笔记本电脑，再到轻薄型的笔记本电脑，到 Mini PC，再到平板电脑，这些计算机们的便携性逐步提升，但是往往性能会逐渐降低。</p>
+<p>但是注意是“往往”，并不是绝对。比如随着技术的发展，轻薄的电脑也能比过之前的台式机；而且轻薄也不一定意味着性能的损失——它们可能只是相同性能的电脑，经过更加用心的设计和布局，减少了内部的空间。当然，消费者就需要为这些用心的设计和做工支付更高的价格了。</p>
+<h3 id="品牌"><a class="header" href="#品牌">品牌</a></h3>
+<p>通常，自行购买零件组装个人电脑，会比购买某个品牌推出的现成的机器更为经济划算，用户也能有更多自定义的选择。但是品牌往往也为用户带来了完善的售后服务和技术支持。</p>
+<h3 id="性能"><a class="header" href="#性能">性能</a></h3>
+<p>性能也是需要考虑的因素。通常，磁盘、内存，以及处理器，决定一台计算机的性能。</p>
+<p>一般来说，磁盘、内存越大越好，处理器主频越快越好。当然，就算是同样大小的磁盘和内存，也有着很大的区别。</p>
+<h4 id="磁盘"><a class="header" href="#磁盘">磁盘</a></h4>
+<p>现在，对于一般笔记本电脑来说，其磁盘已经大多为固态硬盘（SSD）了；也有部分笔记本会采用混合硬盘的方式，即采用固态硬盘（SSD）+ 机械硬盘（HDD）的方式。</p>
+<p>机械硬盘内部是一块磁性圆盘，通过磁性记录信息。工作时，机械硬盘利用磁头在磁盘上通过磁性写入信息。固态硬盘则是利用固态电路记录信息。振荡很容易导致机械硬盘这种物理机械结构发生故障，而固态硬盘相对来说不容易受到震动的影响。</p>
+<blockquote>
+<p>由于历史习惯，我们可能会将二者统一称作磁盘，但是固态硬盘从原理上说并不是磁盘。有时我们也会将计算机这种长久存储信息的设备称作硬盘（hard disk），这可能是一个与软盘相对的称呼：曾经，人们用一种软质的磁性碟片存储信息，该种介质通常用作在计算机之间传递文件。</p>
+</blockquote>
+<p>关于固态硬盘和机械硬盘的特点，大约如下：</p>
+<ul>
+<li>固态硬盘速度很快，抗震抗摔，但是单位容量价格偏贵，且使用寿命与机械硬盘相比较短，误删数据不易恢复；</li>
+<li>机械硬盘速度较慢，不抗摔，但是价格便宜，误删数据相对容易恢复。</li>
+</ul>
+<p>处于笔记本便携性的考虑，建议选购固态硬盘的机型。所谓的“使用寿命较短”其实并没有那么可怕，而且只要平时做好重要数据的备份，则完全不用担心。</p>
+<p>如果有大文件存储需求，且预算紧张，可以考虑购买移动硬盘（HDD）；但如果资金充裕，还是建议购买移动固态硬盘。</p>
+<p>对于机械硬盘来说，转速越快，意味着写入 / 读取速度越快。</p>
+<p>对于固态硬盘，一般需要考虑颗粒类型、接口类型和协议等。现在一般很少会遇到搭配 SATA 接口的固态硬盘，因为该种搭配的速度会受到接口的限制。多见的是 M.2 NVMe 的固态硬盘。大多数情况下，厂商不会在产品介绍页说明自己产品使用的颗粒类型，消费者也不用过于纠结，只要不贪图低价，一般不会上当受骗。</p>
+<p>至于容量的选择，如果从事的工作确实很轻量，可以考虑 128 G 或 256 G 的型号。一般还是建议选购 512 G 的磁盘容量。如果资金充足，可以购置 1 T 容量的机型，或者选择加购移动硬盘。</p>
+<h4 id="内存"><a class="header" href="#内存">内存</a></h4>
+<p>如果把磁盘比作存储信息的仓库，那么内存就是使用信息的桌面、舞台。通常，计算机访问内存的速度远快于访问硬盘的速度。内存越大，计算机就能更快的同时运行多个程序。为什么呢？因为计算机可以一次将内容载入到内存，而不必频繁从硬盘读写，因此减少了很多访问时间。想象一下，假如你有一个很大的客厅，那么你就可以把自己想玩的游戏机、立体声音响、电视机等等全都放在里面，而不用在想使用它们时，还要费时间从储藏室把它们搬出来。</p>
+<p>虽然内存读写速度很快，但是其不具备长期储存信息的能力。切断电源后，内存中的信息都会消失。</p>
+<blockquote>
+<p>现在的硬盘读写速度越来越快，甚至比曾经计算机的内存还要快很多。而且，非易失性闪存也已经研发出来。也许有一天，计算机可能真的就不需要硬盘 / 内存了。</p>
+</blockquote>
+<p>针对现如今的使用需求，建议购买内存在 16 G 或以上的机型。</p>
+<h4 id="处理器"><a class="header" href="#处理器">处理器</a></h4>
+<p>处理器是计算机实现计算功能的核心。处理器，即“中央处理器（CPU）”。处理器需要关注的指标有主频、Cache 大小。</p>
+<p>更高的主频，意味着处理器更快的处理指令的速度，也就是更快的计算速度。</p>
+<p>一般消费者不太会关注处理器 Cache 的大小。Cache 的作用，可以类比内存之于磁盘的作用。处理器可以把经常需要用到的信息放在 Cache 里，这样便可进一步缩短处理时间。由于与处理器紧密相连，Cache 的访问速度极快，但成本也很高，是很宝贵的存储单元。</p>
+<p>Cache 越大，一般意味着处理器运算越快。</p>
+<h4 id="图形处理器"><a class="header" href="#图形处理器">图形处理器</a></h4>
+<h3 id="to-be-continued"><a class="header" href="#to-be-continued">To Be Continued...</a></h3>
+<h3 id="第一次打开计算机oobe"><a class="header" href="#第一次打开计算机oobe">第一次打开计算机（OOBE）</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../know-your-computer/what-are-computers.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../know-your-computer/use-electronic-products.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../know-your-computer/what-are-computers.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../know-your-computer/use-electronic-products.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

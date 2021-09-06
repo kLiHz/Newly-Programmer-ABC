@@ -1,0 +1,52 @@
+<svg width="900" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="0" y="0" width="900" height="480" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)">
+		<rect x="0" y="0" width="900" height="480" fill="#FFFFFF" />
+		<rect x="120" y="131" width="147" height="72" fill="#FFF2CC" />
+		<text font-family="Courier New,monospace" font-weight="400" font-size="27" transform="translate(137.681 175)">
+			hello.c
+		</text>
+		<rect x="273" y="131" width="53" height="72" fill="#FFF2CC" />
+		<text font-family="Courier New,monospace" font-weight="400" font-size="27" transform="translate(283.565 175)">
+			-o
+		</text>
+		<rect x="332" y="131" width="107" height="72" fill="#FFF2CC" />
+		<text font-family="Courier New,monospace" font-weight="400" font-size="27" transform="translate(345.411 175)">
+			hello
+		</text>
+		<rect x="40" y="131" width="74" height="72" fill="#FFD966" />
+		<text font-family="Courier New,monospace" font-weight="400" font-size="27" transform="translate(53.1798 175)">
+			gcc
+		</text>
+		<path d="M76.5 119.5C76.5 109.283 90.2034 101 107.107 101L199.893 101C216.797 101 230.5 92.7174 230.5 82.5001 230.5 92.7174 244.203 101 261.107 101L353.893 101C370.797 101 384.5 109.283 384.5 119.5" stroke="#000000" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(169.743 63)">
+			命令行参数
+		</text>
+		<path d="M138.833 331.833 333.167 331.833 333.167 413.167 138.833 413.167ZM140.167 412.5 139.5 411.833 332.5 411.833 331.833 412.5 331.833 332.5 332.5 333.167 139.5 333.167 140.167 332.5Z" />
+		<path d="M123.417 348.167 106.812 348.167 78.7837 236.211 80.0771 235.887 107.979 347.338 107.333 346.833 123.417 346.833ZM75.874 238.314 77.8114 229.582 83.6345 236.371Z" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(163.057 368)">
+			表示调用名为
+			<tspan font-size="24" x="-9.5" y="26">
+				“gcc”的程序
+			</tspan>
+		</text>
+		<path d="M384.5 222.5C384.5 232.993 370.426 241.5 353.065 241.5L320.435 241.5C303.074 241.5 289 250.007 289 260.5 289 250.007 274.926 241.5 257.565 241.5L224.935 241.5C207.574 241.5 193.5 232.993 193.5 222.5" stroke="#000000" stroke-width="1.33333" stroke-miterlimit="8" fill="none" fill-rule="evenodd" />
+		<path d="M379.833 296.833 869.167 296.833 869.167 377.167 379.833 377.167ZM381.167 376.5 380.5 375.833 868.5 375.833 867.833 376.5 867.833 297.5 868.5 298.167 380.5 298.167 381.167 297.5Z" />
+		<path d="M339.835 312.979 298.659 312.979 291.07 285.749 292.354 285.391 299.807 312.134 299.165 311.646 339.835 311.646ZM288.217 287.928 289.922 279.148 295.923 285.781Z" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(398.76 330)">
+			之后的这些字段会传给“gcc”这个程序，
+			<tspan font-size="24" x="48" y="29">
+				告诉“gcc”如何完成这一项工作
+			</tspan>			
+		</text>
+		<path d="M443.5 167 477.793 167 477.793 168 443.5 168ZM476.46 163.5 484.46 167.5 476.46 171.5Z" />
+		<text font-family="NSimSun,sans-serif" font-weight="400" font-size="24" transform="translate(498.56 177)">
+			命令
+		</text>
+		<rect x="33.5001" y="126.5" width="410" height="83" stroke="#E7E6E6" stroke-width="1.33333" stroke-miterlimit="8" fill="none" />
+	</g>
+</svg>

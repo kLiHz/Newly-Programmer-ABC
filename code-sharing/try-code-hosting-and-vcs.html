@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>代码托管与版本控制的实际使用 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../code-sharing/try-code-hosting-and-vcs.html" class="active"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="代码托管与版本控制的实际使用"><a class="header" href="#代码托管与版本控制的实际使用">代码托管与版本控制的实际使用</a></h1>
+<p>有很多常用的版本控制系统，如 Git、SVN 等。</p>
+<p>我们经常听到的代码托管平台有 GitHub、Gitee、GitLab 等，从他们的名称可以看出，这些平台是基于 Git 这一版本控制系统的。关于 Git 的历史本篇文章不多展开，这里主要介绍结合代码托管平台网站介绍一下 Git 的使用和基本的协作开发。</p>
+<h2 id="以实例讲解"><a class="header" href="#以实例讲解">以实例讲解</a></h2>
+<p>接下来我们用实例的方式进行内容的讲解。</p>
+<p>假设小 A 要开始编写一本介绍自己校园生活的书。经过一段时间的思考，小 A 构思好了此书大概的章节、目录规划。</p>
+<p>接下来，小 A 需要思考自己该使用何种工具和平台来实现这个事情。他希望自己的书能够被更多人看到，因此很可能会通过计算机和互联网技术来实现这一愿望。</p>
+<p>固然，小 A 可以采用纸笔的形式写草稿。不过，传统纸张书写的内容进入计算机，还存在数字化这一过程。为了省去这一过程，同时提升自己的计算机能力，小 A 决定全程采用计算机编写内容。</p>
+<p>以往，小 A 可能会选择使用 Microsoft Word 之类的办公（排版）软件来书写。不过，经过之前章节的学习，小 A 发现自己也可以使用标记语言来编写文稿，使用一些现有的工具，自己可以方便地构建出现代网页，并且应用任何自己喜欢的样式。</p>
+<p>小 A 发现有一款类似 gitbook 的工具 <a href="https://github.com/rust-lang/mdBook">mdBook</a> 比较适合自己的需求。这样的工具可以根据用户提供的描述文档结构的文件，生成文档的目录。小 A 发现书籍的目录结构可以和文件系统中的目录的结构完美的对应起来。</p>
+<p>关于这款工具的使用这里不详细介绍。假设小 A 的工作目录为“campus-guide”。下面为小 A 工作目录的结构。</p>
+<pre><code>campus-guide
+├── book.toml   // 告诉 mdBook 如何生成书籍产物，如格式等可选项
+├── book/       // mdBook 生成的网页默认会输出在这个目录
+└── src/        // 用来生成书籍的源文件目录
+    ├── SUMMARY.md   // 描述目录结构的文件
+    ├── chapt-1/     // 存放第 1 章节的目录
+    |   ├── 1-A.md
+    |   ├── 1-B.md
+    |   └── README.md   // 章节开始介绍性的文档
+    └── chapt-2/     // 存放第 2 章节的目录
+        ├── 2-A.md
+        ├── 2-B.md
+        └── README.md   // 章节开始介绍性的文档
+</code></pre>
+<p>相应的，小 A 的 <code>SUMMARY.md</code> 可能为如下内容：</p>
+<pre><code class="language-markdown"># Summary
+
+- [Chapter 1](./chapt-1/README.md)
+    - [1-A](./chapt-1/1-A.md)
+    - [1-B](./chapt-1/1-B.md)
+
+- [Chapter 2](./chapt-2/README.md)
+    - [2-A](./chapt-2/2-A.md)
+    - [2-B](./chapt-2/2-B.md)
+
+</code></pre>
+<p>当然，小 A 也可以使用更为具体的目录名。则对应的 <code>SUMMARY.md</code> 文件可以为：</p>
+<pre><code class="language-markdown"># Summary
+
+- [基础设施](./basic-facilities/README.md)
+    - [南教学楼](./basic-facilities/south-teaching-building.md)
+    - [食堂](./basic-facilities/student-dinning-hall.md)
+
+- [食在校园](./dinning-on-campus/README.md)
+    - [食堂就餐流程](./dinning-on-campus/dinning-procedure.md)
+    - [食堂特色菜品](./dinning-on-campus/specialties.md)
+
+</code></pre>
+<p>相应的的目录结构：</p>
+<pre><code>campus-guide
+├── book.toml
+├── book/
+└── src/
+    ├── SUMMARY.md
+    ├── basic-facilities/
+    |   ├── README.md
+    |   ├── south-teaching-building.md
+    |   └── student-dinning-hall.md
+    └── dinning-on-campus/
+        ├── dinning-procedure.md
+        ├── README.md
+        └── specialties.md
+</code></pre>
+<blockquote>
+<p>mdBook 可以根据 <code>SUMMARY.md</code> 文件直接生成缺失的目录和文件。因此用户只需写好 <code>SUMMARY.md</code> 即可，执行一次 <code>mdbook build</code> 即可实现目录和文件的新建。</p>
+</blockquote>
+<p>现在目录结构已经完成，小 A 可以开始编写了。完成了一定的内容后，只需要在 <code>campus-guide</code> 目录下运行 <code>mdbook build</code> 即可生成静态网页。（需要将 <code>mdbook</code> 可执行文件所在的目录添加进 <code>PATH</code> 环境变量）</p>
+<p>开始工程后，小 A 想用版本快照记录自己编辑的历史，以便可以在自己不满意时回退到之前的版本；此外，由于书籍编写量巨大，小 A 希望和其他人一同编写。以上这两点都可以使用版本控制系统来解决。</p>
+<p>如果没有版本控制系统，小 A 可能需要定期将自己的工程打包，存储在一个目录下，并且在需要回退时将这个压缩包解压。这种方法不容易查看每次快照的状态，更不方便比较两次版本之间的差异。此外，小 A 的协作者要想将自己编写的内容和小 A 的汇总，也需要小 A 进行手动的比较和合并，效率较低且容易出错；当协作者的数量增加时，事情会变得更复杂；如果想查看某一内容曾经的编辑者，也几乎是不可能的事。</p>
+<blockquote>
+<p>这里有一个秩事，1998 年，KDE 开始开发自己的浏览器渲染引擎 KHTML，不久，Apple 发现了这一开源项目，并创建了自己的分支 WebKit。根据 KHTML 采用的 LGPL 协议，Apple 必须公布自己修改后的源码。但是 Apple 使用了极其阴险的方式：他们公开的是没有修改记录（版本历史）的最终源码包，并且里面混杂了大量的 Apple 专有代码。这使得 KDE 无法利用 VCS（版本控制系统）摘取有用的代码修改，浪费了大量人力，并且导致 WebKit 的改进无法被 KHTML 上游吸收，最终这两个渲染引擎分道扬镳。</p>
+</blockquote>
+<p>经过一番调查后，小 A 决定使用 Git 管理自己的项目。</p>
+<h2 id="获得-git"><a class="header" href="#获得-git">获得 Git</a></h2>
+<p>用户可以在 Git 官方的下载页面 <a href="https://git-scm.com/downloads">Git - Downloads - git-scm.com</a> 下载 Git 的二进制版本。</p>
+<p>在 Windows 下，安装 Git 会带来一个精简、定制的 MSYS2 环境，其中包含一些基础的 GNU 工具。如果用户已经安装了 MSYS2 环境，也可以尝试使用其中提供的 Git。</p>
+<p>Git 自带有一个简易的图形化界面客户端。此外，也有许多 <a href="https://git-scm.com/downloads/guis">第三方为 Git 设计的图形化客户端</a>。对于一般用户来说，使用客户端可以免去记忆和输入命令的苦恼。</p>
+<p>关于 Git 的具体使用，读者可以参考 <a href="https://oi-wiki.org/tools/git/">Git - OI Wiki</a>、<a href="https://git-scm.com/doc">Git 的官方文档</a>、<a href="https://www.atlassian.com/git/tutorials">Atlassian Git Tutorial</a>，以及 <a href="https://git-scm.com/book">Pro Git</a> 一书。</p>
+<h2 id="本地和远程仓库的建立"><a class="header" href="#本地和远程仓库的建立">本地和远程仓库的建立</a></h2>
+<p>小 A 可以将项目现有的内容作为自己第一次快照的内容，也可以只选择若干的文件进行提交（commit），并且决定是否将其余的修改也提交到版本控制系统。</p>
+<p>好习惯是为每次提交填写“提交信息（commit messgae）”，一般是说明这次提交的目的（相较于上一次的变动）——做了什么，或者说解决（fix）了哪些问题、新增了哪些功能（feat）。</p>
+<p>项目中有些内容是小 A 不应该提交到版本控制系统中的。比如，小 A 使用的 mdBook 工具会将构建产物输出在项目同级的 <code>book</code> 目录下。对于使用 Git 的小 A，可以通过在目录下的 <code>.gitognore</code> 文件中标记出需要被版本控制系统忽略的某些目录或某些文件。</p>
+<blockquote>
+<p>用户可能还需要配置 <code>.gitattributes</code> 文件：</p>
+<p><a href="https://stackoverflow.com/questions/21472971/what-is-the-purpose-of-text-auto-in-gitattributes-file">git - What is the purpose of <code>text=auto</code> in <code>.gitattributes</code> file? - Stack Overflow</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/108266134">什么是 .gitattributes ？ - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>现在，小 A 完成了本地仓库的初始化。而如果要和小 B 一起合作，还需要建立一个“远程仓库”。</p>
+<p>对于小 A 这样的普通用户，它可以选择使用现有的、基于 Git 的代码托管平台，比如 <a href="https://github.com">GitHub</a>、<a href="https://gitlab.com">GitLab</a> 或者 <a href="https://bitbucket.org/">BitBucket</a>。注册对应网站的用户后，小 A 可以创建一个属于自己的仓库，也可以创建一个组织（比如“本书编写组”），并将仓库建立在组织名下。</p>
+<p>小 A 需要给自己的仓库起一个名字。名称可以是任意的，但为了清晰表示仓库的内容和目的，小 A 决定采用“Campus-Guide-Book”作为仓库的名称。</p>
+<p>由于仓库是公开的，为了别人更好的了解仓库中的内容，小 A 可能还需要为自己的项目添加一个 <code>README</code> 文件（自述文件）进行说明。根据对应托管平台的情况，小 A 可以使用托管平台支持的标记语言——如 Markdown——或者纯文本文件，来书写项目的自述文件。</p>
+<p>除此之外，为了保护自己的知识产权，小 A 可能还需要为自己的仓库添加许可证。</p>
+<h2 id="推送修改"><a class="header" href="#推送修改">推送修改</a></h2>
+<p>小 A 在本地安装好客户端时，需要进行一定的设置，其中一项就是自己的称谓和电子邮箱。这样，版本控制系统就能记录修改的人员以及对应的改动。</p>
+<p>远端仓库建立好时，内部一般是空的，用户可以设定本地仓库对应的远端仓库地址，便可以向远端仓库进行推送（push）。</p>
+<p>不过，远端仓库中也可能已经有一些内容，这时建议用户先将远端仓库“clone”到本地，再修改这个仓库。不然，直接从远端仓库的拉取代码到本地仓库，可能会发生冲突，需要手动解决。如果本地有未提交的修改，还需要先将本地仓库中的修改暂存起来。</p>
+<p>小 A 要向远端仓库推送修改，需要向远程服务器证明自己的身份。这个过程可以使用用户名和密码，也可以使用 SSH 密钥。远端仓库验证小 A 的身份后，才会允许小 A 的推送。</p>
+<blockquote>
+<p>简单来讲，用户需要使用一定的程序生成 SSH 密钥，在将该密钥添加到远端仓库所在对应平台后，在本地计算机上使用该密钥与服务器建立通信，就能完成用户身份的验证。</p>
+<p>参考链接：<a href="https://linuxkamarada.com/en/2019/07/14/using-git-with-ssh-keys/">Using Git with SSH keys - Linux Kamarada</a></p>
+</blockquote>
+<p>当小 A 在自己的计算机上完成一定阶段的修改后，可以在本地进行“commit（提交）”操作。可以连续进行若干次“commit”，并在确认无误后，将这几次“commit”一并推送到远端仓库（push origin）。</p>
+<p>如果小 B 也想向远端仓库提交修改，需要将仓库“clone”到自己的计算机上。此外，还需要远端仓库的所有者小 A 为小 B 分配相应的权限（小 B 也需要在对应的平台上注册账号）。之后，小 B 可以进行修改、提交，并将修改推送到远端仓库。</p>
+<h2 id="使用分支"><a class="header" href="#使用分支">使用分支</a></h2>
+<p>现在，小 A 和小 B 同时拥有对一个仓库的访问权限，二人交替的向远端仓库提交修改。</p>
+<p>如果二人修改的内容互不冲突，那么理论上可以向同一个分支提交修改。为了保持与远端仓库最新版本的同步，参与者都要定时执行“pull origin”的操作将代码拉取到本地。</p>
+<p>事实上，同时修改的若干方很难保证彼此的修改之间不存在冲突，这会导致每次从远端仓库拉取（pull）更新的时候都需要先解决冲突。此外，这样交替修改所形成的版本时间线也不易于查看和分析。</p>
+<p>因此，小 A 和小 B 应该事先约定好分工的部分，并在不同的分支上进行各自的修改，并在需要汇入时从该分支向主分支发起“pull request”，简称“PR”，检查（review）无冲突后，即可将修改合并入主分支。</p>
+<blockquote>
+<p>在汇入主分支时，有几种不同的方式。一般，如果为了保持主分支版本迭代线的整洁，会对待合并分支进行 rebase 操作之后合并。</p>
+</blockquote>
+<p>一般来说，对于一个较为稳定的项目，任何参与者每次针对某个问题的修改，都应新建一个分支进行操作。</p>
+<p>比如，每当小 A 或小 B 准备开始一个新的章节时，都可以新建一个分支，并在完成后汇入主分支。</p>
+<blockquote>
+<p>如果小 A 和小 B 的工作之间存在互相引用的情况，则需要实现设计好引用的接口。</p>
+</blockquote>
+<h2 id="外部人员的参与"><a class="header" href="#外部人员的参与">外部人员的参与</a></h2>
+<p>为了能够帮助更多的人、同时邀请到更多的人参与进来，小 A 将自己在代码托管平台上的仓库设置为了公开仓库。</p>
+<p>小 C 对于这个项目很感兴趣。他也想参与进来。</p>
+<p>假如小 C 对项目持有问题或建议，可以在“issue”中与项目管理者以及其他用户讨论这一点。在发起一个新的“issue”前，最好搜索是否已经存在类似的“issue”（包括已经解决的）。当“issue”对应的问题解决后，小 C 或者仓库维护者应关闭该“issue”。</p>
+<p>假如小 C 想向项目中贡献内容，还应查看项目的参与规则，这一般会在项目根目录的 <code>CONTRIBUTING</code> 文件中注明。如果找不到这样的文件，那么小 C 最好发起一个“issue”来向仓库所有者询问对应的时候情况。</p>
+<blockquote>
+<p>小 C 也应该明白自己的贡献将会以何种形式被使用。这是仓库持有者和参与者都应该考虑的问题。</p>
+</blockquote>
+<p>了解清楚情况后，可以将小 A 的仓库“fork”一份到自己的名下。由于仓库是公开的，任何人都可以访问这个仓库，不需要小 A 的同意。之后，小 C 可以将“fork”得到的这个仓库“clone”到本地，并且建立分支、进行修改、“commit”，并将修改推送到这个自己“fork”得到的远端仓库。</p>
+<blockquote>
+<p>如果小 C 只是想使用小 A 的内容，则可以选择“clone”这个项目，或者从项目的 Release 中下载某个版本的代码或构建产物。而如果要进行修改，因为不具有其远端仓库的写入权限，因此需要先将仓库“fork”一份在自己的名下，并将修改推送到该“fork”得到的远端仓库。</p>
+</blockquote>
+<p>如果小 C 完成了自己的修改，希望将修改合并到小 A 的仓库，则需要在代码托管平台向小 A 的仓库发起“PR”。</p>
+<p>当小 A 或其他仓库维护者完成对于小 C 发起的“PR”中的内容的检查（即“review”）后，可以通过小 C 的“PR”请求。如果系统通过比较，发现“PR”来源分支的状态和目标分支的状态存在冲突（即无法完成自动合并），则需要小 A（仓库管理者）或者小 B（请求发起者）解决出现的冲突之后再进行合并。</p>
+<h2 id="wiki"><a class="header" href="#wiki">Wiki</a></h2>
+<p>（待补充）</p>
+<h2 id="release"><a class="header" href="#release">Release</a></h2>
+<p>（待补充）</p>
+<h2 id="参考"><a class="header" href="#参考">参考</a></h2>
+<ul>
+<li>
+<p><a href="https://www.runoob.com/git/git-tutorial.html">Git 教程 - 菜鸟教程</a></p>
+</li>
+<li>
+<p>https://zhuanlan.zhihu.com/p/250493093</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../code-sharing/code-hosting-platform-and-vcs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../code-sharing/about-github.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../code-sharing/code-hosting-platform-and-vcs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../code-sharing/about-github.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

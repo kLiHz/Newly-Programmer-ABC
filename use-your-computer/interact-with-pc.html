@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>与计算机交互 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../use-your-computer/interact-with-pc.html" class="active"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../know-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../begin-programming/read-cpp.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li class="chapter-item expanded "><a href="../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.7.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.8.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.8.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.9.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../begin-programming/vm/index.html"><strong aria-hidden="true">4.10.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.10.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../begin-programming/coding-practice.html"><strong aria-hidden="true">4.11.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/pointers-and-references.html"><strong aria-hidden="true">6.1.</strong> 指针和引用</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> 动态内存分配</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> 类和对象</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> 浅拷贝、深拷贝</div></li><li class="chapter-item expanded "><a href="../cpp/macro-and-preprocess.html"><strong aria-hidden="true">6.6.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.7.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.8.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.9.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.10.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../cpp/project/index.html"><strong aria-hidden="true">6.11.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.11.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.11.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.11.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../cpp/modern/index.html"><strong aria-hidden="true">6.12.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.12.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.12.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.12.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.12.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.12.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.12.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="和计算机交互"><a class="header" href="#和计算机交互">和计算机交互</a></h1>
+<p>对于最原始的计算机，我们可能需要通过拨动开关或者连接电线等方式，才能对计算机进行编程等操作。后来，人们发明出通过键盘操作计算机的方式，计算机则通过打字机向用户显示计算的结果；再后来，打字机变成了可以显示字符，甚至是矢量图形和位图的屏幕，也就是终端（Terminal）。</p>
+<p>随着科技的发展，如今，我们和计算机交流的工具进化为了屏幕、键盘、鼠标等。而交流的方式，除了敲击键盘之外，也增加了点按、鼠标移动、触摸、体感等多种方式。</p>
+<p>得益于计算机存储能力的提升和信息传递方式的改进，现在计算机不仅可以存储许多内容和资料，也可以存储多种多样的应用程序（Applications），有时也称为程序（Programs）。</p>
+<p>所谓<strong>程序</strong>，即一系列操作计算机的指令，包括如何获取输入，进行何种运算，如何将结果展示给用户。这些应用程序由开发者（Developers）事先编写好，并以一种方式发布。编写应用程序的过程即为“编程”（Programming）。这些应用程序可以是直接被计算机执行的指令，也可以是需要通过其他程序解读才能执行的脚本。获取应用的平台一般称作“应用商店（Application Store）”或“应用市场（Application Market）”。</p>
+<p>现在的计算机结构通常比较复杂，一般需要<strong>操作系统</strong>来作为用户和计算机之间的中介。操作系统负责调度计算机的硬件，与硬件沟通。可以将操作系统理解成最基础的程序，在操作系统上，我们可以运行其他的应用程序。这些应用程序通过操作系统提供的接口操作计算机。</p>
+<p>用户可以通过计算机的硬件（输入设备）操作计算机，产生的信号会发送给操作系统处理，操作系统再将信息发送给应用程序，应用程序处理后，通过使用操作系统提供的接口，将结果输出在硬件上，最终为用户所知。</p>
+<p>总的来说，操作系统负责<strong>调度计算机的资源</strong>，可以使用户<strong>更方便的使用计算机</strong>。</p>
+<pre><code>用户 &lt;-&gt; 应用程序 &lt;-&gt; 操作系统 &lt;-&gt; 硬件
+</code></pre>
+<blockquote>
+<p>其实操作系统和硬件之间又有 BIOS（Basic Input / Output System），这个系统又会提供接口给操作系统使用。当然，应用程序也可以有供给其他程序使用的接口。</p>
+</blockquote>
+<p>常见的操作系统有 Windows、OS X、各个 Linux 发行版（如 Ubuntu、Debian、Arch Linux、Manjaro 等）。不同操作系统上程序文件（可执行文件）的格式不尽相同。</p>
+<blockquote>
+<p>苹果（Apple）公司生产的计算机，一般称作 Mactonish，预装的系统称作 macOS，也叫 OS X，它和苹果的诸多其他设备所使用的系统，都是从 Darwin 系统开发出来的。而 Darwin 又是从 Unix 系统演变过来的。而其他厂商（OEM）出产的家用计算机一般会预装 Windows 系统。</p>
+<p>少数会预装 Linux <strong>内核</strong>（Kernel）的系统。Linux 是一个操作系统<strong>内核</strong>的名字。操作系统内核并不能满足用户实际日常使用的需要，需要安装一些<strong>工具</strong>才能做一些实际的事情。除此之外，还需要安装<strong>桌面环境</strong>，才能具有图形化的界面。常见的 Linux 内核的系统有 Debian、Ubuntu、CentOS 等，这些统称为 <strong>Linux 发行版</strong>，他们会包括一些必要的基础工具以及桌面环境。</p>
+<p>由于 Unix 和 Linux 的操作很相近（至于他们的渊源暂时不解释），所以有时候用“*nix”来统称两种系统。</p>
+<p><a href="https://www.howtogeek.com/295067/why-is-macos-software-sometimes-labeled-darwin/">Why Is macOS Software Sometimes Labeled “Darwin”? - How-To Geek</a></p>
+</blockquote>
+<h2 id="输入输出设备"><a class="header" href="#输入输出设备">输入输出设备</a></h2>
+<h3 id="驱动程序"><a class="header" href="#驱动程序">驱动程序</a></h3>
+<p>驱动程序（driver）也是一段程序，它通过翻译一个程序或者硬件的输出，使得该输出能够被另一个或另一些程序或硬件理解，从而使两者之间可以正常沟通。</p>
+<p>我们的连接到计算机的外部设备，通常都需要驱动程序的存在，才能使硬件正常工作——即其能够被正确识别，且输出能够被正常读取（以及能够正确接收操作系统的控制）。</p>
+<h3 id="键盘"><a class="header" href="#键盘">键盘</a></h3>
+<p>通常，按下键盘上的按键，其就会发送相应的信号。我们常用的键盘包含 0 - 9 阿拉伯数字、英文字母 A - Z、标点符号、控制按键等。键盘上有哪些按键、按键对应的字母或功能，称作<strong>键盘布局</strong>（Keyboard Layout）。</p>
+<p>中国境内销售的计算机，一般和英美国家的键盘布局是相似的，有时也称作“QWERTY”键盘。而如法国、西班牙等国家，考虑到语言的使用习惯，其销售的计算机键盘按键所对应的字母可能并不是 A - Z 或是我们所熟悉的标点符号。</p>
+<p>我们可以打开计算机上的记事本程序，然后按下键盘上的按键，观察屏幕上的输出。</p>
+<h3 id="鼠标"><a class="header" href="#鼠标">鼠标</a></h3>
+<p>鼠标（mouse），因为其椭圆流线型的形状外加一条数据线，酷似生活中的小老鼠而得名。用户可以通过移动鼠标，从而移动电脑屏幕上的光标到想要的位置上，是一种输入设备。</p>
+<p>鼠标一般至少具有三个按键：左键、中键和右键。其中中键有可能是滚轮，也有可能是集成了“中键”功能的滚轮（即，可点按）。三者通常并列在鼠标前端。</p>
+<p>在桌面平台（desktop）里——笔记本、台式机等——中鼠标的常用操作：</p>
+<p>当用户移动鼠标时，显示器上对应的鼠标指针也会移动。一般情况下，图形界面中能被触发的元素，会响应用户的鼠标移动，比如颜色、大小发生改变。当用户将鼠标停留（悬浮）在这些元素上时，一般还会有对应的说明信息显示出来。</p>
+<ul>
+<li><strong>左键单击</strong>：快速按下并松开左键，可以<strong>选定</strong>一个操作目标，或者点击按钮</li>
+<li><strong>左键双击</strong>：两次快速按下并松开左键，可以“<strong>打开 / 执行</strong>”操作目标如应用和文件夹等</li>
+<li><strong>右键单击</strong>：快速按下并松开右键，可以打开一个操作目标的<strong>选项菜单</strong></li>
+<li><strong>左键单击并拖动</strong>：按下左键并保持不松开的同时移动鼠标，可以拉出选框框选多个操作目标（拖选）；也可以拖动窗口，也可以拖动选中的目标；拖动目标到其他位置可以实现移动或复制目标</li>
+<li><strong>拨动滚轮</strong>：可以上下翻动页面</li>
+</ul>
+<p>有时，移动设备也能连接鼠标，这时的鼠标操作可能需要类比触摸输入。</p>
+<p>根据习惯，用户也可以在系统中设置，选择交换鼠标右键和左键的功能。</p>
+<h3 id="触摸屏"><a class="header" href="#触摸屏">触摸屏</a></h3>
+<p>触摸屏常见于移动设备和一些可穿戴设备上，如智能手机、智能手表等。</p>
+<p>针对触摸屏的操作，一般很少用到双击。总体来说，触摸屏的操作有如下逻辑：</p>
+<ul>
+<li><strong>点击</strong>：选择一个目标，或者打开一个项目。</li>
+<li>按下、停留一段时间后松开（<strong>长按</strong>）：打开操作目标的选项菜单</li>
+<li><strong>长按并拖动</strong>：移动选中目标</li>
+<li><strong>滑动</strong>：翻动页面</li>
+<li><strong>双指捏合</strong>：缩小内容</li>
+<li><strong>双指张开</strong>：放大内容</li>
+</ul>
+<p>有些桌面式计算机也会配备触摸屏，其操作大致可以类比移动设备触摸屏的操作。</p>
+<p>曾经的智能手机会在正面底部提供实体导航键。导航键一般包括三个按键，分别为“返回上一级页面”“回到主页面”“打开最近任务/打开当前页面的选项菜单”三种功能。这些按钮可能也会分为“长按”和“点击”两种操作，用来实现不同的功能。</p>
+<p>现在的智能手机多为“全面屏”，其导航键也进化了为触摸手势。用户可以选择在屏幕底部显示导航栏的按键（虚拟导航栏），延续之前的操作习惯；也可以选择通过滑动屏幕底端对应区域，代替之前点按导航键的操作；也可以采用为全面屏设计的操作：</p>
+<ul>
+<li>从屏幕底部快速向上滑动并松开：回到主页面</li>
+<li>从屏幕底部向上滑动并停留：查看后台程序</li>
+<li>在屏幕底部左右滑动：切换应用程序</li>
+<li>从屏幕侧边向内滑动：返回上一级页面</li>
+</ul>
+<blockquote>
+<p>所谓“主页面”，即用户进入图形界面所看到的最开始的页面，也称作“桌面”。桌面上一般会放置若干应用程序的图标，或者一些小工具；桌面式计算机桌面上可能还会放置有用户的文件。</p>
+</blockquote>
+<h3 id="触摸板"><a class="header" href="#触摸板">触摸板</a></h3>
+<p>触摸板通常是为了代替鼠标操作，一般配备在笔记本电脑上，使其更加便携（不需要额外携带鼠标）。由于笔记本电脑属于桌面端，因此其操作不同于触摸屏。</p>
+<ul>
+<li>单指轻触/点击：相当于鼠标左键单击。也可以按下整块触摸板（偏左部的区域）。有些旧式触摸板不支持触摸点击的操作，需要按下相应侧的按键。</li>
+<li>单指滑动：移动鼠标指针的位置</li>
+<li>点击一下并按住（轻触、抬起、再触摸）：相当于鼠标左键单击并拖动</li>
+<li>双指轻触/点击：相当于鼠标右键单击。有时按压触摸板的右部（偏右下部分）也可以实现这个操作。有些旧式触摸板不支持触摸点击的操作，需要按下相应侧的按键。</li>
+<li>双指滑动：相当于鼠标滚轮</li>
+<li>三指轻触/点击：相当于鼠标中键点击。可能需要在系统中设置触摸板的手势。Windows 10 操作系统默认会打开“搜索”，需要用户手动修改。</li>
+<li>双指捏合：缩小内容</li>
+<li>双指张开：放大内容</li>
+</ul>
+<p>Apple 生产的计算机的触摸板可能会采用两段式设计，其使用上又有不同，详情请参考相应产品的支持页面。</p>
+<blockquote>
+<p>我们会在后面介绍网页和站点的概念。</p>
+</blockquote>
+<h2 id="图形界面"><a class="header" href="#图形界面">图形界面</a></h2>
+<p>在命令行界面中，用户一般只能通过输入文字命令来与程序进行交互；在这种交互方式下，输入输出信息的过程往往是单一的，即用户同一时间只能进行一个操作，输入需要逐行获取，要修改之前的输入也不是件轻松的事。而图形界面为用户提供了同时操作多个程序、同时输入多项信息的可能。</p>
+<blockquote>
+<p>图形界面虽然方便好用，但也有局限之处，比如占用资源高，对用户使用的设备有一定的要求。相对的，命令行界面虽然简陋，但是也能实现很多功能。此外，有些命令行程序也会提供一个由文本字符组成的“类图形界面”。</p>
+</blockquote>
+<h3 id="常见图标语义"><a class="header" href="#常见图标语义">常见图标语义</a></h3>
+<p>在图形界面中，通常有下面这些语义：</p>
+<ul>
+<li>
+<p><strong>按钮</strong>（Button）：可以点击，触发事件。按钮的图标一般具有文字说明或着图形，我们可以根据这些内容联想语义：如一个“放大镜”形状的图标，可能意味着对当前内容进行“查找”操作；如同三个点的省略号形状的图标，可能代表点击后会有更多内容或选项展开。当用户的鼠标指针移动过“按钮”时，按钮元素可能会发生变化——如颜色、大小的改变。</p>
+</li>
+<li>
+<p><strong>文本框</strong>（Text Box）：通常为一块区域，可以在其中输入内容；文本框分为可写入的和不可写入的：</p>
+<ul>
+<li>
+<p>对于可写入的文本框，选中文本框后，其中一般会出现闪烁的<strong>光标</strong>，表示接下来输入的内容将会插入在此处。用户可以通过鼠标指针或者键盘按键移动光标。</p>
+</li>
+<li>
+<p>对于不可写入的文本框，一般可以用来向用户展示信息。根据开发者的设计，用户可能能够选中其中的信息，但不能修改。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>文本标签</strong>（Label）：类似于文本框，文本标签通常用来在图形界面上显示一些文本，可以用来作为其他元素的说明，有时会出现在按钮或文本框旁边。不同于文本框，文本标签没有外部的框，一般也不能被选中。</p>
+</li>
+<li>
+<p><strong>窗口</strong>（Window）：一个窗口为出现在桌面上的框体。一个窗口中可能会有若干按钮和文本框。通常一个应用程序可以创建一个或多个窗口，用来和用户交互（获取输入或展示信息）。应用程序使用过程中<strong>弹出的窗口</strong>（pop-up）一般用来向用户提示信息、请求确认等。</p>
+</li>
+</ul>
+<h3 id="桌面环境"><a class="header" href="#桌面环境">桌面环境</a></h3>
+<p>桌面环境（Desktop Environment）不仅提供图形界面，也包括一些基本的图形应用程序，如文件管理器、计算器等实用工具。</p>
+<h3 id="如何确定计算机使用的是什么操作系统"><a class="header" href="#如何确定计算机使用的是什么操作系统">如何确定计算机使用的是什么操作系统？</a></h3>
+<p>大部分情况下，市面上购买到的家用计算机会预装 Windows 操作系统。Apple 生产的计算机会预装 macOS 系统。部分计算机会预装某种 Linux 发行版。</p>
+<h3 id="windows-10-桌面"><a class="header" href="#windows-10-桌面">Windows 10 桌面</a></h3>
+<h4 id="桌面图标"><a class="header" href="#桌面图标">桌面图标</a></h4>
+<p>如图所示的即为 Windows 10 系统的桌面。左上角有两个图标，上边的一个“桶”图标为“回收站（Recycle Bin）”，用户删除的文件会暂存在这里；下边的一个绿色流线型（海浪型）图标为系统自带的浏览器“Microsoft Edge”。</p>
+<p><img src="assets/windows-desktop-capture.jpg" alt="Windows 桌面，任务栏默认在最下方，桌面左上有“回收站”和“Microsoft Edge”的图标" title="Windows 10 桌面环境" /></p>
+<p>图片最下方的部分为“任务栏（Taskbar）”。任务栏主要有几个板块组成：</p>
+<ul>
+<li>任务栏最左端的窗型图标为“<strong>‘开始’菜单</strong>（Startup Menu）”按钮，<strong>点击</strong>可以打开“‘开始’菜单”，以便<strong>查看和启动其他已安装的应用程序</strong>；也可以按下键盘上的“Windows 徽标键”，或者“Start”按钮，唤出开始菜单；</li>
+<li>“‘开始’菜单旁边的图标”为“Windows Search”搜索框，可以用来检索计算机上的内容；</li>
+<li>随后为若干应用程序的图标，它们被固定在任务栏上，方便用户快速启动，也被称为“<strong>快速启动栏</strong>”；</li>
+<li>任务栏的最右端包括一些<strong>状态图标</strong>，用来展示计算机当前的状态，或者正在后台（background）运行的程序；</li>
+<li>此外还有日期时间、输入法等。</li>
+</ul>
+<p>我们可以右键点击任务栏，对其进行一些设置，比如任务栏中显示的图标、任务栏在屏幕上的位置等。</p>
+<h4 id="新建文件"><a class="header" href="#新建文件">新建文件</a></h4>
+<p>接下来，我们尝试在桌面的空白处右键点击，这会弹出一个菜单，称为“上下文菜单（context menu）”，也称“右键菜单”。</p>
+<p><img src="./assets/right-click-on-desktop.jpg" alt="在桌面空白处使用鼠标右键点击，会出现上下文菜单，切换到“新建”选项，可以查看到可以新建的项目" title="在 Windows 桌面空白处使用右键点击唤出上下文菜单" /></p>
+<blockquote>
+<p>因为菜单的内容由右键点击的位置决定，因此被称为“上下文菜单”。</p>
+</blockquote>
+<p>在右键菜单中选择“新建（New）”，这样便可以新建文件或目录。我们尝试新建一个文本文档。这会使得桌面上出现一个“文档”形状的图标，其代表着我们新建的文本文档。</p>
+<p>刚创建一个新文件时，图标下方文件名称处是一个待输入的文本框，其中的文本（默认文件名）以高亮方式选中，这表明其期待我们键入一些字符来命名这个文档。我们可以选择从键盘键入一些文本作为文件名，也可以点击桌面的空白处，退出这个重命名的过程，这将使用默认文件名。</p>
+<p><img src="assets/default-name-to-be-replaced.jpg" alt="新建一个文件后，默认的文件名会被选中并高亮" title="默认文件名被高亮显示" /> </p>
+<p>如果稍后想要修改文件名，可以右键点击“文本文档”图标，选择“重命名（Rename）”；或者先单击选中文件，稍作等待后再次点击目标，即可对目标进行“重命名”操作。</p>
+<h4 id="打开文件"><a class="header" href="#打开文件">打开文件</a></h4>
+<p>之后，我们双击新创建文本文档的图标，操作系统便会用与“文本文档”格式相关联的程序打开这个文件，默认为“记事本（Notepad）”。我们会看到，双击后，桌面上弹出了一个新窗口，即“记事本”程序创建的窗口。</p>
+<blockquote>
+<p>也可以通过 Windows 的“运行”对话框运行“记事本”程序。我们按下 <code>Win</code> + <code>R</code> 这个组合键（同时按下两个按键），即可打开 Windows 的“运行”对话框。我们在其中输入“notepad”，点击“确定”，即可打开记事本程序。之后，我们将需要打开的文件<strong>拖入</strong>窗体，即可完成文件的打开。</p>
+</blockquote>
+<p><img src="assets/windows-running-notepad.jpg" alt="Windows 上“记事本”程序的窗口" title="空白的“记事本”程序窗口" /></p>
+<p>我们可以点击窗口的空白处，确保闪烁的光标出现在窗口内部。之后，我们可以通过键盘键入文本了。我们可以通过鼠标点击或者键盘上的方向键，来控制光标的移动。光标所在的位置，意味着输入将要插入的位置。</p>
+<blockquote>
+<p>如果我们不选择打开文件，记事本中默认也能接受并临时存储用户的输入，相当于打开了一个临时文件。在用户尝试关闭窗口时，或者尝试打开其他文件时，提示用户对更改进行保存。不过，如果程序意外退出，则这些<strong>未保存的</strong>更改可能会丢失。</p>
+</blockquote>
+<h4 id="键入文本中文输入法"><a class="header" href="#键入文本中文输入法">键入文本、中文输入法</a></h4>
+<p>一般来讲，用户使用的操作系统会预装当前地区语言的输入法。对于英语来说，我们可以不需要输入法——假如要输入“apple”单词，我们只需依次按下键盘上的“A”“P”“P”“L”“E”键即可。对于中文，我们固然可以将所有可能用到的汉字悉数安排在键盘上，可这样会需要很大的空间，也不方便我们寻找对应的汉字。因此，我们需要一种输入方法，其能通过一些按键的组合，使我们能够得到需要的汉字字符。</p>
+<p>最直白的方法是，直接键入汉字字符所对应的编码，然后我们就能让计算机理解我们想要的字符为何。但是这样显然不够高效：我们很难记住上千个汉字所对应的编码。于是，人们想到可以通过汉字的字形构造来输入文字，这就是“五笔”。不过五笔输入法仍然需要用户背字根表，并且熟练使用，才能高效地键入汉字。</p>
+<p>根据汉语拼音方案，所用的标音字母基本都可以在英文的 26 个字母中找到对应的字母，且汉语拼音易于学习和掌握，这令我们非常适合通过英文键盘键入拼音。此外，使用拼音并不一定要求用户知晓汉字的具体写法，这也极大降低了输入的难度。</p>
+<p>在输入中文前，我们需要确保已经启用了中文输入法，这一般会在任务栏中有所体现（语言栏）。我们可以观察下图任务栏的最右端，有一个汉字“中”的图标，表明我们处于中文输入模式。</p>
+<p>我们依次按下键盘上表示“越过长城”汉字拼音的字母，屏幕上出现了对应的字母，以及悬浮的候选词菜单。输入法自动帮我们完成了拼音的分割操作；由于处在待确定状态，拼音字母下方有下划线表示。我们按下我们希望的候选词的序号对应的数字按键，即可完成中文的输入。如果候选词恰好在第一个，我们也可以直接按空格提交输入。</p>
+<p><img src="assets/input-chinese-by-pinyin.jpg" alt="使用拼音输入法在记事本程序中输入中文，用户的按键输入的拼音字母以下划线标出" title="使用拼音输入法输入中文" /></p>
+<p>如果要输入英文，我们可以点击任务栏的“中”图标，便可切换到英文输入模式。也可以按一下键盘上的“Shift”按键，切换中英文输入。快捷按键的设置可以在输入法的设置中修改。</p>
+<p>当用户在前台使用一些程序时，应用程序的图标通常会出现在任务栏上，并且其图标与其他图标有一定的区别（如下方会出现一条横线），如下图所示。</p>
+<p>用户可以继续尝试输入下方图片中的文本：</p>
+<blockquote>
+<p>越过长城，走向世界。</p>
+<p>Across the Great Wall we can reach every corner in the world.</p>
+</blockquote>
+<p>我们留意到，当我们键入内容后，窗口最顶端，也就是窗口的<strong>标题栏</strong>中，所打开的文件名“Text”前有一个<strong>星号</strong>“*”,这<strong>表明我们的文件发生了修改，但是没有保存</strong>。</p>
+<p><img src="assets/win-notepad-with-contents.jpg" alt="“记事本”程序窗口中显示了用户键入的文本，窗口标题栏中的文件名前有星号标识" title="键入了文本的记事本程序窗口" /></p>
+<p>我们可以点击标题栏下方<strong>选项栏</strong>里的“文件（File）”，在展开的菜单中选择“保存（Save）”，可以将内容保存。也可以同时按下键盘上的“Ctrl”键和“S”键。</p>
+<p>完成后，我们可以点击窗口右上角的“×”按钮，这将关闭这个窗口，也就是关闭“记事本”程序。由于我们尚未保存键入的内容，“记事本”程序会弹出一个窗口，来询问我们是否要保存所做的修改。我们根据需要选择即可。如果保存，则键入的数据将写入磁盘。如果不保存，则数据会被丢弃。</p>
+<h4 id="键入模式"><a class="header" href="#键入模式">键入模式</a></h4>
+<p>在光标处插入文本时，有“插入”和“覆写”两种模式。默认为“插入模式”，即用户在光标处键入的文本会插入在光标前后的文本之间；而在“覆写模式”下，用户键入文本则会逐个覆盖光标后的字符。</p>
+<p>一般情况下，用户可以通过按键盘上的“<code>Insert</code>”键来切换两种模式。</p>
+<p>删除文本也有“Backspace（退格）”和“Delete”之分。当我们按下“退格”时，顾名思义，光标会向前退一格。在一般的使用场景下，按下“退格”键通常还会删除相应的文本。这有点违背其字面上的含义。</p>
+<p>Apple 公司的 Mactonish 的键盘上并不存在退格键，而只有一个“Del”键，当用户按下这个“Del”键，会删除光标前的文本。这看起来比较符合其字面上的含义。不过，在 Windows 上按下“Del”键，则会删除光标之后的文本。如果需要在 Mac 上实现删除光标之后的文本，则需要按下功能键“Fn”，再点按“Del”键。</p>
+<blockquote>
+<p>我们可以把过去的终端想象成打字机，如果需要修改上面显示的字符，则需要将光标移到要删除的字符（或者若干字符）之前（退格），接着输出一个（或者若干）其他的字符覆盖掉原有的字符。事实上，所有显示都是这个道理，我们往往只需要修改变动的地方——比如在纸上书写错了字，可以用修正带抹去，再重新覆写相应的字符。</p>
+</blockquote>
+<p>用户可以在下面的文本框里尝试使用“Delete”和“Backspace”键：</p>
+<p><textarea name="textarea" id="textarea" cols="45" rows="5">Here is an example textarea box that can be used to test the delete and Backspace keys on your keyboard. </textarea></p>
+<blockquote>
+<p>参考链接：<a href="https://www.computerhope.com/issues/ch001389.htm">computerhope.com/issues/ch001389.htm</a></p>
+</blockquote>
+<p>而对于计算机上的项目（包括文字），在选中后按下“Delete”键，一般都是对其执行“删除”操作。（图形界面下）删除的文件，一般会被计算机移动到“回收箱（Recycle Bin）”或“废纸篓（Trash Bin）”之类的文件夹，相当于临时删除，用户如有需要可以在之后恢复，或选择永久删除这些文件。用户也可以直接在删除文件之前按下“Shift（换挡）”，表示直接进行删除操作，即永久删除，需要使用专业软件才有一定可能恢复。</p>
+<h4 id="打开资源管理器"><a class="header" href="#打开资源管理器">打开资源管理器</a></h4>
+<p>用户可以通过资源管理器查看计算机上存储的文件。同时按下键盘上的“Windows 徽标”键（或“Start”按键）和“E”键，或者点击任务栏中的黄色文件夹形图标，即可打开 Windows 的<strong>资源管理器</strong>（<strong>E</strong>xplorer）。</p>
+<h4 id="快速访问此电脑磁盘分区"><a class="header" href="#快速访问此电脑磁盘分区">快速访问、此电脑、磁盘分区</a></h4>
+<p><img src="assets/win-explorer-default.jpg" alt="资源管理器的默认启动页为“快速访问页面”，其中包含若干目录和常用文件的快捷方式" title="Windows 10 资源管理器默认启动页" /></p>
+<p>我们看到，窗口居中部分的几个文件夹，就是我们上一节提到的<strong>用户文件夹</strong>中的若干子目录——“文档（Documents）”“下载（Downloads）”“音乐（Music）”“视频（Videos）”“桌面（Desktop）”等。这个界面即 Windows 资源管理器的“快速访问（Quick Access）”页面，其为用户文件目录以及常用文件提供了一个快速访问的入口。用户尽可能<strong>将个人文件存储在用户文件夹</strong>中，这样方便管理和备份。</p>
+<p>我们可以点击左侧的“<strong>此电脑</strong>（This PC）”，这样便能看到这台电脑上的若干“驱动器”，也就是我们之前所说的“分区”。</p>
+<p>我们可以在设置中更改打开资源管理器时默认显示的页面为“快速访问”或者“此电脑”。</p>
+<blockquote>
+<p>假设用户名为“Henry”，在 Linux 发行版中，用户文件夹一般为“<code>/home/Henry/</code>”目录；macOS 上一般为“<code>/Users/Henry/</code>”；在 Windows 上一般为“<code>X:/Users/Henry/</code>”，其中“X”为操作系统所在分区的盘符，一般为“C”。</p>
+</blockquote>
+<p>我们可以双击驱动器（分区）的图标，即可浏览其中的内容（需要当前用户具有相应的权限）。我们可以尝试进入“<code>C:/Users/Henry/Desktop/</code>”目录，查看我们保存在桌面上的“Text”文件是否在其中。</p>
+<h4 id="显示文件扩展名"><a class="header" href="#显示文件扩展名">显示文件扩展名</a></h4>
+<p>要<strong>显示文件扩展名</strong>，我们点击选项栏中的“<strong>查看</strong>（View）”选项卡，在“显示/隐藏”栏中即可看到相关选项。</p>
+<p>至于 Windows 11 中，可以在资源管理器选项栏中的“布局和视图选项”中的“显示（show）”中更改此设置。</p>
+<p>具体操作如下所示：</p>
+<table><thead><tr><th align="center">Windows 版本</th><th align="center">显示文件扩展名操作示意图</th></tr></thead><tbody>
+<tr><td align="center">Windows 10</td><td align="center"><img src="assets/win-explorer-show-file-extension.jpg" alt="打开资源管理器的“查看”选项卡，勾选“文件扩展名”选项" title="在 Windows 资源管理器中打开显示文件扩展名的选项（Win 10）" /></td></tr>
+<tr><td align="center">Windows 11</td><td align="center"><img src="assets/win-11-explorer-show-file-extension.jpg" alt="打开资源管理器选项栏中的“布局和视图”菜单，在“显示”中勾选“文件扩展名”" title="在 Windows 资源管理器中打开显示文件扩展名的选项（Win 11）" /></td></tr>
+</tbody></table>
+<p>在窗口侧边栏中，我们还看到有“网络（Network）”的选项。在这里我们可以看到该计算机通过网络连接到的其他设备，并访问其上的文件。</p>
+<blockquote>
+<p>我们会在后边的内容中介绍网络相关的内容。</p>
+</blockquote>
+<p>通过以上的例子，相信读者已经基本熟悉桌面环境的基本使用了。其他系统的桌面环境也与此类似，其中不同的地方读者可以自行去摸索。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../use-your-computer/organize-your-files.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../use-your-computer/font-and-font-rendering.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../use-your-computer/organize-your-files.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../use-your-computer/font-and-font-rendering.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<svg width="680" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+	<defs>
+		<clipPath id="clip0">
+			<rect x="0" y="0" width="1280" height="720" />
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip0)">
+		<rect x="0" y="0" width="680" height="400" fill="#FFFFFF" />
+		<rect x="360" y="27.5001" width="307" height="284" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(469.464 50)">
+			funcs.cpp
+			<tspan font-weight="400" font-size="16" x="-97.1667" y="39">#include "funcs.h"</tspan>
+			<tspan font-weight="400" font-size="16" x="-97.1667" y="77">int add(int n, int m)</tspan>
+			<tspan font-weight="400" font-size="16" x="-97.1667" y="96">{</tspan>
+			<tspan font-weight="400" font-size="16" x="-61.8333" y="115">return n + m;</tspan>
+			<tspan font-weight="400" font-size="16" x="-97.1667" y="135">}</tspan>
+			<tspan font-weight="400" font-size="16" x="-97.1667" y="173">int subtract(int n, int m)</tspan>
+			<tspan font-weight="400" font-size="16" x="-97.1667" y="192">{</tspan>
+			<tspan font-weight="400" font-size="16" x="-61.8333" y="211">return n - m;</tspan>
+			<tspan font-weight="400" font-size="16" x="-97.1667" y="231">}</tspan>
+		</text>
+		<rect x="35" y="27" width="307" height="110" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(154.413 50)">
+			funcs.h
+			<tspan font-weight="400" font-size="16" x="-107.5" y="39">int add(int n, int m);</tspan>
+			<tspan font-weight="400" font-size="16" x="-107.5" y="58">int subtract(int n, int m);</tspan>
+		</text>
+		<rect x="35" y="160" width="307" height="207" stroke="#7F7F7F" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+		<text font-family="Courier New,Courier,Consolas,monospace" font-weight="700" font-size="19" transform="translate(149.246 183)">
+			main.cpp
+			<tspan font-weight="400" font-size="16" x="-102.333" y="39">#include "funcs.h"</tspan>
+			<tspan font-weight="400" font-size="16" x="-102.333" y="77">int main()</tspan>
+			<tspan font-weight="400" font-size="16" x="-102.333" y="96">{</tspan>
+			<tspan font-weight="400" font-size="16" x="-67" y="115">add(6,7);</tspan>
+			<tspan font-weight="400" font-size="16" x="-67" y="135">subtract(8,9);</tspan>
+			<tspan font-weight="400" font-size="16" x="-102.333" y="154">}</tspan>
+		</text>
+	</g>
+</svg>
