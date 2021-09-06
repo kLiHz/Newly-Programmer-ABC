@@ -42,11 +42,12 @@ Unix 传统鼓励使用命令行参数来控制程序的运行，因为这样可
 
 由于单字母的选项用尽了，GNU 风格开始使用以两个连字符为前缀的**关键词**。命令行选项和其参数之间可以以空格或等号“`=`”间隔，如“`--lines=10`”。这种方法很流行，因为阅读起来更为清晰，并且能和之前的单字母无歧义地组合在一起。
 
-> 参考链接：
->
-> [bash - Short/long options with option argument - is this some sort of convention? - Stack Overflow](https://stackoverflow.com/questions/10818443/short-long-options-with-option-argument-is-this-some-sort-of-convention)
->
-> [What is the general syntax of a Unix shell command? - Stack Overflow](https://stackoverflow.com/questions/2160083/what-is-the-general-syntax-of-a-unix-shell-command)
+---
+
+参考链接：
+
+- [bash - Short/long options with option argument - is this some sort of convention? - Stack Overflow](https://stackoverflow.com/questions/10818443/short-long-options-with-option-argument-is-this-some-sort-of-convention)
+- [What is the general syntax of a Unix shell command? - Stack Overflow](https://stackoverflow.com/questions/2160083/what-is-the-general-syntax-of-a-unix-shell-command)
 
 
 
@@ -88,13 +89,9 @@ $ ls -a      # 显示目录下的所有文件/目录
 $ ls -a -l   # 以列表方式显示目录下的所有文件/目录的详细信息
 ```
 
-
-
 ### cd：切换目录
 
 `cd` 是英文单词 change directory 的简写，其功能为更改当前的工作目录，也是用户最常用的命令之一。
-
-> `.`  代表当前目录，`..` 代表上一级目录，`~` 代表用户的家目录
 
 注意：Linux 所有的 **目录** 和 **文件名** 都是大小写敏感的
 
@@ -108,11 +105,6 @@ $ cd ..      # 切换到上级目录
 | `cd .`  | 保持在当前目录不变                                   |
 | `cd ..` | 切换到上级目录                                       |
 | `cd -`  | 可以在最近两次工作目录之间来回切换                   |
-
-**相对路径和绝对路径**
-
-相对路径：在输入路径时，最前面**不是** `/` 或者 `~`，表示相对 当前目录 所在的目录位置
-绝对路径：在输入路径时，最前面**是** `/` 或者 `~`，表示从 根目录 / 家目录 开始的具体目录位置
 
 ### pwd：查看当前目录
 
@@ -134,7 +126,7 @@ $ echo "" > hello.txt
 
 ### mkdir：创建一个新的目录
 
-> 新建目录的名称不能与当前目录中**已有的目录或文件**同名
+新建目录的名称不能与当前目录中**已有的目录或文件**同名
 
 ```console
 $ mkdir workspace
@@ -144,7 +136,7 @@ $ cd ..
 
 ### rm：删除文件或目录
 
-> 使用 rm 命令要小心，因为文件删除后不能恢复
+使用 rm 命令要小心，因为文件删除后不能恢复
 
 | 选项 | 含义                                                  |
 | ---- | ----------------------------------------------------- |
@@ -160,6 +152,71 @@ $ cd ..
 | `mv 源文件 目标文件` | move     | 移动文件或者目录／文件或者目录重命名 |
 
 参考链接：[文件和目录常用命令 - davidabdy - 博客园 (cnblogs.com)](https://www.cnblogs.com/zkpythonstudy/p/9960512.html)
+
+### 任务控制
+
+很多 Shell 支持“任务控制（job control）”。下面介绍 bash 中的任务控制。
+
+在命令后附加 `&` 字符可以使任务在后台（Background）运行，如：
+
+```console
+$ sleep 1000 &
+[1] 379
+```
+
+数字 `379` 是该任务的进程 ID。
+
+运行在后台的程序如果有输出，也会直接输出到控制台。
+
+使用 `jobs` 命令可以列出后台运行的程序。使用 `fg` 命令，可以将后台运行的程序提到前台（Foreground）。`fg` 命令后的数字，是 `jobs` 命令输出结果中对应的编号。
+
+```console
+$ sleep 100 &
+[1] 416
+
+$ sleep 100 &
+[2] 417
+
+$ sleep 100 &
+[3] 418
+
+$ jobs
+[1]   Running                 sleep 100 &
+[2]-  Running                 sleep 100 &
+[3]+  Running                 sleep 100 &
+
+$ fg 2
+sleep 100 &
+```
+
+当程序运行在前台时，可以按下 `Control` + `C` 发送信号，终止程序的运行。
+
+按下 `Control` + `Z`，可以使程序暂停（Stopped），并切换至后台。这时通过 `jobs` 命令可以看到该进程处于“Stopped”状态。
+
+使用 `bg` 命令，可以将某编号的任务在后台运行。即，可以使用 `Control` + `Z` 组合键和 `bg` 命令，将一正在前台运行的程序移至后台运行。
+
+```console
+$ sleep 100
+^Z
+[1]+  Stopped                 sleep 100
+
+$ jobs
+[1]+  Stopped                 sleep 100
+
+$ bg % 1
+[1]+ sleep 100 &
+
+$ jobs
+[1]+  Running                 sleep 100 &
+```
+
+需要注意，无论将一处于“Stopped”状态的任务移至前台还是后台，该任务都会继续开始执行。
+
+---
+
+参考资料：
+
+[Understanding the job control commands in Linux – bg, fg and CTRL+Z - The Geek Diary](https://www.thegeekdiary.com/understanding-the-job-control-commands-in-linux-bg-fg-and-ctrlz/)
 
 ## PowerShell
 
