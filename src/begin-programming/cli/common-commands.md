@@ -168,7 +168,9 @@ $ sleep 1000 &
 
 运行在后台的程序如果有输出，也会直接输出到控制台。
 
-使用 `jobs` 命令可以列出后台运行的程序。使用 `fg` 命令，可以将后台运行的程序提到前台（Foreground）。`fg` 命令后的数字，是 `jobs` 命令输出结果中对应的编号。
+使用 `jobs` 命令可以列出后台运行的程序，输出结果编号后的 `+` 表示这是当前的任务，`-` 表示这是之前的任务。
+
+使用 `fg` 命令，可以将后台运行的程序提到前台（Foreground）。`fg` 命令后的数字、`+` 或者 `-`，可以引用 `jobs` 命令输出结果中对应的任务。
 
 ```console
 $ sleep 100 &
@@ -185,7 +187,7 @@ $ jobs
 [2]-  Running                 sleep 100 &
 [3]+  Running                 sleep 100 &
 
-$ fg 2
+$ fg %2
 sleep 100 &
 ```
 
@@ -216,7 +218,8 @@ $ jobs
 
 参考资料：
 
-[Understanding the job control commands in Linux – bg, fg and CTRL+Z - The Geek Diary](https://www.thegeekdiary.com/understanding-the-job-control-commands-in-linux-bg-fg-and-ctrlz/)
+- [Understanding the job control commands in Linux – bg, fg and CTRL+Z - The Geek Diary](https://www.thegeekdiary.com/understanding-the-job-control-commands-in-linux-bg-fg-and-ctrlz/)
+- [Job Control (Bash Reference Manual) - gnu.org](https://www.gnu.org/software/bash/manual/html_node/Job-Control.html)
 
 ## PowerShell
 

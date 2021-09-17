@@ -102,7 +102,7 @@
 
 比如，我们可以使用 JSON 来描述电话簿里面的若干联系人。其中，每个联系人除了姓名、称谓等属性外，可能有若干个联系方式。
 
-在 JSON 中，我们用一个花括号 `{}` 内的键值对来描述一个对象的属性。键名为字符串，键值可以为值、列表或者另一个对象。
+在 JSON 中，我们用一个花括号 `{}` 内的键值对来描述一个对象的属性，使用方括号 `[]` 来表示一个列表，以包含若干有序的值或对象。键名为字符串，键值可以为值（数值或字符串）、列表或者另一个对象。
 
 ```json
 {
@@ -128,18 +128,13 @@
 }
 ```
 
-JSON 也常用来作为应用程序配置文件的记录形式。
+由于应用程序的一些不同模块的不同运行配置通常为若干有层级、有组织的键值对，JSON 也常被用作应用程序配置文件的记录格式。
 
-TOML，是“Tom's Obvious, Minimal Language”的首字母缩写，是一种与 JSON 相比较易于书写的配置文件格式。
+> 之前介绍到，可以使用命令行参数影响程序的运行。很多程序也会使用配置文件的方式来影响自身的运行，比如记录程序状态、记录用户相关个性化信息等。
 
-- GitHub：[toml-lang/toml](https://github.com/toml-lang/toml)
+除此之外，INI、[TOML](https://github.com/toml-lang/toml)、YML 等也是常用的格式。
 
-- Official Wiki：[Home · toml-lang/toml Wiki](https://github.com/toml-lang/toml/wiki)
-
-    可以在这里看到各种TOML解析器的实现，以及使用了TOML的项目。
-    比如一个 C++ 的 Header-Only 实现：[ToruNiina/toml11](https://github.com/ToruNiina/toml11)
-
-- 语法介绍：[toml/toml.md at master · toml-lang/toml (github.com)](https://github.com/toml-lang/toml/blob/master/toml.md)
+> TOML 是“Tom's Obvious, Minimal Language”的首字母缩写，是一种与 JSON 相比较易于书写的配置文件格式。
 
 ## 参考资料
 
