@@ -254,7 +254,8 @@ $ cd ..
 </code></pre>
 <p>数字 <code>379</code> 是该任务的进程 ID。</p>
 <p>运行在后台的程序如果有输出，也会直接输出到控制台。</p>
-<p>使用 <code>jobs</code> 命令可以列出后台运行的程序。使用 <code>fg</code> 命令，可以将后台运行的程序提到前台（Foreground）。<code>fg</code> 命令后的数字，是 <code>jobs</code> 命令输出结果中对应的编号。</p>
+<p>使用 <code>jobs</code> 命令可以列出后台运行的程序，输出结果编号后的 <code>+</code> 表示这是当前的任务，<code>-</code> 表示这是之前的任务。</p>
+<p>使用 <code>fg</code> 命令，可以将后台运行的程序提到前台（Foreground）。<code>fg</code> 命令后的数字、<code>+</code> 或者 <code>-</code>，可以引用 <code>jobs</code> 命令输出结果中对应的任务。</p>
 <pre><code class="language-console">$ sleep 100 &amp;
 [1] 416
 
@@ -269,7 +270,7 @@ $ jobs
 [2]-  Running                 sleep 100 &amp;
 [3]+  Running                 sleep 100 &amp;
 
-$ fg 2
+$ fg %2
 sleep 100 &amp;
 </code></pre>
 <p>当程序运行在前台时，可以按下 <code>Control</code> + <code>C</code> 发送信号，终止程序的运行。</p>
@@ -291,7 +292,10 @@ $ jobs
 <p>需要注意，无论将一处于“Stopped”状态的任务移至前台还是后台，该任务都会继续开始执行。</p>
 <hr />
 <p>参考资料：</p>
-<p><a href="https://www.thegeekdiary.com/understanding-the-job-control-commands-in-linux-bg-fg-and-ctrlz/">Understanding the job control commands in Linux – bg, fg and CTRL+Z - The Geek Diary</a></p>
+<ul>
+<li><a href="https://www.thegeekdiary.com/understanding-the-job-control-commands-in-linux-bg-fg-and-ctrlz/">Understanding the job control commands in Linux – bg, fg and CTRL+Z - The Geek Diary</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Job-Control.html">Job Control (Bash Reference Manual) - gnu.org</a></li>
+</ul>
 <h2 id="powershell"><a class="header" href="#powershell">PowerShell</a></h2>
 <p>上述提到的命令，在 PowerShell 中也是基本适用的。</p>
 <h2 id="相关内容"><a class="header" href="#相关内容">相关内容</a></h2>

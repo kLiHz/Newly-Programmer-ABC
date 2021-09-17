@@ -211,7 +211,7 @@
 <h3 id="描述数据的语言"><a class="header" href="#描述数据的语言">描述数据的语言</a></h3>
 <p>编程语言中所操作的数据对象，往往可以通过由关联容器和顺序容器的组合表示出来。</p>
 <p>比如，我们可以使用 JSON 来描述电话簿里面的若干联系人。其中，每个联系人除了姓名、称谓等属性外，可能有若干个联系方式。</p>
-<p>在 JSON 中，我们用一个花括号 <code>{}</code> 内的键值对来描述一个对象的属性。键名为字符串，键值可以为值、列表或者另一个对象。</p>
+<p>在 JSON 中，我们用一个花括号 <code>{}</code> 内的键值对来描述一个对象的属性，使用方括号 <code>[]</code> 来表示一个列表，以包含若干有序的值或对象。键名为字符串，键值可以为值（数值或字符串）、列表或者另一个对象。</p>
 <pre><code class="language-json">{
     &quot;id&quot;: &quot;My Contact Book&quot;,
     &quot;items&quot;: [
@@ -234,21 +234,14 @@
     ]
 }
 </code></pre>
-<p>JSON 也常用来作为应用程序配置文件的记录形式。</p>
-<p>TOML，是“Tom's Obvious, Minimal Language”的首字母缩写，是一种与 JSON 相比较易于书写的配置文件格式。</p>
-<ul>
-<li>
-<p>GitHub：<a href="https://github.com/toml-lang/toml">toml-lang/toml</a></p>
-</li>
-<li>
-<p>Official Wiki：<a href="https://github.com/toml-lang/toml/wiki">Home · toml-lang/toml Wiki</a></p>
-<p>可以在这里看到各种TOML解析器的实现，以及使用了TOML的项目。
-比如一个 C++ 的 Header-Only 实现：<a href="https://github.com/ToruNiina/toml11">ToruNiina/toml11</a></p>
-</li>
-<li>
-<p>语法介绍：<a href="https://github.com/toml-lang/toml/blob/master/toml.md">toml/toml.md at master · toml-lang/toml (github.com)</a></p>
-</li>
-</ul>
+<p>由于应用程序的一些不同模块的不同运行配置通常为若干有层级、有组织的键值对，JSON 也常被用作应用程序配置文件的记录格式。</p>
+<blockquote>
+<p>之前介绍到，可以使用命令行参数影响程序的运行。很多程序也会使用配置文件的方式来影响自身的运行，比如记录程序状态、记录用户相关个性化信息等。</p>
+</blockquote>
+<p>除此之外，INI、<a href="https://github.com/toml-lang/toml">TOML</a>、YML 等也是常用的格式。</p>
+<blockquote>
+<p>TOML 是“Tom's Obvious, Minimal Language”的首字母缩写，是一种与 JSON 相比较易于书写的配置文件格式。</p>
+</blockquote>
 <h2 id="参考资料"><a class="header" href="#参考资料">参考资料</a></h2>
 <ul>
 <li>数据结构 - OI Wiki：https://oi-wiki.org/ds/</li>

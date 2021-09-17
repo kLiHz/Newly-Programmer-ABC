@@ -167,6 +167,9 @@
 </code></pre>
 <p>上面只是一个简化的举例，实际情况中，CPU 指令的设计是一个比较复杂的事情。一台 CPU 能够支持的各种指令叫做“指令集”，或者说，是对于一套指令集（指令集架构，ISA，Instruction Set Architecture）的实现。对于指令集，通常有“复杂指令集”和“简单指令集”之分。</p>
 <blockquote>
+<p>从理论上来说，我们可以设计 CPU 内部的电路，使之能够直接理解字符组成的指令，甚至是高级语言。但那样形成的电路将会十分复杂，可扩展性不佳，电路的时延也会变得十分明显。因此，现代 CPU 指令集架构往往在设计时，通过确定一套合理的、基础的指令，并用这些指令实现更多的事情。</p>
+</blockquote>
+<blockquote>
 <p>参考链接：</p>
 <p><a href="https://www.cnblogs.com/yeshenmeng/p/10789051.html">指令集与架构 - yeshenmeng - 博客园 - cnblogs.com</a></p>
 </blockquote>

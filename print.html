@@ -1887,6 +1887,9 @@ int main() {
 </code></pre>
 <p>上面只是一个简化的举例，实际情况中，CPU 指令的设计是一个比较复杂的事情。一台 CPU 能够支持的各种指令叫做“指令集”，或者说，是对于一套指令集（指令集架构，ISA，Instruction Set Architecture）的实现。对于指令集，通常有“复杂指令集”和“简单指令集”之分。</p>
 <blockquote>
+<p>从理论上来说，我们可以设计 CPU 内部的电路，使之能够直接理解字符组成的指令，甚至是高级语言。但那样形成的电路将会十分复杂，可扩展性不佳，电路的时延也会变得十分明显。因此，现代 CPU 指令集架构往往在设计时，通过确定一套合理的、基础的指令，并用这些指令实现更多的事情。</p>
+</blockquote>
+<blockquote>
 <p>参考链接：</p>
 <p><a href="https://www.cnblogs.com/yeshenmeng/p/10789051.html">指令集与架构 - yeshenmeng - 博客园 - cnblogs.com</a></p>
 </blockquote>
@@ -2362,7 +2365,8 @@ $ cd ..
 </code></pre>
 <p>数字 <code>379</code> 是该任务的进程 ID。</p>
 <p>运行在后台的程序如果有输出，也会直接输出到控制台。</p>
-<p>使用 <code>jobs</code> 命令可以列出后台运行的程序。使用 <code>fg</code> 命令，可以将后台运行的程序提到前台（Foreground）。<code>fg</code> 命令后的数字，是 <code>jobs</code> 命令输出结果中对应的编号。</p>
+<p>使用 <code>jobs</code> 命令可以列出后台运行的程序，输出结果编号后的 <code>+</code> 表示这是当前的任务，<code>-</code> 表示这是之前的任务。</p>
+<p>使用 <code>fg</code> 命令，可以将后台运行的程序提到前台（Foreground）。<code>fg</code> 命令后的数字、<code>+</code> 或者 <code>-</code>，可以引用 <code>jobs</code> 命令输出结果中对应的任务。</p>
 <pre><code class="language-console">$ sleep 100 &amp;
 [1] 416
 
@@ -2377,7 +2381,7 @@ $ jobs
 [2]-  Running                 sleep 100 &amp;
 [3]+  Running                 sleep 100 &amp;
 
-$ fg 2
+$ fg %2
 sleep 100 &amp;
 </code></pre>
 <p>当程序运行在前台时，可以按下 <code>Control</code> + <code>C</code> 发送信号，终止程序的运行。</p>
@@ -2399,7 +2403,10 @@ $ jobs
 <p>需要注意，无论将一处于“Stopped”状态的任务移至前台还是后台，该任务都会继续开始执行。</p>
 <hr />
 <p>参考资料：</p>
-<p><a href="https://www.thegeekdiary.com/understanding-the-job-control-commands-in-linux-bg-fg-and-ctrlz/">Understanding the job control commands in Linux – bg, fg and CTRL+Z - The Geek Diary</a></p>
+<ul>
+<li><a href="https://www.thegeekdiary.com/understanding-the-job-control-commands-in-linux-bg-fg-and-ctrlz/">Understanding the job control commands in Linux – bg, fg and CTRL+Z - The Geek Diary</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Job-Control.html">Job Control (Bash Reference Manual) - gnu.org</a></li>
+</ul>
 <h2 id="powershell"><a class="header" href="#powershell">PowerShell</a></h2>
 <p>上述提到的命令，在 PowerShell 中也是基本适用的。</p>
 <h2 id="相关内容"><a class="header" href="#相关内容">相关内容</a></h2>
@@ -2554,7 +2561,7 @@ PS&gt; echo $Env:abc
 <h3 id="描述数据的语言"><a class="header" href="#描述数据的语言">描述数据的语言</a></h3>
 <p>编程语言中所操作的数据对象，往往可以通过由关联容器和顺序容器的组合表示出来。</p>
 <p>比如，我们可以使用 JSON 来描述电话簿里面的若干联系人。其中，每个联系人除了姓名、称谓等属性外，可能有若干个联系方式。</p>
-<p>在 JSON 中，我们用一个花括号 <code>{}</code> 内的键值对来描述一个对象的属性。键名为字符串，键值可以为值、列表或者另一个对象。</p>
+<p>在 JSON 中，我们用一个花括号 <code>{}</code> 内的键值对来描述一个对象的属性，使用方括号 <code>[]</code> 来表示一个列表，以包含若干有序的值或对象。键名为字符串，键值可以为值（数值或字符串）、列表或者另一个对象。</p>
 <pre><code class="language-json">{
     &quot;id&quot;: &quot;My Contact Book&quot;,
     &quot;items&quot;: [
@@ -2577,21 +2584,14 @@ PS&gt; echo $Env:abc
     ]
 }
 </code></pre>
-<p>JSON 也常用来作为应用程序配置文件的记录形式。</p>
-<p>TOML，是“Tom's Obvious, Minimal Language”的首字母缩写，是一种与 JSON 相比较易于书写的配置文件格式。</p>
-<ul>
-<li>
-<p>GitHub：<a href="https://github.com/toml-lang/toml">toml-lang/toml</a></p>
-</li>
-<li>
-<p>Official Wiki：<a href="https://github.com/toml-lang/toml/wiki">Home · toml-lang/toml Wiki</a></p>
-<p>可以在这里看到各种TOML解析器的实现，以及使用了TOML的项目。
-比如一个 C++ 的 Header-Only 实现：<a href="https://github.com/ToruNiina/toml11">ToruNiina/toml11</a></p>
-</li>
-<li>
-<p>语法介绍：<a href="https://github.com/toml-lang/toml/blob/master/toml.md">toml/toml.md at master · toml-lang/toml (github.com)</a></p>
-</li>
-</ul>
+<p>由于应用程序的一些不同模块的不同运行配置通常为若干有层级、有组织的键值对，JSON 也常被用作应用程序配置文件的记录格式。</p>
+<blockquote>
+<p>之前介绍到，可以使用命令行参数影响程序的运行。很多程序也会使用配置文件的方式来影响自身的运行，比如记录程序状态、记录用户相关个性化信息等。</p>
+</blockquote>
+<p>除此之外，INI、<a href="https://github.com/toml-lang/toml">TOML</a>、YML 等也是常用的格式。</p>
+<blockquote>
+<p>TOML 是“Tom's Obvious, Minimal Language”的首字母缩写，是一种与 JSON 相比较易于书写的配置文件格式。</p>
+</blockquote>
 <h2 id="参考资料-1"><a class="header" href="#参考资料-1">参考资料</a></h2>
 <ul>
 <li>数据结构 - OI Wiki：https://oi-wiki.org/ds/</li>
