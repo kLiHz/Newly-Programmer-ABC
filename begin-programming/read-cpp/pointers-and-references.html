@@ -1,0 +1,428 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>指针和引用 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/intro.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/common-signs.html"><strong aria-hidden="true">4.4.1.</strong> 常见符号</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/variable-declaration.html"><strong aria-hidden="true">4.4.2.</strong> 变量声明</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/function.html"><strong aria-hidden="true">4.4.3.</strong> 函数</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/struct-and-class.html"><strong aria-hidden="true">4.4.4.</strong> 复杂数据类型：结构与类</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/pointers-and-references.html" class="active"><strong aria-hidden="true">4.4.5.</strong> 指针和引用</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/branches-and-loops.html"><strong aria-hidden="true">4.4.6.</strong> 分支与循环</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/macro-and-preprocess.html"><strong aria-hidden="true">4.4.7.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/coding-convention.html"><strong aria-hidden="true">4.4.8.</strong> 代码规范</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.9.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/conclusion.html"><strong aria-hidden="true">4.4.10.</strong> 总结</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../../begin-programming/new-to-python.html"><strong aria-hidden="true">4.7.</strong> Python 基础</a></li><li class="chapter-item expanded "><a href="../../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.8.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.9.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.9.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.9.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.10.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../../begin-programming/vm/index.html"><strong aria-hidden="true">4.11.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.11.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/coding-practice.html"><strong aria-hidden="true">4.12.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.1.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.3.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.4.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../../cpp/project/index.html"><strong aria-hidden="true">6.5.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.5.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.5.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.5.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../../cpp/modern/index.html"><strong aria-hidden="true">6.6.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.6.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.6.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.6.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.6.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.6.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.6.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.6.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.6.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC/edit/main/src/begin-programming/read-cpp/pointers-and-references.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="指针和引用"><a class="header" href="#指针和引用">指针和引用</a></h1>
+<p>在开始这部分内容之前，读者需要：</p>
+<ul>
+<li>能阅读基本的 C++ 代码</li>
+</ul>
+<h2 id="变量的地址指针"><a class="header" href="#变量的地址指针">变量的地址、指针</a></h2>
+<p>在程序中，我们的数据都有其存储的地址。在程序每次的实际运行过程中，变量在物理内存中的存储位置不尽相同。不过，我们仍能够在编程时，通过一定的语句，来取得数据在内存中的地址。</p>
+<p>地址也是数据。存放地址所用的变量类型有一个特殊的名字，叫做“指针变量”，有时也简称做“指针”。</p>
+<blockquote>
+<p>指针变量的大小在不同环境下有差异。在 32 位机上，地址用 32 位二进制整数表示，因此一个指针的大小为 4 字节。而 64 位机上，地址用 64 位二进制整数表示，因此一个指针的大小就变成了 8 字节。</p>
+</blockquote>
+<p>地址只是一个刻度一般的数据，为了针对不同类型的数据，“指针变量”也有不同的类型，比如，可以有 <code>int</code> 类型的指针变量，其中存储的地址（即指针变量存储的数值）对应一块大小为 32 位的空间的起始地址；有 <code>char</code> 类型的指针变量，其中存储的地址对应一块 8 位的空间的起始地址。</p>
+<p>事实上，用户也可以声明指向指针变量的指针变量。</p>
+<p>假如用户自定义了一个结构体：</p>
+<pre><code class="language-cpp">struct ThreeInt {
+  int a;
+  int b;
+  int c;
+};
+</code></pre>
+<p>则 <code>ThreeInt</code> 类型的指针变量，对应着一块 3 × 32 = 96 bit 的空间。</p>
+<h2 id="指针的声明与使用"><a class="header" href="#指针的声明与使用">指针的声明与使用</a></h2>
+<p>C/C++ 中，指针变量的类型为类型名后加上一个星号 <code>*</code>。比如，<code>int</code> 类型的指针变量的类型名即为 <code>int*</code>。</p>
+<p>我们可以使用 <code>&amp;</code> 符号取得一个变量的地址。</p>
+<p>要想访问指针变量地址所对应的空间（又称指针所 <strong>指向</strong> 的空间），需要对指针变量进行 <strong>解引用</strong>（dereference），使用 <code>*</code> 符号。</p>
+<pre><code class="language-cpp">int main() {
+  int a = 123;  // a: 123
+  int* pa = &amp;a;
+  *pa = 321;  // a: 321
+}
+</code></pre>
+<p>对结构体变量也是类似。如果要访问指针指向的结构中的成员，需要先对指针进行解引用，再使用 <code>.</code> 成员关系运算符。不过，更推荐使用“箭头”运算符 <code>-&gt;</code> 这一更简便的写法。</p>
+<pre><code class="language-cpp">struct ThreeInt {
+  int a;
+  int b;
+  int c;
+};
+
+int main() {
+  ThreeInt x{1, 2, 3}, y{6, 7, 8};
+  ThreeInt* px = &amp;x;
+  (*px) = y;    // x: {6,7,8}
+  (*px).a = 4;  // x: {4,7,8}
+  px-&gt;b = 5;    // x: {4,5,8}
+}
+</code></pre>
+<h2 id="指针的偏移"><a class="header" href="#指针的偏移">指针的偏移</a></h2>
+<p>指针变量也可以 <strong>和整数</strong> 进行加减操作。对于 <code>int</code> 型指针，每加 1（递增 1），其指向的地址偏移 32 位（即 4 个字节）；若加 2，则指向的地址偏移 2 × 32 = 64 位。同理，对于 <code>char</code> 型指针，每次递增，其指向的地址偏移 8 位（即 1 个字节）。</p>
+<h3 id="使用指针偏移访问数组"><a class="header" href="#使用指针偏移访问数组">使用指针偏移访问数组</a></h3>
+<p>我们前面说过，数组是一块连续的存储空间。而在 C/C++ 中，直接使用数组名，得到的是数组的起始地址。</p>
+<pre><code class="language-cpp">int main() {
+  int a[3] = {1, 2, 3};
+  int* p = a;  // p 指向 a[0]
+  *p = 4;      // a: [4, 2, 3]
+  p = p + 1;   // p 指向 a[1]
+  *p = 5;      // a: [4, 5, 3]
+  p++;         // p 指向 a[2]
+  *p = 6;      // a: [4, 5, 6]
+}
+</code></pre>
+<p>当通过指针访问数组中的元素时，往往需要用到“指针的偏移”，换句话说，即通过一个基地址（数组起始的地址）加上偏移量来访问。</p>
+<p>我们常用 <code>[]</code> 运算符来访问数组中某一指定偏移量处的元素。比如 <code>a[3]</code> 或者 <code>p[4]</code>。这种写法和对指针进行运算后再引用是等价的，即 <code>p[4]</code> 和 <code>*(p + 4)</code> 是等价的两种写法。</p>
+<h2 id="指针的进阶使用"><a class="header" href="#指针的进阶使用">指针的进阶使用</a></h2>
+<p>使用指针，使得程序编写者可以操作程序运行时中各处的数据，而不必局限于作用域。</p>
+<h3 id="指针类型参数的使用"><a class="header" href="#指针类型参数的使用">指针类型参数的使用</a></h3>
+<p>在 C/C++ 中，调用函数（过程）时使用的参数，均以拷贝的形式传入子过程中（引用除外，会在后续介绍）。默认情况下，函数仅能通过返回值，将结果返回到调用处。但是，如果某个函数希望修改其外部的数据，或者某个结构体/类的数据量较为庞大、不宜进行拷贝，这时，则可以通过向其传入外部数据的地址，便得以在其中访问甚至修改外部数据。</p>
+<p>下面的 <code>my_swap</code> 方法，通过接收两个 <code>int</code> 型的指针，在函数中使用中间变量，完成对两个 <code>int</code> 型变量值的交换。</p>
+<pre><code class="language-cpp">void my_swap(int *a, int *b) {
+  int t;
+  t = a;
+  a = b;
+  b = t;
+}
+
+int main() {
+  int a = 6, b = 10;
+  my_swap(&amp;a, &amp;b);
+  // 调用后，main 函数中 a 变量的值变为 10，b 变量的值变为 6
+}
+</code></pre>
+<p>C++ 中引入了引用的概念，相对于指针来说，更易用，也更安全。</p>
+<h3 id="动态实例化"><a class="header" href="#动态实例化">动态实例化</a></h3>
+<p>除此之外，程序编写时往往会涉及到动态内存分配，即，程序会在运行时，向操作系统动态地申请或归还存放数据所需的内存。当程序通过调用操作系统接口申请内存时，操作系统将返回程序所申请空间的地址。要使用这块空间，我们需要将这块空间的地址存储在指针变量中。</p>
+<p>在 C++ 中，我们使用 <code>new</code> 运算符来获取一块内存，使用 <code>delete</code> 运算符释放某指针所指向的空间。</p>
+<pre><code class="language-cpp">int* p = new int(1234);
+/* ... */
+delete p;
+</code></pre>
+<p>上面的语句使用 <code>new</code> 运算符向操作系统申请了一块 <code>int</code> 大小的空间，将其中的值初始化为 1234，并声明了一个 <code>int</code> 型的指针 <code>p</code> 指向这块空间。</p>
+<p>同理，也可以使用 <code>new</code> 开辟新的对象：</p>
+<pre><code class="language-cpp">class A {
+  int a;
+
+ public:
+  A(int a_) : a(a_) {}
+};
+
+int main() {
+  A* p = new A(1234);
+  /* ... */
+  delete p;
+}
+</code></pre>
+<p>如上，「<code>new</code> 表达式」将尝试开辟一块对应大小的空间，并尝试在这块空间上构造这一对象，并返回这一空间的地址。</p>
+<pre><code class="language-cpp">struct ThreeInt {
+  int a;
+  int b;
+  int c;
+};
+
+int main() {
+  ThreeInt* p = new ThreeInt{1, 2, 3};
+  /* ... */
+  delete p;
+}
+</code></pre>
+<p><code>{}</code> 运算符可以用来初始化没有构造函数的结构。除此之外，使用 <code>{}</code> 运算符可以使得变量的初始化形式变得统一。详见「<a href="https://en.cppreference.com/w/cpp/language/list_initialization">list initialization (since C++11)</a>」。</p>
+<p>需要注意，当使用 <code>new</code> 申请的内存不再使用时，需要使用 <code>delete</code> 释放这块空间。不能对一块内存释放两次或以上。而对空指针 <code>nullptr</code> 使用 <code>delete</code> 操作是合法的。</p>
+<h3 id="动态创建数组"><a class="header" href="#动态创建数组">动态创建数组</a></h3>
+<p>也可以使用 <code>new[]</code> 运算符创建数组，这时 <code>new[]</code> 运算符会返回数组的首地址，也就是数组第一个元素的地址，我们可以用对应类型的指针存储这个地址。释放时，则需要使用 <code>delete[]</code> 运算符。</p>
+<pre><code class="language-cpp">size_t element_cnt = 5;
+int *p = new int[element_cnt];
+delete[] p;
+</code></pre>
+<p>数组中元素的存储是连续的，即 <code>p + 1</code> 指向的是 <code>p</code> 的后继元素。</p>
+<h3 id="二维数组"><a class="header" href="#二维数组">二维数组</a></h3>
+<p>在存放矩阵形式的数据时，可能会用到“二维数组”这样的数据类型。从语义上来讲，二维数组是一个数组的数组。而计算机内存可以视作一个很长的一维数组。要在计算机内存中存放一个二维数组，便有“连续”与否的说法。</p>
+<p>所谓“连续”，即二维数组的任意一行（row）的末尾与下一行的起始，在物理地址上是毗邻的，换言之，整个二维数组可以视作一个一维数组；反之，则二者在物理上不一定相邻。</p>
+<p>对于“连续”的二维数组，可以仅使用一个循环，借由一个不断递增的指针即可遍历数组中的所有数据。而对于非连续的二维数组，由于每一行不连续，则需要先取得某一行首的地址，再访问这一行中的元素。</p>
+<blockquote>
+<p>这种按照“行（row）”存储数据的方式，称为行优先存储；相对的，也可以按照列（column）存储数据。由于计算机内存访问的特性，一般来说，访问连续的数据会得到更高的效率。因此，需要按照数据可能的使用方式，选择“行优先”或“列优先”的存储方式。</p>
+</blockquote>
+<h3 id="动态创建二维数组"><a class="header" href="#动态创建二维数组">动态创建二维数组</a></h3>
+<p>在 C/C++ 中，我们可以使用类似下面这样的语句声明一个 N 行（row）M 列（column）的二维数组，其空间在物理上是连续的。</p>
+<blockquote>
+<p>更通用的方式是使用第 n 维（dimension）的说法描述数组的维度。对于“行优先”的存储形式，数组的第一维长度为 N，第二维长度为 M。</p>
+</blockquote>
+<pre><code class="language-cpp">int a[N][M];
+</code></pre>
+<p>这种声明方式要求 N 和 M 为在编译期即可确定的常量表达式。</p>
+<p>在 C/C++ 中，数组的第一个元素下标为 0，因此 <code>a[r][c]</code> 这样的式子代表二维数组 a 中第 r + 1 行的第 c + 1 个元素，我们也称这个元素的下标为 <code>(r,c)</code>。</p>
+<p>不过，实际使用中，（二维）数组的大小可能不是固定的，需要动态内存分配。</p>
+<p>常见的方式是声明一个长度为 N × M 的<strong>一维数组</strong>，并通过下标 <code>r * M + c</code> 访问二维数组中下标为 <code>(r, c)</code> 的元素。</p>
+<pre><code class="language-cpp">int* a = new int[N * M];
+</code></pre>
+<p>这种方法可以保证二维数组是 <strong>连续的</strong>。</p>
+<blockquote>
+<p>实际上，数据在内存中都可以视作线性存放的，因此在一定的规则下，通过动态开辟一维数组的空间，即可在其上存储 n 维的数组。</p>
+</blockquote>
+<p>此外，亦可以根据“数组的数组”这一概念来进行内存的获取与使用。对于一个存放的若干数组的数组，实际上为一个存放的若干数组的首地址的数组，也就是一个存放若干指针变量的数组。</p>
+<p>我们需要一个变量来存放这个“数组的数组”的首地址——也就是一个指针的地址。这个变量便是一个“指向指针的指针”，有时也称作“二重指针”，如：</p>
+<pre><code class="language-cpp">int** a = new int*[5];
+</code></pre>
+<p>接着，我们需要为每一个数组申请空间：</p>
+<pre><code class="language-cpp">for (int i = 0; i &lt; 5; i++) {
+  a[i] = new int[5];
+}
+</code></pre>
+<p>至此，我们便完成了内存的获取。而对于这样获得的内存的释放，则需要进行一个逆向的操作：即先释放每一个数组，再释放存储这些数组首地址的数组，如：</p>
+<pre><code class="language-cpp">for (int i = 0; i &lt; 5; i++) {
+  delete[] a[i];
+}
+delete[] a;
+</code></pre>
+<p>需要注意，这样获得的二维数组，不能保证其空间是连续的。</p>
+<p>还有一种方式，需要使用到“指向数组的指针”。</p>
+<blockquote>
+<p>我们之前说到，在 C/C++ 中，直接使用数组名，值等于数组首元素的地址。但是数组名表示的这一变量的类型实际上是整个数组，而非单个元素。</p>
+<pre><code class="language-cpp">int main() { int a[5] = {1, 2, 3, 4, 5}; }
+</code></pre>
+<p>从概念上说，代码中标识符 <code>a</code> 的类型是 <code>int[5]</code>；从实际上来说，<code>a + 1</code> 所指向的地址相较于 <code>a</code> 指向的地址的偏移量为 5 个 <code>int</code> 型变量的长度。</p>
+</blockquote>
+<pre><code class="language-cpp">int main() {
+  int(*a)[5] = new int[5][5];
+  int* p = a[2];
+  a[2][1] = 1;
+  delete[] a;
+}
+</code></pre>
+<p>这种方式获得到的也是连续的内存，但是可以直接使用 <code>a[n]</code> 的形式获得到数组的第 n + 1 行（row）的首地址，因此，使用 <code>a[r][c]</code> 的形式即可访问到下表为 <code>(r, c)</code> 的元素。</p>
+<p>由于指向数组的指针也是一种确定的数据类型，因此除数组的第一维外，其他维度的长度均须为一个能在编译器确定的常量。不然，编译器将无法翻译如 <code>a[n]</code> 这样的表达式（<code>a</code> 为指向数组的指针）。</p>
+<h2 id="指向函数的指针"><a class="header" href="#指向函数的指针">指向函数的指针</a></h2>
+<p>简单地说，要调用一个函数，需要知晓该函数的参数类型、个数以及返回值类型，这些也统一称作接口类型。</p>
+<p>可以通过函数指针调用函数。有时候，若干个函数的接口类型是相同的，使用函数指针可以根据程序的运行 <strong>动态地</strong> 选择需要调用的函数。换句话说，可以在不修改一个函数的情况下，仅通过修改向其传入的参数（函数指针），使得该函数的行为发生变化。</p>
+<p>假设我们有若干针对 <code>int</code> 类型的二元运算函数，则函数的参数为 2 个 <code>int</code>，返回值亦为 <code>int</code>。下边是一个使用了函数指针的例子：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int (*binary_int_op)(int, int);
+
+int foo1(int a, int b) { return a * b + b; }
+
+int foo2(int a, int b) { return (a + b) * b; }
+
+int main() {
+  int choice;
+  std::cin &gt;&gt; choice;
+  if (choice == 1) {
+    binary_int_op = foo1;
+  } else {
+    binary_int_op = foo2;
+  }
+
+  int m, n;
+  std::cin &gt;&gt; m &gt;&gt; n;
+  std::cout &lt;&lt; binary_int_op(m, n);
+}
+</code></pre>
+<blockquote>
+<p>关于 <code>&amp;</code>、<code>*</code> 和函数指针：</p>
+<p>在 C 语言中，诸如 <code>void (*p)() = foo;</code>、<code>void (*p)() = &amp;foo;</code>、<code>void (*p)() = *foo;</code>、<code>void (*p)() = ***foo</code> 等写法的结果是一样的。
+因为函数（如 <code>foo</code>）是能够被隐式转换为指向函数的指针的，因此 <code>void (*p)() = foo;</code> 的写法能够成立。</p>
+<p>使用 <code>&amp;</code> 运算符可以取得到对象的地址，这对函数也是成立的，因此 <code>void (*p)() = &amp;foo;</code> 的写法仍然成立。</p>
+<p>对函数指针使用 <code>*</code> 运算符可以取得指针指向的函数，而对于 <code>**foo</code> 这样的写法来说，<code>*foo</code> 得到的是 <code>foo</code> 这个函数，紧接着又被隐式转换为指向 <code>foo</code> 的指针。如此类推，<code>**foo</code> 得到的最终还是指向 <code>foo</code> 的函数指针；用户尽可以使用任意多的 <code>*</code>，结果也是一样的。</p>
+<p>同理，在调用时使用类似 <code>(*p)()</code> 和 <code>p()</code> 的语句是一样的，可以省去 <code>*</code> 运算符。</p>
+<p>参考资料：<a href="https://stackoverflow.com/questions/6893285/why-do-function-pointer-definitions-work-with-any-number-of-ampersands-or-as">Why do function pointer definitions work with any number of ampersands '&amp;' or asterisks '*'? - stackoverflow.com</a></p>
+</blockquote>
+<p>可以使用 <code>typdef</code> 关键字声明函数指针的类型。</p>
+<pre><code class="language-cpp">typedef int (*p_bi_int_op)(int, int);
+</code></pre>
+<p>这样我们就可以在之后使用 <code>p_bi_int_op</code> 这种类型，即指向“参数为 2 个 <code>int</code>，返回值亦为 <code>int</code>”的函数的指针。</p>
+<p>可以通过使用 <code>std::function</code> 来更方便的引用函数。（未完待续）</p>
+<p>使用函数指针，可以实现“回调函数”。（未完待续）</p>
+<hr />
+<p>参考：<a href="https://oi-wiki.org/lang/pointer/">https://oi-wiki.org/lang/pointer/</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../begin-programming/read-cpp/struct-and-class.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../begin-programming/read-cpp/branches-and-loops.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../begin-programming/read-cpp/struct-and-class.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../begin-programming/read-cpp/branches-and-loops.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

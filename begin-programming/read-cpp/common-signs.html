@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>常见符号 - 程序员入门指南</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../preface.html">序言</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/index.html"><strong aria-hidden="true">1.</strong> 认识自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../know-your-computer/what-are-computers.html"><strong aria-hidden="true">1.1.</strong> 什么是计算机</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/buying-a-computer.html"><strong aria-hidden="true">1.2.</strong> 购买一台计算机</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/use-electronic-products.html"><strong aria-hidden="true">1.3.</strong> 使用电子产品</a></li><li class="chapter-item expanded "><a href="../../know-your-computer/interface-and-protocol.html"><strong aria-hidden="true">1.4.</strong> 常见的接口、协议</a></li></ol></li><li class="chapter-item expanded "><a href="../../use-your-computer/index.html"><strong aria-hidden="true">2.</strong> 使用自己的计算机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../use-your-computer/files-and-directories.html"><strong aria-hidden="true">2.1.</strong> 目录、文件、文件系统</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/file-format.html"><strong aria-hidden="true">2.2.</strong> 文件格式</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/organize-your-files.html"><strong aria-hidden="true">2.3.</strong> 整理自己的文件</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/interact-with-pc.html"><strong aria-hidden="true">2.4.</strong> 与计算机交互</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/font-and-font-rendering.html"><strong aria-hidden="true">2.5.</strong> 字体与字体渲染</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/io-devices.html"><strong aria-hidden="true">2.6.</strong> 输入输出设备</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/markup-lang-and-rich-text.html"><strong aria-hidden="true">2.7.</strong> 标记语言和富文本</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/network-and-internet.html"><strong aria-hidden="true">2.8.</strong> 网络和互联网</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/browsing-internet.html"><strong aria-hidden="true">2.9.</strong> 如何浏览互联网</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/what-can-internet-do.html"><strong aria-hidden="true">2.10.</strong> 互联网能做什么</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/safe-internet-connection.html"><strong aria-hidden="true">2.11.</strong> 建立安全的网络连接</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/acquire-and-install-apps.html"><strong aria-hidden="true">2.12.</strong> 获取、安装应用程序</a></li><li class="chapter-item expanded "><a href="../../use-your-computer/work-efficiently.html"><strong aria-hidden="true">2.13.</strong> 高效地使用计算机</a></li></ol></li><li class="chapter-item expanded "><a href="../../web-surfing/index.html"><strong aria-hidden="true">3.</strong> 网上冲浪</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../web-surfing/learn-english.html"><strong aria-hidden="true">3.1.</strong> 掌握一门外语——英语</a></li><li class="chapter-item expanded "><a href="../../web-surfing/obtain-information.html"><strong aria-hidden="true">3.2.</strong> 信息获取与搜索技巧</a></li><li class="chapter-item expanded "><a href="../../web-surfing/search-for-help.html"><strong aria-hidden="true">3.3.</strong> 利用网络解决问题</a></li><li class="chapter-item expanded "><a href="../../web-surfing/notes-taking.html"><strong aria-hidden="true">3.4.</strong> 做笔记</a></li><li class="chapter-item expanded "><a href="../../web-surfing/markdown-tips.html"><strong aria-hidden="true">3.5.</strong> Markdown 技巧</a></li><li class="chapter-item expanded "><a href="../../web-surfing/web-accessibility-intro.html"><strong aria-hidden="true">3.6.</strong> Web 无障碍</a></li><li class="chapter-item expanded "><a href="../../web-surfing/intro-to-mastodon.html"><strong aria-hidden="true">3.7.</strong> Mastodon 介绍</a></li><li class="chapter-item expanded "><a href="../../web-surfing/better-web-experience.html"><strong aria-hidden="true">3.8.</strong> 更好的浏览体验</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/index.html"><strong aria-hidden="true">4.</strong> 开始编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/what-is-programming.html"><strong aria-hidden="true">4.1.</strong> 什么是编程</a></li><li class="chapter-item expanded "><a href="../../begin-programming/cli/cli-and-shell.html"><strong aria-hidden="true">4.2.</strong> 命令行与 Shell 程序</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/cli/common-commands.html"><strong aria-hidden="true">4.2.1.</strong> 一些常用 Shell 命令</a></li><li class="chapter-item expanded "><a href="../../begin-programming/cli/common-cli-tools.html"><strong aria-hidden="true">4.2.2.</strong> 一些常用命令行工具</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/ds-algo-intro.html"><strong aria-hidden="true">4.3.</strong> 数据结构与算法入门</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/intro.html"><strong aria-hidden="true">4.4.</strong> 看懂 C/C++ 代码</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/common-signs.html" class="active"><strong aria-hidden="true">4.4.1.</strong> 常见符号</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/variable-declaration.html"><strong aria-hidden="true">4.4.2.</strong> 变量声明</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/function.html"><strong aria-hidden="true">4.4.3.</strong> 函数</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/struct-and-class.html"><strong aria-hidden="true">4.4.4.</strong> 复杂数据类型：结构与类</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/pointers-and-references.html"><strong aria-hidden="true">4.4.5.</strong> 指针和引用</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/branches-and-loops.html"><strong aria-hidden="true">4.4.6.</strong> 分支与循环</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/macro-and-preprocess.html"><strong aria-hidden="true">4.4.7.</strong> 宏定义、预处理指令</a></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/coding-convention.html"><strong aria-hidden="true">4.4.8.</strong> 代码规范</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.9.</strong> 变量作用域、生命期</div></li><li class="chapter-item expanded "><a href="../../begin-programming/read-cpp/conclusion.html"><strong aria-hidden="true">4.4.10.</strong> 总结</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/first-cpp-program.html"><strong aria-hidden="true">4.5.</strong> 编译运行第一个 C/C++ 程序</a></li><li class="chapter-item expanded "><a href="../../begin-programming/software-build.html"><strong aria-hidden="true">4.6.</strong> 什么是构建</a></li><li class="chapter-item expanded "><a href="../../begin-programming/new-to-python.html"><strong aria-hidden="true">4.7.</strong> Python 基础</a></li><li class="chapter-item expanded "><a href="../../begin-programming/programming-paradigm.html"><strong aria-hidden="true">4.8.</strong> 编程范式</a></li><li class="chapter-item expanded "><a href="../../begin-programming/uml/intro-to-uml.html"><strong aria-hidden="true">4.9.</strong> UML：统一建模语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/uml/class-diagram.html"><strong aria-hidden="true">4.9.1.</strong> UML 类图</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.9.2.</strong> 用例模型 Use Case Model</div></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/setup-develop-environment.html"><strong aria-hidden="true">4.10.</strong> 搭建开发环境</a></li><li class="chapter-item expanded "><a href="../../begin-programming/vm/index.html"><strong aria-hidden="true">4.11.</strong> 使用虚拟机</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../begin-programming/vm/try-ubuntu-on-windows.html"><strong aria-hidden="true">4.11.1.</strong> 在 Windows 上的虚拟机中安装 Ubuntu</a></li></ol></li><li class="chapter-item expanded "><a href="../../begin-programming/coding-practice.html"><strong aria-hidden="true">4.12.</strong> 代码规范</a></li></ol></li><li class="chapter-item expanded "><a href="../../code-sharing/index.html"><strong aria-hidden="true">5.</strong> 代码的分享、管理与协作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../code-sharing/where-it-all-began.html"><strong aria-hidden="true">5.1.</strong> 从代码分享说起</a></li><li class="chapter-item expanded "><a href="../../code-sharing/code-hosting-platform-and-vcs.html"><strong aria-hidden="true">5.2.</strong> 代码托管平台与版本控制系统</a></li><li class="chapter-item expanded "><a href="../../code-sharing/try-code-hosting-and-vcs.html"><strong aria-hidden="true">5.3.</strong> 代码托管与版本控制的实际使用</a></li><li class="chapter-item expanded "><a href="../../code-sharing/about-github.html"><strong aria-hidden="true">5.4.</strong> 关于 GitHub</a></li><li class="chapter-item expanded "><a href="../../code-sharing/page-hosting.html"><strong aria-hidden="true">5.5.</strong> 静态页托管</a></li><li class="chapter-item expanded "><a href="../../code-sharing/continuous-intergration.html"><strong aria-hidden="true">5.6.</strong> 持续集成（CI）</a></li></ol></li><li class="chapter-item expanded "><a href="../../cpp/index.html"><strong aria-hidden="true">6.</strong> 编程语言：C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/undefined-behaviors.html"><strong aria-hidden="true">6.1.</strong> 未定义行为</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 异常处理</div></li><li class="chapter-item expanded "><a href="../../cpp/cpp-coding-practice.html"><strong aria-hidden="true">6.3.</strong> C/C++ 代码规范</a></li><li class="chapter-item expanded "><a href="../../cpp/cpp-best-practice.html"><strong aria-hidden="true">6.4.</strong> C++ 编程最佳实践</a></li><li class="chapter-item expanded "><a href="../../cpp/project/index.html"><strong aria-hidden="true">6.5.</strong> C++ 工程入门</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/project/multi-files-programming.html"><strong aria-hidden="true">6.5.1.</strong> C/C++ 多文件编程</a></li><li class="chapter-item expanded "><a href="../../cpp/project/compile-and-link.html"><strong aria-hidden="true">6.5.2.</strong> 编译、链接</a></li><li class="chapter-item expanded "><a href="../../cpp/project/cmake-intro.html"><strong aria-hidden="true">6.5.3.</strong> CMake 入门</a></li></ol></li><li class="chapter-item expanded "><a href="../../cpp/modern/index.html"><strong aria-hidden="true">6.6.</strong> 现代 C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-auto.html"><strong aria-hidden="true">6.6.1.</strong> auto 关键字</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.6.2.</strong> C++ STL</div></li><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-enum.html"><strong aria-hidden="true">6.6.3.</strong> 枚举类型与 enum class</a></li><li class="chapter-item expanded "><a href="../../cpp/modern/lambda-expression.html"><strong aria-hidden="true">6.6.4.</strong> C++ Lambda 表达式</a></li><li class="chapter-item expanded "><a href="../../cpp/modern/wrap-algorithm-with-class.html"><strong aria-hidden="true">6.6.5.</strong> 用类包装算法</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.6.6.</strong> C++ 智能指针</div></li><li class="chapter-item expanded "><a href="../../cpp/modern/cpp-random.html"><strong aria-hidden="true">6.6.7.</strong> C++ random 库</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.6.8.</strong> C++ thread 库</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../anecdotes/index.html"><strong aria-hidden="true">7.</strong> 计算机人漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../anecdotes/hacker-how-to.html"><strong aria-hidden="true">7.1.</strong> How To Become A Hacker</a></li><li class="chapter-item expanded "><a href="../../anecdotes/college-life.html"><strong aria-hidden="true">7.2.</strong> 大学生活指北</a></li></ol></li><li class="chapter-item expanded "><a href="../../security/index.html"><strong aria-hidden="true">8.</strong> 计算机安全漫谈</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> TLS 与 HTTPS</div></li><li class="chapter-item expanded "><a href="../../security/pgp-and-gpg.html"><strong aria-hidden="true">8.2.</strong> PGP 与 GPG</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> 木马与病毒</div></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">程序员入门指南</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                                        <a href="https://github.com/tsagaanbar/Newly-Programmer-ABC/edit/main/src/begin-programming/read-cpp/common-signs.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="c-代码中常见的符号"><a class="header" href="#c-代码中常见的符号">C++ 代码中常见的符号</a></h1>
+<p>首先来看一段 C++ 程序的源代码：</p>
+<pre><code class="language-cpp">// hello-world.cpp
+
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; &quot;Hello!&quot;;
+}
+</code></pre>
+<p>下面的内容会介绍 C++ 代码中的符号和基本语法，希望藉此向读者介绍 C++ 代码的语义。</p>
+<p>注意：下面的这些符号都是 ASCII 码表中对应的符号，也是我们常说的“英文符号”或“半角符号”。</p>
+<h3 id="井号"><a class="header" href="#井号"><code>#</code> 井号</a></h3>
+<p>通常，我们会在代码中看到<strong>以 <code>#</code> 符号起始的行</strong>：</p>
+<pre><code class="language-cpp">#include &lt;algorithm&gt;
+#include &quot;MyClass.h&quot;
+</code></pre>
+<p>也有这样的：</p>
+<pre><code class="language-cpp">#ifdef WIN32
+    /* some code here */
+#endif
+</code></pre>
+<p>之前我们说到，C/C++ 是一个需要编译的语言，在编译前，需要对代码做一些<strong>预处理</strong>（preprocess）。而跟在 <code>#</code> 符号后面的，叫做<strong>预处理指令</strong>，用来告诉预处理器对代码执行哪些预先的处理。</p>
+<p>预处理过程发生在编译之前。如 <code>include</code> 指令，就是将其后所指明的文件复制到对应的位置。比如 <code>#include &lt;algorithm&gt;</code> 就是将 <code>algorithm</code> 文件中的内容复制到对应的地方；同理，<code>#include &quot;MyClass.h&quot;</code> 就是将 <code>MyClass.h</code> 文件的内容复制进来。</p>
+<blockquote>
+<p>这些复制进来的文件也叫做<strong>头文件</strong>（headers），我们会在后续“多文件编程”的章节展开介绍。至于 <code>include</code> 指令中 <code>&lt;&gt;</code> 和 <code>&quot;&quot;</code> 的区别，以及其他指令的含义，我们会在 C/C++ 预处理命令的章节具体介绍。</p>
+</blockquote>
+<h3 id="变量"><a class="header" href="#变量">变量</a></h3>
+<p>在 C/C++ 中，变量（variables）对应着内存中一块可以修改的数据。用户可以通过一个名称来访问这块数据，这个名称就是变量名。</p>
+<h3 id="赋值"><a class="header" href="#赋值">赋值</a></h3>
+<p>使用赋值运算符 <code>=</code> 可以为变量赋值。比如 <code>a = 5</code> 就是将 5 这一个值赋给了变量 <code>a</code>，之后，变量 <code>a</code> 的值就是 5 了。</p>
+<h3 id="函数"><a class="header" href="#函数">函数</a></h3>
+<p>不同于数学上“函数”的概念，C/C++ 中的函数（function）一般是若干语句的集合。我们也可以将其称作“<strong>子过程</strong>（subroutine）”。</p>
+<p>函数可以接收若干值，这叫做函数的参数。函数中一般会使用这些参数，根据参数的不同，函数的执行也可能会有不同的结果。函数也可以返回某个值，即函数的返回值。</p>
+<p>通过使用函数，我们可以将具体的实现过程<strong>封装</strong>起来，也可以将问题拆分成若干部分，方便于代码的编写、修正与测试；还能将代码中重复的过程提取出来，形成一个函数，减少重复代码。</p>
+<h3 id="-分号"><a class="header" href="#-分号"><code>;</code> 分号</a></h3>
+<p>英文分号通常用作<strong>语句</strong>（statement）之间的分割。一个语句通常完成会<strong>赋值</strong>、<strong>声明</strong>或<strong>调用</strong>等操作，我们将在下面讲解这些操作。</p>
+<p>下面的代码就是三条语句。我们可以将语句分在几行写，但由于有分号作为语句之间的间隔，将其写在一行也是没有问题的。</p>
+<pre><code class="language-cpp">a = 1; b = 2; c = 3;
+</code></pre>
+<p>在 C/C++ 中，语句之间可以有任意多的分号。一条语句也可以在中间的地方断开，分在多行完成。</p>
+<pre><code class="language-cpp">a = 1; b = 2; c = 3;
+d = 
+    a + b + c;
+</code></pre>
+<h3 id="-花括号"><a class="header" href="#-花括号"><code>{}</code> 花括号</a></h3>
+<p>一对花括号（braces）中可以<strong>包含若干语句</strong>，我们习惯将花括号及其包裹的若干语句称为一个<strong>代码块</strong>（code block）。</p>
+<pre><code class="language-cpp">{
+    a = 1;
+    b = 2.34;
+}
+</code></pre>
+<p>花括号也可以在变量<strong>初始化</strong>时使用，其中包括的是一个或者一些值。</p>
+<pre><code class="language-c">int a[] = {1,2,3};
+</code></pre>
+<h3 id="引号"><a class="header" href="#引号"><code>&quot;&quot;</code> 引号</a></h3>
+<p>在引号中的文本叫做“<strong>字符串</strong>（string）”，也就是一连串字符。</p>
+<p>我们也将这些写在代码中的这些字符串的文本形式称为“字符串字面量（string literal）”。在字符串字面量中要表示控制字符，则需要使用转义字符，如 <code>\b</code>、<code>\n</code> 等。</p>
+<h3 id="尖括号"><a class="header" href="#尖括号"><code>&lt;&gt;</code> 尖括号</a></h3>
+<p>尖括号通常和 C++ 中的<strong>模板</strong>相关。模板是“泛型（generic）编程”中的一个概念。所谓“泛型”，即“通用类型”。有些程序的逻辑是和具体数据类型无关的，我们便可以使用泛型思想编写程序，这样的程序代码就叫做模板。在使用时，针对不同的数据类型，我们向模板中填入具体的参数，由此实例化出对应的代码。这提高了代码复用性，使得程序员可以编写更少的代码。</p>
+<p>尖括号中通常填写数据类型的名称。比如，<code>some_function</code> 是一个函数模板。当我们书写 <code>some_function&lt;int&gt;</code> 时，编译器则会为我们生成<strong>针对 <code>int</code> 类型</strong>的代码，用英文描述就是“<strong>of</strong> <code>int</code> type”。</p>
+<p>关于什么是“函数”，我们会在下面进行介绍。</p>
+<h3 id="注释"><a class="header" href="#注释">注释</a></h3>
+<p>有时候，我们可能会希望能够在代码中记录一些说明语句作用的文本。这些文本叫做<strong>注释</strong>（comment）。注释会被编译器忽略掉，对于编译器来说，它们相当于不存在。</p>
+<p>也有时候，我们在<strong>调试</strong>代码的过程中，会希望一些语句不被执行，也可以将代码“注释掉（comment out）”。</p>
+<p>注释分为<strong>单行注释</strong>和<strong>多行注释</strong>。在每一行中，<code>//</code>（连续的两个“斜线”）之后的文本，直到这一行结束，皆为注释（字符串中出现的“<code>//</code>”除外），这称为单行注释。多行注释以 <code>/*</code>（斜线和一个星号）开始，以 <code>*/</code>（星号和一个斜线）为结束，并且不支持嵌套。也就是说，<code>/*</code> 会和最近的 <code>*/</code> 配对，将其中的内容形成注释，这就会导致嵌套的注释出现错误。</p>
+<pre><code class="language-cpp">// This is a single-line comment.
+
+// int a = 1; // commented out; won't be executed
+
+/* This is a 
+   multi-line
+   comment.  */
+</code></pre>
+<h3 id="续行符"><a class="header" href="#续行符">续行符</a></h3>
+<p>单独出现在<strong>行末</strong>的反斜线（back slash）“<code>\</code>”会将下一行的内容接续到这一行来，也就是两行并作一行。也就是说，如果在一个单行注释行末添加续行符，则该单行注释的下一行也会变为注释。</p>
+<pre><code class="language-cpp">// this is a single-line comment\
+    but acctuall takes two lines
+</code></pre>
+<h3 id="-作用域范围解析符"><a class="header" href="#-作用域范围解析符"><code>::</code> 作用域范围解析符</a></h3>
+<p>我们可能会在 C++ 代码中见到两个连在一起的冒号，它叫做作用域范围解析符。不过它的名字不重要，我们只需要理解它的含义表示<strong>符号的所属</strong>即可。比如 <code>A::B</code>，<strong>表示 <code>A</code> 中的 <code>B</code></strong>。</p>
+<p>我们可能经常见到如同 <code>using namespace std;</code> 这样的语句，这个顾名思义，表示“使用 <code>std</code> 这个命名空间”。<code>std</code> 是 C++ 标准库的命名空间。使用了 <code>using</code> 语句后，我们就可以<strong>直接</strong>使用命名空间中的内容了，否则，则需要指明使用的<strong>符号</strong>来自于何命名空间，如 <code>std::cin</code>、<code>std::cout</code> 等等。</p>
+<h3 id="--成员关系运算符"><a class="header" href="#--成员关系运算符"><code>.</code>、<code>-&gt;</code> 成员关系运算符</a></h3>
+<p>成员关系运算符，一般用来访问一个“结构”的成员或者属性。如 <code>a.b</code> 可以表示“a”的“b”，<code>apple.color</code> 就表示苹果的颜色。成员关系运算符“<code>.</code>（单独的一个句点）”左边应该是一个具体的结构的名称，而相对的，“<code>-&gt;</code>（一个横线和一个右尖括号）”的左边则是对一个结构的引用，比如结构所在的“地址”“位置”。成员关系运算符的右侧则是成员的名称。</p>
+<h3 id="-方括号"><a class="header" href="#-方括号"><code>[]</code> 方括号</a></h3>
+<p>一般情况下，方括号内部填入数据，用来索引元素。对于一个数组，我们可以用如 <code>a[5]</code> 的方式，访问数组“a”的第 6 个元素；对于关联容器，我们可以在方括号中填入键，以访问其对应的值，如 <code>color[&quot;apple&quot;]</code>。</p>
+<h3 id="cincout"><a class="header" href="#cincout"><code>cin</code>、<code>cout</code>、<code>&lt;&lt;</code>、<code>&gt;&gt;</code></a></h3>
+<p>C++ 为程序的标准输入（stdin）和标准输出（stdout）等封装为了流对象，即 <code>std::cin</code>、<code>std::cout</code> 等。</p>
+<p><code>&gt;&gt;</code> 为连续的两个向右的尖括号，在 C 语言中为“位移运算符”，但是在 C++ 中它被赋予了新的含义，叫做“流提取运算符”。顾名思义，其语义为“从某事物中读取”。我们也可以从其形状——指向右方的箭头——中观察出这层语义来。</p>
+<p>我们可以从输入流中<strong>提取</strong>需要的内容。比如我们想在程序中从标准输入读入信息，存入“<code>a</code>”中，就可以使用如 <code>cin &gt;&gt; a</code>（注意箭头的方向）的语句。</p>
+<p>同理，<code>&lt;&lt;</code> 运算符为连续的两个向左的尖括号，叫做“流插入运算符”，语义为“向某事物中写入”。在程序中，我们可以把内容<strong>插入</strong>到标准输出流中，如 <code>cout &lt;&lt; a</code>（注意体会箭头的方向）。</p>
+<blockquote>
+<p>如果读者不清楚标准输入输出，可以阅读“命令行入门”章节。简单地说，标准输入默认就是从终端读入，标准输出默认输出到终端。</p>
+</blockquote>
+<p>用户从文字终端的输入并不会直接交予程序，而是暂存在缓冲区（buffer）中，程序在需要时才会从其中读取。</p>
+<p>同理，输出到标准输出的字符一般不会立即显示，也会暂存在输出缓冲区中，待缓冲区满后，才会将其中字符输出到文字终端。</p>
+<p>当用户输出的内容需要换行时，可以向输出流插入 <code>\n</code> 字符。如果在换行的同时，需要内容即时显示在终端上——即刷新（flush）缓冲区——则可以向 <code>std::cout</code> 中插入 <code>std::endl</code>。</p>
+<h3 id="算术运算符"><a class="header" href="#算术运算符">算术运算符</a></h3>
+<p>对于常用的运算，C/C++ 中提供有 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 符号，分别对应着“加”“减”“乘”“除”四种操作。这些操作可以用于 C/C++ 的各种内建类型（built-in types）上。</p>
+<p>对于普通的数字类型的数据，这些符号对应的就是“加”“减”“乘”“除”操作。对于用户自定义的类型，用户可以<strong>重载</strong>这些运算符以使其适用于这些类型，或赋予其新的含义。比如，若“a”“b”表示两个集合，则 <code>a - b</code> 就可以表示两个集合的求差的结果。</p>
+<p>C/C++ 也提供如 <code>+=</code>、<code>-=</code> 这样的操作符。这些运算符表示将 <code>+</code> 或 <code>-</code> 操作的结果，再赋于运算符的左操作数。比如，<code>a = a + 5</code> 可以写作 <code>a += 5</code>。</p>
+<p>C/C++ 还提供了自增和自减运算符。该运算符将对其操作数进行语义上的“加 1”或“减 1”操作。</p>
+<p>自增运算符分为前自增和后自增运算符，其执行的效果是一样的，不过该变量及自增运算符所形成表达式的值不一样。前自增运算符表达式的值为自增后的新值，而后自增运算符表达式的值为自增前的旧值。</p>
+<p>假设初始 <code>a</code> 的值为 5，则 <code>a++</code> 得到的值为 5，<code>++a</code> 得到的值为 6。分别进行两种操作后，<code>a</code> 的值都变为了 6。</p>
+<p>自减运算符类似，即 <code>--x</code> 和 <code>x--</code>。</p>
+<h3 id="比较运算符"><a class="header" href="#比较运算符">比较运算符</a></h3>
+<p>比较运算符有左右两个操作数，其表达式的值只能为 <code>true</code>（真）或 <code>false</code>（假）。</p>
+<p>这些运算符包括 <code>&gt;</code>、<code>&lt;</code>、<code>&gt;=</code>、<code>&lt;=</code>、<code>==</code>、<code>!=</code>，他们的语义和数学上类似，也是用来比较左右两边元素的值的大小。</p>
+<p>比如 <code>5 &lt; 6</code> 的值为 <code>true</code>，<code>6 == 7</code> 或 <code>5 != 5</code> 的值为 <code>false</code>。</p>
+<h3 id="布尔逻辑运算"><a class="header" href="#布尔逻辑运算">布尔逻辑运算</a></h3>
+<p>上述的 <code>true</code> 和 <code>false</code> 为布尔值（真值）。我们可以对布尔值进行若干运算：</p>
+<ul>
+<li>逻辑与（<code>&amp;&amp;</code> 运算符）：运算符左右两操作数全为真，表达式值才为真，否则为假；</li>
+<li>逻辑或（<code>||</code> 运算符）：运算符左右两操作数全为假，表达式值才为假，否则为真（只要有一个操作数为真，表达式就为真）；</li>
+<li>逻辑非（<code>!</code> 元素符）：对布尔值（真值）取反。</li>
+</ul>
+<p>C/C++ 中，<code>0</code> 总是表示 <code>false</code>，其余值向布尔值转换时都为“真”。此外，当一个布尔逻辑运算式的值已经可以确定时，其余部分的表达式不再进行求值操作，也称“短路求值（short-circuit evaluation）”。</p>
+<h3 id="字面量"><a class="header" href="#字面量">字面量</a></h3>
+<p>直接出现在代码中的数字、字符串称为字面量。</p>
+<h3 id="表达式"><a class="header" href="#表达式">表达式</a></h3>
+<p>操作符和操作数连接起来的即形成了表达式。操作数也可以是其他的表达式。</p>
+<p>一般情况下，代码中出现的表达式即会被求值（evaluation），即表达式的值。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../../begin-programming/read-cpp/intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../../begin-programming/read-cpp/variable-declaration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../../begin-programming/read-cpp/intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../../begin-programming/read-cpp/variable-declaration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
