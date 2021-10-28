@@ -55,6 +55,7 @@ mdBook 本身具有对 MathJax 的支持，但目前需要使用 `\( \)` 和 `\[
 
 - 《计算机教育中缺失的一课（The Missing Semester of Your CS Education）》[中文版网站](https://missing-semester-cn.github.io/)、[中文版 GitHub 仓库地址](https://github.com/missing-semester-cn/missing-semester-cn.github.io)
 - [编程入门指南 v1.5 - 知乎专栏](https://zhuanlan.zhihu.com/p/19959253)
+- 《程序员的自我修养》 [leohxj/a-programmer-prepares - github.com](https://github.com/leohxj/a-programmer-prepares)
 
 除特别注明外，项目中除代码外的部分均在 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 协议之条款下提供。
 
