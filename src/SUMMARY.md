@@ -68,6 +68,7 @@
     - [代码托管平台与版本控制系统](code-sharing/code-hosting-platform-and-vcs.md)
     - [代码托管与版本控制的实际使用](code-sharing/try-code-hosting-and-vcs.md)
     - [关于 GitHub](code-sharing/about-github.md)
+    - [静态网页生成](code-sharing/build-static-pages.md)
     - [静态页托管](code-sharing/page-hosting.md)
     - [持续集成（CI）](code-sharing/continuous-intergration.md)
 
