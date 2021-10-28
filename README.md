@@ -49,6 +49,7 @@ mdBook 本身具有对 MathJax 的支持，但目前需要使用 `\( \)` 和 `\[
 - 上交生存手册
     - 仓库：[SurviveSJTU/SurviveSJTUManual - GitHub](https://github.com/SurviveSJTU/SurviveSJTUManual)
     - 阅读地址：[SurviveSJTUManual - GitBook](https://survivesjtu.gitbook.io/survivesjtumanual/)
+- [IT50 - True control comes after knowledge.](https://it50.org/)
 - ...
 
 ## 参考资料
