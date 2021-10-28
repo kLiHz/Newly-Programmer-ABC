@@ -23,7 +23,9 @@
 
 > 对于国人自国外翻译过来的书或者文章，不要咬文嚼字，在力争把握整本书、整章节或整篇文章整体框架思路基础上再咬文嚼字，实在不行，直接干原著！所以，英语学习好还是很重要！可以不被人家轻易忽悠！
 >
-> 来源：[推荐尽可能看Paul Deitel的英文原著《C how to Program, Sixth Edition》_YunShuiShanFeng-CSDN博客](https://blog.csdn.net/sinat_36330809/article/details/72875215)
+> 来源：[推荐尽可能看 Paul Deitel 的英文原著《C How To Program, Sixth Edition》_YunShuiShanFeng-CSDN博客](https://blog.csdn.net/sinat_36330809/article/details/72875215)
+
+在本篇教程的参考资料以及推荐资料中，有很多以英语写就。所幸，这些资料并涉及很复杂的语法，读者只需要具备中学英语的能力、拥有一本合适的字典，即可解决大部分问题。
 
 ## 学习外语的平台
 
