@@ -44,6 +44,12 @@ Apple 公司生产的移动设备中一般预装其开发的 iOS 操作系统，
 - 点击安装。
 
 读者也可以尝试通过关键字搜索自己需要的工具，并进行挑选和安装。
+## Linux(GNU/Linux)
+大多数现代的类 Unix 操作系统都提供了一种中心化的机制用来搜索和安装软件。软件通常都是存放在存储库中，并通过包的形式进行分发。处理包的工作被称为包管理。包提供了操作系统的基本组件，以及共享的库、应用程序、服务和文档。
+
+对于Linux,不同的发行版有不同的安装包管理系统，比如Debian/Ubuntu的'apt-get\dpkg',Redhat/CentOS/fedora的'yum\dnf',ArchLinux/manjaro的'pacman',里面的安装包一般是免费的,而这些安装包有它们对应的介质文件，比如上述三种分别为:.deb,.rpm,.tar.zst。对于Arch Linux/manjaro,还有AUR(Arch User Repository，基于pacman)使用 AUR 的最简单方法是通过 AUR 助手，比如yay.
+
+Linux中也有图形化的应用商店，如KDE的Discover,Discover需要安装包管理器应用程序后端，比如pacman,除此以外，GNOME等桌面环境也有类似的图形化应用商店
 
 ## 获取应用程序的其他渠道
 
@@ -53,7 +59,7 @@ Apple 公司生产的移动设备中一般预装其开发的 iOS 操作系统，
 
 应用分发商可能会分发可执行文件格式的“安装程序”，也称“安装器（Installer）”。安装器是一个可执行程序，其可能在自身中存储有安装程序所需的文件，也可能在线获取其所需的文件。后者通常是因为，软件的数据量较为庞大，不便直接通过 HTTPS 下载，因此软件开发方可能会提供软件下载器，其内部可能包含代理，支持断点续传等功能，可以使用户获得更好的下载体验。
 
-在 Windows 操作系统，我们常见以 `exe` 或 `msi` 为扩展名的“安装包”。这些文件为可执行文件，严格来说属于“安装器”。
+在 Windows 操作系统，我们常见以 `exe` 或 `msi` 为扩展名的“安装包”。在UNIX系统中，使用'.tar.gz'(任意系统),'deb'(Debian/Ubuntu),'rpm'(redhat/CentOS/fedora),'.tar.zst'(ArchLinux/Manjaro),'pkg'(FreeBSD)这些文件为可执行文件，严格来说属于“安装器”。
 
 ### 安装包形式
 
