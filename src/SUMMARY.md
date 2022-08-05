@@ -1,6 +1,6 @@
 # Summary
 
-[序言](preface.md)
+[序言](./README.md)
 
 - [认识自己的计算机](know-your-computer/README.md)
     - [什么是计算机](know-your-computer/what-are-computers.md)

@@ -15,10 +15,6 @@
 以上，祝你学习愉快！
 
 
-> 在线阅读：
->
-> - GitHub Pages：[tsagaanbar.github.io/Newly-Programmer-ABC](https://tsagaanbar.github.io/Newly-Programmer-ABC/) 
-
 
 > 如果你正在使用浏览器浏览该页面，点击左上角“菜单”图标，可以查看教程目录。点击右上角“打印机”图标，可以将本教程打印为 PDF，以便离线阅读。
 >
