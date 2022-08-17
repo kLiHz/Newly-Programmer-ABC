@@ -34,6 +34,7 @@
     - [Web 无障碍](web-surfing/web-accessibility-intro.md)
     - [Mastodon 介绍](web-surfing/intro-to-mastodon.md)
     - [更好的浏览体验](web-surfing/better-web-experience.md)
+    - [多因素认证](web-surfing/mfa-intro.md)
 
 
 - [开始编程](begin-programming/README.md)
