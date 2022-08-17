@@ -12,11 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@v3
 
-    - name: Setup mdBook
-      uses: peaceiris/actions-mdbook@v1
-      with:
-        mdbook-version: 'latest'
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
 
-    - run: mdbook build
+      - run: mdbook build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v0
+        with:
+          path: ./book
+          retention-days: 3
