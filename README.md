@@ -19,7 +19,10 @@
 
 目录：[src/SUMMARY.md](src/SUMMARY.md)
 
-在线阅读地址：[GitHub Pages](https://tsagaanbar.github.io/Newly-Programmer-ABC/) 
+在线阅读地址：
+
+- [GitHub Pages](https://klihz.github.io/Newly-Programmer-ABC/) 
+- [Gitee Pages](https://tsagaanbar.gitee.io/newly-programmer-abc/)
 
 ## 构建
 
@@ -50,6 +53,7 @@ mdBook 本身具有对 MathJax 的支持，但目前需要使用 `\( \)` 和 `\[
     - 仓库：[SurviveSJTU/SurviveSJTUManual - GitHub](https://github.com/SurviveSJTU/SurviveSJTUManual)
     - 阅读地址：[SurviveSJTUManual - GitBook](https://survivesjtu.gitbook.io/survivesjtumanual/)
 - [IT50 - True control comes after knowledge.](https://it50.org/)
+- [RM-CV Wiki](https://github.com/MUC-RM-CV/wiki) - 开发相关内容的知识库
 - ...
 
 ## 参考资料

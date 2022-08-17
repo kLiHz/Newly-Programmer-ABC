@@ -27,16 +27,12 @@
 - [计算机入门指南](https://github.com/Computer-Literacy-Primer/Computer-Literacy-Primer)：一个同类项目
 - [OI Wiki](https://oi-wiki.org) 项目仓库地址：[GitHub](https://github.com/OI-wiki/OI-wiki/)
 - [浅見沙織的笔记 - Telegram 频道](https://t.me/NoteOfAsamiSaori)
-- @Coelacanthus
-    - [Coelacanthus@GitHub](https://github.com/CoelacanthusHex)
-- @空忧居士
-    - [空忧居士@CSDN](https://me.csdn.net/qq_45871272)
-- @Par
-    - [Par@Github](https://github.com/ouoqwq1)
 - 上交生存手册
     - 仓库：[SurviveSJTU/SurviveSJTUManual - GitHub](https://github.com/SurviveSJTU/SurviveSJTUManual)
     - 阅读地址：[SurviveSJTUManual - GitBook](https://survivesjtu.gitbook.io/survivesjtumanual/)
 - [IT50 - True control comes after knowledge.](https://it50.org/)
+- [RM-CV Wiki](https://github.com/MUC-RM-CV/wiki) - 开发相关内容的知识库
+- ... [作者的博客](https://zedifen.github.io/blog)?
 - ...
 
 ## 参考资料
