@@ -83,23 +83,6 @@
     - [持续集成（CI）](code-sharing/continuous-intergration.md)
 
 - [编程语言：C++](cpp/README.md)
-    - [未定义行为](cpp/undefined-behaviors.md)
-    - [异常处理]()
-    - [C/C++ 代码规范](cpp/cpp-coding-practice.md)
-    - [C++ 编程最佳实践](cpp/cpp-best-practice.md)
-    - [C++ 工程入门](cpp/project/README.md)
-        - [C/C++ 多文件编程](cpp/project/multi-files-programming.md)
-        - [编译、链接](cpp/project/compile-and-link.md)
-        - [CMake 入门](cpp/project/cmake-intro.md)
-    - [现代 C++](cpp/modern/README.md)
-        - [`auto` 关键字](cpp/modern/cpp-auto.md)
-        - [C++ STL]()
-        - [枚举类型与 enum class](cpp/modern/cpp-enum.md)
-        - [C++ Lambda 表达式](cpp/modern/lambda-expression.md)
-        - [用类包装算法](cpp/modern/wrap-algorithm-with-class.md)
-        - [C++ 智能指针]()
-        - [C++ random 库](cpp/modern/cpp-random.md)
-        - [C++ thread 库]()
 
 - [编程语言：Python]()
 
