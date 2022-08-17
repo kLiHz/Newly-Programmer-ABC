@@ -4,9 +4,12 @@
 
 [序言](./preface.md)
 
+# 基础部分
+
 - [认识自己的计算机](know-your-computer/README.md)
     - [什么是计算机](know-your-computer/what-are-computers.md)
     - [购买一台计算机](know-your-computer/buying-a-computer.md)
+    - [购买一台智能手机]() <!-- know-your-computer/buying-a-smartphone.md -->
     - [使用电子产品](know-your-computer/use-electronic-products.md)
     - [常见的接口、协议](know-your-computer/interface-and-protocol.md)
 
@@ -33,9 +36,13 @@
     - [Markdown 技巧](web-surfing/markdown-tips.md)
     - [Web 无障碍](web-surfing/web-accessibility-intro.md)
     - [Mastodon 介绍](web-surfing/intro-to-mastodon.md)
+    - [关于许可证]() <!-- web-surfing/intro-to-licenses.md -->
     - [更好的浏览体验](web-surfing/better-web-experience.md)
     - [多因素认证](web-surfing/mfa-intro.md)
+    - [流媒体传输]() <!-- web-surfing/media-streaming.md -->
+    - [避免追踪分享文件：种子、磁力链]()
 
+# 进阶部分
 
 - [开始编程](begin-programming/README.md)
     - [什么是编程](begin-programming/what-is-programming.md)
@@ -93,6 +100,8 @@
         - [C++ 智能指针]()
         - [C++ random 库](cpp/modern/cpp-random.md)
         - [C++ thread 库]()
+
+- [编程语言：Python]()
 
 - [计算机人漫谈](anecdotes/README.md)
     - [How To Become A Hacker](anecdotes/hacker-how-to.md)
