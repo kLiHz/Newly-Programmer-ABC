@@ -64,7 +64,7 @@
     - [编译运行第一个 C/C++ 程序](begin-programming/first-cpp-program.md)
     - [什么是构建](begin-programming/software-build.md)
     - [搭建开发环境](begin-programming/setup-develop-environment.md)
-    - [编程范式](begin-programming/programming-paradigm.md)
+    - [编程范式]() <!-- begin-programming/programming-paradigm.md -->
     - [UML：统一建模语言](begin-programming/uml/intro-to-uml.md)
         - [UML 类图](begin-programming/uml/class-diagram.md)
         - [用例模型 Use Case Model]() 
@@ -79,8 +79,8 @@
     - [代码托管与版本控制的实际使用](code-sharing/try-code-hosting-and-vcs.md)
     - [关于 GitHub](code-sharing/about-github.md)
     - [静态网页生成](code-sharing/build-static-pages.md)
-    - [静态页托管](code-sharing/page-hosting.md)
-    - [持续集成（CI）](code-sharing/continuous-intergration.md)
+    - [静态页托管]() <!-- code-sharing/page-hosting.md -->
+    - [持续集成（CI）]() <!-- code-sharing/continuous-intergration.md -->
 
 - [编程语言：C++](cpp/README.md)
 
