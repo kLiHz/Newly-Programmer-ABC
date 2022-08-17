@@ -1,5 +1,7 @@
 # Summary
 
+[首页](./README.md)
+
 [序言](./preface.md)
 
 - [认识自己的计算机](know-your-computer/README.md)
